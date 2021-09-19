@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\cerradura_6\CERRADURA.ncd
+OUTFILE=C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\cerradura_6\CERRADURA.bit
+FAMILY=Spartan6
+PART=xc6slx45-3csg324
+WORKINGDIR=C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\cerradura_6
+LICENSE=WebPack
+USER_INFO=__0_0_0

@@ -1,0 +1,320 @@
+Release 14.5 Map P.58f (nt64)
+Xilinx Mapping Report File for Design 'multiplicador'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o multiplicador_map.ncd multiplicador.ngd
+multiplicador.pcf 
+Target Device  : xc6slx45
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Sun Sep 16 15:10:12 2018
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    3
+Slice Logic Utilization:
+  Number of Slice Registers:                     0 out of  54,576    0%
+  Number of Slice LUTs:                        337 out of  27,288    1%
+    Number used as logic:                      333 out of  27,288    1%
+      Number using O6 output only:             172
+      Number using O5 output only:              17
+      Number using O5 and O6:                  144
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   6,408    0%
+    Number used exclusively as route-thrus:      4
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         4
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                    90 out of   6,822    1%
+  Number of MUXCYs used:                       356 out of  13,644    2%
+  Number of LUT Flip Flop pairs used:          337
+    Number with an unused Flip Flop:           337 out of     337  100%
+    Number with an unused LUT:                   0 out of     337    0%
+    Number of fully used LUT-FF pairs:           0 out of     337    0%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  54,576    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        68 out of     218   31%
+    Number of LOCed IOBs:                       16 out of      68   23%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of     116    0%
+  Number of RAMB8BWERs:                          0 out of     232    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       0 out of      16    0%
+  Number of DCM/DCM_CLKGENs:                     0 out of       8    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     376    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     376    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     376    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     256    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      58    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       4    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                2.58
+
+Peak Memory Usage:  413 MB
+Total REAL time to MAP completion:  8 secs 
+Total CPU time to MAP completion:   8 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:Place:837 - Partially locked IO Bus is found. 
+    Following components of the bus are not locked: 
+   	 Comp: A<16>
+   	 Comp: A<15>
+   	 Comp: A<14>
+   	 Comp: A<13>
+   	 Comp: A<12>
+   	 Comp: A<11>
+   	 Comp: A<10>
+   	 Comp: A<9>
+   	 Comp: A<8>
+   	 Comp: A<7>
+   	 Comp: A<6>
+   	 Comp: A<5>
+   	 Comp: A<4>
+
+WARNING:Place:837 - Partially locked IO Bus is found. 
+    Following components of the bus are not locked: 
+   	 Comp: B<16>
+   	 Comp: B<15>
+   	 Comp: B<14>
+   	 Comp: B<13>
+   	 Comp: B<12>
+   	 Comp: B<11>
+   	 Comp: B<10>
+   	 Comp: B<9>
+   	 Comp: B<8>
+   	 Comp: B<7>
+   	 Comp: B<6>
+   	 Comp: B<5>
+   	 Comp: B<4>
+
+WARNING:Place:837 - Partially locked IO Bus is found. 
+    Following components of the bus are not locked: 
+   	 Comp: P<33>
+   	 Comp: P<32>
+   	 Comp: P<31>
+   	 Comp: P<30>
+   	 Comp: P<29>
+   	 Comp: P<28>
+   	 Comp: P<27>
+   	 Comp: P<26>
+   	 Comp: P<25>
+   	 Comp: P<24>
+   	 Comp: P<23>
+   	 Comp: P<22>
+   	 Comp: P<21>
+   	 Comp: P<20>
+   	 Comp: P<19>
+   	 Comp: P<18>
+   	 Comp: P<17>
+   	 Comp: P<16>
+   	 Comp: P<15>
+   	 Comp: P<14>
+   	 Comp: P<13>
+   	 Comp: P<12>
+   	 Comp: P<11>
+   	 Comp: P<10>
+   	 Comp: P<9>
+   	 Comp: P<8>
+
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Place:834 - Only a subset of IOs are locked. Out of 68 IOs, 16 are locked
+   and 52 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   1 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| A<0>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| A<1>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| A<2>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| A<3>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| A<4>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| A<5>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| A<6>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| A<7>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| A<8>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| A<9>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| A<10>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| A<11>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| A<12>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| A<13>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| A<14>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| A<15>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| A<16>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| B<0>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| B<1>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| B<2>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| B<3>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| B<4>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| B<5>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| B<6>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| B<7>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| B<8>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| B<9>                               | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| B<10>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| B<11>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| B<12>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| B<13>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| B<14>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| B<15>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| B<16>                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| P<0>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<1>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<2>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<3>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<4>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<5>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<6>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<7>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<8>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<9>                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<10>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<11>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<12>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<13>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<14>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<15>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<16>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<17>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<18>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<19>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<20>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<21>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<22>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<23>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<24>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<25>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<26>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<27>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<28>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<29>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<30>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<31>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<32>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| P<33>                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

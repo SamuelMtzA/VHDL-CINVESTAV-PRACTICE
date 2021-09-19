@@ -1,0 +1,16 @@
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/MOORE.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-fg320-5 MOORE.ngc MOORE.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o MOORE_map.ncd MOORE.ngd MOORE.pcf 
+par -w -intstyle ise -ol high -t 1 MOORE_map.ncd MOORE.ncd MOORE.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml MOORE.twx MOORE.ncd -o MOORE.twr MOORE.pcf 
+netgen -intstyle ise -s 5  -pcf MOORE.pcf -rpw 100 -tpw 0 -ar Structure -tm MOORE -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim MOORE.ncd MOORE_timesim.vhd 

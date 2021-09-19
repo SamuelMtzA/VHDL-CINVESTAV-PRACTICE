@@ -1,0 +1,8 @@
+V3 3
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/dado/dado.vhd 2018/09/22.15:39:31 P.58f
+EN work/dado 1537649023 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/dado/dado.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/dado/Arq_dado 1537649024 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/dado/dado.vhd EN work/dado 1537649023

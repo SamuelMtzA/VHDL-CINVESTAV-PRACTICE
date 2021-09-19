@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/ir/Receptor.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/ir/Receptor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc receptor.ucf -p xc3s500e-fg320-4 Receptor.ngc Receptor.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Receptor_map.ncd Receptor.ngd Receptor.pcf 
+par -w -intstyle ise -ol high -t 1 Receptor_map.ncd Receptor.ncd Receptor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Receptor.twx Receptor.ncd -o Receptor.twr Receptor.pcf -ucf receptor.ucf 

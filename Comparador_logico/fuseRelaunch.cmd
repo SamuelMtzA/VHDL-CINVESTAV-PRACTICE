@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Comparador_logico/comparador_isim_beh.exe" -prj "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Comparador_logico/comparador_beh.prj" "work.comparador" "work.glbl" 

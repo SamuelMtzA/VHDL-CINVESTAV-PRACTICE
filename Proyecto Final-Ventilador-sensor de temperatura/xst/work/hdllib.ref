@@ -1,0 +1,14 @@
+EN lcd NULL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/LCD.vhd sub00/vhpl07 1539744614
+AR lcd behavioral C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/LCD.vhd sub00/vhpl08 1539744615
+AR volante arq_volante C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.vhd sub00/vhpl13 1539738396
+AR pwm arq_pwm C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/PWM.vhd sub00/vhpl04 1539744611
+EN pwm NULL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/PWM.vhd sub00/vhpl03 1539744610
+AR convertidor arq_convertidor C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/BCD.vhd sub00/vhpl06 1539744613
+EN convertidor NULL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/BCD.vhd sub00/vhpl05 1539744612
+EN ventilador NULL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador1.vhd sub00/vhpl09 1539744616
+AR adc adc_arq C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/ADC.vhd sub00/vhpl02 1539744609
+EN adc NULL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/ADC.vhd sub00/vhpl01 1539744608
+AR ventilador behavioral C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.vhd sub00/vhpl11 1539737378
+EN volante NULL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.vhd sub00/vhpl12 1539738395
+PH modulos NULL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Modulos.vhd sub00/vhpl00 1539744607
+AR ventilador arq_ventilador C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador1.vhd sub00/vhpl10 1539744617

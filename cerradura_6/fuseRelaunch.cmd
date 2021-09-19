@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/cerradura_6/Cerradura_sim_isim_par.exe" -prj "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/cerradura_6/Cerradura_sim_par.prj" "work.Cerradura_sim" 

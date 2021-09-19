@@ -1,0 +1,2 @@
+vhdl work "dado.vhd"
+vhdl work "dado_tb.vhd"

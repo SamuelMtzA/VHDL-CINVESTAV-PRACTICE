@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/ADC/ADC_tb_isim_beh.exe" -prj "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/ADC/ADC_tb_beh.prj" "work.ADC_tb" 

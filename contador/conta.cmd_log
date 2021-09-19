@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/contador/conta.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/contador/conta.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/contador/conta.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/contador/conta.syr" 

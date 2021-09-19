@@ -1,0 +1,2 @@
+vhdl work "netgen/par/multiplicador_timesim.vhd"
+vhdl work "multiplicador_tb.vhd"

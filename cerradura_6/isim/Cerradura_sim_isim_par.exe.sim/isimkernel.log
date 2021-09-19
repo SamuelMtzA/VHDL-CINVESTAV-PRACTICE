@@ -1,0 +1,30 @@
+Command line:
+   Cerradura_sim_isim_par.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/par/CERRADURA_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  0
+     -socket  57894
+
+Sat Sep 29 13:35:18 2018
+
+
+ Elaboration Time: 0.078 sec
+
+ Current Memory Usage: 511.402 Meg
+
+ Total Signals          : 843
+ Total Nets             : 565
+ Total Signal Drivers   : 493
+ Total Blocks           : 186
+ Total Primitive Blocks : 106
+ Total Processes        : 493
+ Total Traceable Variables  : 1214
+ Total Scalar Nets and Variables : 8941
+
+ Total Simulation Time: 0.951605 sec
+
+ Current Memory Usage: 511.402 Meg
+
+Sat Sep 29 13:40:36 2018
+

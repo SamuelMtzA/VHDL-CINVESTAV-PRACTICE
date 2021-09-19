@@ -1,0 +1,8 @@
+INTSTYLE=impact
+INFILE=C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\tras\impact.xsl
+OUTFILE=C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\tras\impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\tras
+LICENSE=iMPACT
+USER_INFO=iMPACT

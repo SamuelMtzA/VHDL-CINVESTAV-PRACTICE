@@ -1,0 +1,2 @@
+vhdl work "netgen/par/Recep_timesim.vhd"
+vhdl work "Recepcion_tb.vhd"

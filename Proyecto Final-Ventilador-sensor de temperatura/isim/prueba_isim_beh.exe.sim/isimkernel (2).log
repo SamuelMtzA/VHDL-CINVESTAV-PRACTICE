@@ -1,0 +1,31 @@
+Command line:
+   prueba_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  63221
+
+Tue Oct 16 21:41:33 2018
+
+
+ Elaboration Time: 0.046801 sec
+
+ Current Memory Usage: 510.927 Meg
+
+ Total Signals          : 82
+ Total Nets             : 3121
+ Total Signal Drivers   : 28
+ Total Blocks           : 10
+ Total Primitive Blocks : 8
+ Total Processes        : 12
+ Total Traceable Variables  : 13
+ Total Scalar Nets and Variables : 3502
+In process ADC.vhd:34 
+ Target Size 24 and source size 26 for array dimension 0 does not match. 
+
+
+ Total Simulation Time: 0.109201 sec
+
+ Current Memory Usage: 510.927 Meg
+
+Tue Oct 16 21:47:19 2018
+

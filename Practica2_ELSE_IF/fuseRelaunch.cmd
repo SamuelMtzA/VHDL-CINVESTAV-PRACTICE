@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Practica2_ELSE_IF/and_or_TB_isim_beh.exe" -prj "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Practica2_ELSE_IF/and_or_TB_beh.prj" "work.and_or_TB" 

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/contador_6/contador_sim_isim_par.exe" -prj "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/contador_6/contador_sim_par.prj" "work.contador_sim" 

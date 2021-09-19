@@ -1,0 +1,15 @@
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/test/Compuerta.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/test/Compuerta.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-fg320-4 Compuerta.ngc Compuerta.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Compuerta_map.ncd Compuerta.ngd Compuerta.pcf 
+par -w -intstyle ise -ol high -t 1 Compuerta_map.ncd Compuerta.ncd Compuerta.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Compuerta.twx Compuerta.ncd -o Compuerta.twr Compuerta.pcf 
+bitgen -intstyle ise -f Compuerta.ut Compuerta.ncd 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/test/Compuerta.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/test/Compuerta.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Salidas.ucf -p xc3s1200e-fg320-4 Compuerta.ngc Compuerta.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o Compuerta_map.ncd Compuerta.ngd Compuerta.pcf 
+par -w -intstyle ise -ol high -t 1 Compuerta_map.ncd Compuerta.ncd Compuerta.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Compuerta.twx Compuerta.ncd -o Compuerta.twr Compuerta.pcf -ucf Salidas.ucf 
+bitgen -intstyle ise -f Compuerta.ut Compuerta.ncd 
+netgen -intstyle ise -insert_glbl true -w -dir netgen/translate -ofmt verilog -sim Compuerta.ngd Compuerta_translate.v 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Compuerta_preroute.twx Compuerta_map.ncd -o Compuerta_preroute.twr Compuerta.pcf -ucf Salidas.ucf 
+netgen -intstyle ise -s 4  -pcf Compuerta.pcf -sdf_anno true -sdf_path "netgen/map" -insert_glbl true -w -dir netgen/map -ofmt verilog -sim Compuerta_map.ncd Compuerta_map.v 

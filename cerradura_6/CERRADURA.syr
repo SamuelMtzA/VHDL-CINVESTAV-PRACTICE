@@ -1,0 +1,656 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.15 secs
+ 
+--> Reading design: CERRADURA.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CERRADURA.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CERRADURA"
+Output Format                      : NGC
+Target Device                      : xc6slx45-3-csg324
+
+---- Source Options
+Top Module Name                    : CERRADURA
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\cerradura_6\Registro.vhd" into library work
+Parsing entity <REGISTRO>.
+Parsing architecture <Behavioral> of entity <registro>.
+Parsing VHDL file "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\cerradura_6\Multiplexor.vhd" into library work
+Parsing entity <MULTIPLEXOR>.
+Parsing architecture <Behavioral> of entity <multiplexor>.
+Parsing VHDL file "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\cerradura_6\Modulos.vhd" into library work
+Parsing package <MODULOS>.
+Parsing VHDL file "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\cerradura_6\Contador.vhd" into library work
+Parsing entity <CONTADOR>.
+Parsing architecture <Behavioral> of entity <contador>.
+Parsing VHDL file "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\cerradura_6\Comparador.vhd" into library work
+Parsing entity <COMPARADOR>.
+Parsing architecture <Behavioral> of entity <comparador>.
+Parsing VHDL file "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\cerradura_6\Antirrebote.vhd" into library work
+Parsing entity <ANTIRREBOTE>.
+Parsing architecture <Behavioral> of entity <antirrebote>.
+Parsing VHDL file "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\cerradura_6\Cerradura.vhd" into library work
+Parsing entity <CERRADURA>.
+Parsing architecture <Behavioral> of entity <cerradura>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <CERRADURA> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <COMPARADOR> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <CONTADOR> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <MULTIPLEXOR> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <REGISTRO> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <ANTIRREBOTE> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <CERRADURA>.
+    Related source file is "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\cerradura_6\Cerradura.vhd".
+    Found 16-bit register for signal <clkdiv>.
+    Found 16-bit adder for signal <clkdiv[15]_GND_6_o_add_0_OUT> created at line 41.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+Unit <CERRADURA> synthesized.
+
+Synthesizing Unit <COMPARADOR>.
+    Related source file is "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\cerradura_6\Comparador.vhd".
+    Found 4-bit comparator equal for signal <DATOA[3]_DATOB[3]_equal_1_o> created at line 27
+    Summary:
+	inferred   1 Comparator(s).
+Unit <COMPARADOR> synthesized.
+
+Synthesizing Unit <CONTADOR>.
+    Related source file is "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\cerradura_6\Contador.vhd".
+    Found 3-bit register for signal <CONTEO>.
+    Found 3-bit adder for signal <CONTEO[2]_GND_8_o_add_0_OUT> created at line 29.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 D-type flip-flop(s).
+Unit <CONTADOR> synthesized.
+
+Synthesizing Unit <MULTIPLEXOR>.
+    Related source file is "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\cerradura_6\Multiplexor.vhd".
+    Found 4x4-bit Read Only RAM for signal <MUX>
+    Summary:
+	inferred   1 RAM(s).
+Unit <MULTIPLEXOR> synthesized.
+
+Synthesizing Unit <REGISTRO>.
+    Related source file is "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\cerradura_6\Registro.vhd".
+WARNING:Xst:647 - Input <CON<1:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <REGOUT<3>>.
+    Found 1-bit register for signal <REGOUT_2>.
+    Found 1-bit register for signal <REGOUT_1>.
+    Found 1-bit register for signal <REGOUT_0>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <REGISTRO> synthesized.
+
+Synthesizing Unit <ANTIRREBOTE>.
+    Related source file is "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\cerradura_6\Antirrebote.vhd".
+    Found 2-bit register for signal <CNT>.
+    Found 2-bit adder for signal <CNT[1]_GND_20_o_add_1_OUT> created at line 33.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+Unit <ANTIRREBOTE> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 3
+ 16-bit adder                                          : 1
+ 2-bit adder                                           : 1
+ 3-bit adder                                           : 1
+# Registers                                            : 7
+ 1-bit register                                        : 4
+ 16-bit register                                       : 1
+ 2-bit register                                        : 1
+ 3-bit register                                        : 1
+# Comparators                                          : 1
+ 4-bit comparator equal                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <ANTIRREBOTE>.
+The following registers are absorbed into counter <CNT>: 1 register on signal <CNT>.
+Unit <ANTIRREBOTE> synthesized (advanced).
+
+Synthesizing (advanced) Unit <CERRADURA>.
+The following registers are absorbed into counter <clkdiv>: 1 register on signal <clkdiv>.
+Unit <CERRADURA> synthesized (advanced).
+
+Synthesizing (advanced) Unit <CONTADOR>.
+The following registers are absorbed into counter <CONTEO>: 1 register on signal <CONTEO>.
+Unit <CONTADOR> synthesized (advanced).
+
+Synthesizing (advanced) Unit <MULTIPLEXOR>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_MUX> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <CONT>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <MUX>           |          |
+    -----------------------------------------------------------------------
+Unit <MULTIPLEXOR> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+# Counters                                             : 3
+ 16-bit up counter                                     : 1
+ 2-bit up counter                                      : 1
+ 3-bit up counter                                      : 1
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+# Comparators                                          : 1
+ 4-bit comparator equal                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <CERRADURA> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block CERRADURA, actual ratio is 0.
+FlipFlop MODULO_4/REGOUT_0 has been replicated 1 time(s) to handle iob=true attribute.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 26
+ Flip-Flops                                            : 26
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : CERRADURA.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 61
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 15
+#      LUT2                        : 4
+#      LUT3                        : 2
+#      LUT4                        : 1
+#      LUT6                        : 1
+#      MUXCY                       : 15
+#      VCC                         : 1
+#      XORCY                       : 16
+# FlipFlops/Latches                : 26
+#      FDC                         : 23
+#      FDCE                        : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 10
+#      IBUF                        : 6
+#      OBUF                        : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              25  out of  54576     0%  
+ Number of Slice LUTs:                   28  out of  27288     0%  
+    Number used as Logic:                28  out of  27288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     30
+   Number with an unused Flip Flop:       5  out of     30    16%  
+   Number with an unused LUT:             2  out of     30     6%  
+   Number of fully used LUT-FF pairs:    23  out of     30    76%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                          11
+ Number of bonded IOBs:                  11  out of    218     5%  
+    IOB Flip Flops/Latches:               1
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRL/BUFHCEs:         1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+---------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)     | Load  |
+-----------------------------------+---------------------------+-------+
+COMPARADOR1(COMPARADOR1:O)         | NONE(*)(MODULO_4/REGOUT_3)| 5     |
+ANTIR1_inv(ANTIR1_inv11:O)         | NONE(*)(MODULO_2/CONTEO_0)| 3     |
+CLK                                | BUFGP                     | 16    |
+clkdiv_15                          | NONE(MODULO_5/CNT_0)      | 2     |
+-----------------------------------+---------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.506ns (Maximum Frequency: 399.058MHz)
+   Minimum input arrival time before clock: 3.782ns
+   Maximum output required time after clock: 3.634ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'COMPARADOR1'
+  Clock period: 1.165ns (frequency: 858.185MHz)
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Delay:               1.165ns (Levels of Logic = 0)
+  Source:            MODULO_4/REGOUT_2 (FF)
+  Destination:       MODULO_4/REGOUT_3 (FF)
+  Source Clock:      COMPARADOR1 rising
+  Destination Clock: COMPARADOR1 rising
+
+  Data Path: MODULO_4/REGOUT_2 to MODULO_4/REGOUT_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.616  MODULO_4/REGOUT_2 (MODULO_4/REGOUT_2)
+     FDCE:D                    0.102          MODULO_4/REGOUT_3
+    ----------------------------------------
+    Total                      1.165ns (0.549ns logic, 0.616ns route)
+                                       (47.1% logic, 52.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ANTIR1_inv'
+  Clock period: 2.506ns (frequency: 399.058MHz)
+  Total number of paths / destination ports: 9 / 6
+-------------------------------------------------------------------------
+Delay:               2.506ns (Levels of Logic = 1)
+  Source:            MODULO_2/CONTEO_2 (FF)
+  Destination:       MODULO_2/CONTEO_0 (FF)
+  Source Clock:      ANTIR1_inv rising
+  Destination Clock: ANTIR1_inv rising
+
+  Data Path: MODULO_2/CONTEO_2 to MODULO_2/CONTEO_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.447   0.651  MODULO_2/CONTEO_2 (MODULO_2/CONTEO_2)
+     LUT2:I1->O            7   0.205   0.773  MODULO_2/RESET_CONTEO[2]_OR_4_o1 (MODULO_2/RESET_CONTEO[2]_OR_4_o)
+     FDC:CLR                   0.430          MODULO_2/CONTEO_0
+    ----------------------------------------
+    Total                      2.506ns (1.082ns logic, 1.424ns route)
+                                       (43.2% logic, 56.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 1.952ns (frequency: 512.334MHz)
+  Total number of paths / destination ports: 136 / 16
+-------------------------------------------------------------------------
+Delay:               1.952ns (Levels of Logic = 17)
+  Source:            clkdiv_0 (FF)
+  Destination:       clkdiv_15 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: clkdiv_0 to clkdiv_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.447   0.579  clkdiv_0 (clkdiv_0)
+     INV:I->O              1   0.206   0.000  Mcount_clkdiv_lut<0>_INV_0 (Mcount_clkdiv_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  Mcount_clkdiv_cy<0> (Mcount_clkdiv_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_clkdiv_cy<1> (Mcount_clkdiv_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_clkdiv_cy<2> (Mcount_clkdiv_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_clkdiv_cy<3> (Mcount_clkdiv_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_clkdiv_cy<4> (Mcount_clkdiv_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_clkdiv_cy<5> (Mcount_clkdiv_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_clkdiv_cy<6> (Mcount_clkdiv_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_clkdiv_cy<7> (Mcount_clkdiv_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_clkdiv_cy<8> (Mcount_clkdiv_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_clkdiv_cy<9> (Mcount_clkdiv_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_clkdiv_cy<10> (Mcount_clkdiv_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_clkdiv_cy<11> (Mcount_clkdiv_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_clkdiv_cy<12> (Mcount_clkdiv_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_clkdiv_cy<13> (Mcount_clkdiv_cy<13>)
+     MUXCY:CI->O           0   0.019   0.000  Mcount_clkdiv_cy<14> (Mcount_clkdiv_cy<14>)
+     XORCY:CI->O           1   0.180   0.000  Mcount_clkdiv_xor<15> (Result<15>)
+     FDC:D                     0.102          clkdiv_15
+    ----------------------------------------
+    Total                      1.952ns (1.373ns logic, 0.579ns route)
+                                       (70.3% logic, 29.7% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clkdiv_15'
+  Clock period: 2.376ns (frequency: 420.911MHz)
+  Total number of paths / destination ports: 7 / 4
+-------------------------------------------------------------------------
+Delay:               2.376ns (Levels of Logic = 1)
+  Source:            MODULO_5/CNT_1 (FF)
+  Destination:       MODULO_5/CNT_0 (FF)
+  Source Clock:      clkdiv_15 rising
+  Destination Clock: clkdiv_15 rising
+
+  Data Path: MODULO_5/CNT_1 to MODULO_5/CNT_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             4   0.447   0.788  MODULO_5/CNT_1 (MODULO_5/CNT_1)
+     LUT2:I0->O            2   0.203   0.616  MODULO_5/n0001_inv1 (MODULO_5/n0001_inv)
+     FDCE:CE                   0.322          MODULO_5/CNT_0
+    ----------------------------------------
+    Total                      2.376ns (0.972ns logic, 1.404ns route)
+                                       (40.9% logic, 59.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'COMPARADOR1'
+  Total number of paths / destination ports: 5 / 5
+-------------------------------------------------------------------------
+Offset:              3.782ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       MODULO_4/REGOUT_2 (FF)
+  Destination Clock: COMPARADOR1 rising
+
+  Data Path: RST to MODULO_4/REGOUT_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            18   1.222   1.154  RST_IBUF (RST_IBUF)
+     LUT2:I0->O            7   0.203   0.773  MODULO_2/RESET_CONTEO[2]_OR_4_o1 (MODULO_2/RESET_CONTEO[2]_OR_4_o)
+     FDC:CLR                   0.430          MODULO_4/REGOUT_0
+    ----------------------------------------
+    Total                      3.782ns (1.855ns logic, 1.927ns route)
+                                       (49.1% logic, 50.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'ANTIR1_inv'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              3.782ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       MODULO_2/CONTEO_0 (FF)
+  Destination Clock: ANTIR1_inv rising
+
+  Data Path: RST to MODULO_2/CONTEO_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            18   1.222   1.154  RST_IBUF (RST_IBUF)
+     LUT2:I0->O            7   0.203   0.773  MODULO_2/RESET_CONTEO[2]_OR_4_o1 (MODULO_2/RESET_CONTEO[2]_OR_4_o)
+     FDC:CLR                   0.430          MODULO_2/CONTEO_0
+    ----------------------------------------
+    Total                      3.782ns (1.855ns logic, 1.927ns route)
+                                       (49.1% logic, 50.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              2.701ns (Levels of Logic = 1)
+  Source:            RST (PAD)
+  Destination:       clkdiv_0 (FF)
+  Destination Clock: CLK rising
+
+  Data Path: RST to clkdiv_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            18   1.222   1.049  RST_IBUF (RST_IBUF)
+     FDC:CLR                   0.430          clkdiv_0
+    ----------------------------------------
+    Total                      2.701ns (1.652ns logic, 1.049ns route)
+                                       (61.2% logic, 38.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clkdiv_15'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.125ns (Levels of Logic = 2)
+  Source:            CAP (PAD)
+  Destination:       MODULO_5/CNT_0 (FF)
+  Destination Clock: clkdiv_15 rising
+
+  Data Path: CAP to MODULO_5/CNT_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.222   0.650  CAP_IBUF (CAP_IBUF)
+     INV:I->O              2   0.206   0.616  CAP_inv1_INV_0 (CAP_inv)
+     FDCE:CLR                  0.430          MODULO_5/CNT_0
+    ----------------------------------------
+    Total                      3.125ns (1.858ns logic, 1.267ns route)
+                                       (59.5% logic, 40.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'COMPARADOR1'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            MODULO_4/REGOUT_2 (FF)
+  Destination:       LEDS<2> (PAD)
+  Source Clock:      COMPARADOR1 rising
+
+  Data Path: MODULO_4/REGOUT_2 to LEDS<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.616  MODULO_4/REGOUT_2 (MODULO_4/REGOUT_2)
+     OBUF:I->O                 2.571          LEDS_2_OBUF (LEDS<2>)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock ANTIR1_inv
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+ANTIR1_inv     |    2.506|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    1.952|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock COMPARADOR1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+ANTIR1_inv     |    2.506|         |         |         |
+COMPARADOR1    |    1.165|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clkdiv_15
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clkdiv_15      |    2.376|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 9.24 secs
+ 
+--> 
+
+Total memory usage is 257580 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

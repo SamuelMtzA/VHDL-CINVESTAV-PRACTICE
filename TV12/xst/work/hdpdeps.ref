@@ -1,0 +1,16 @@
+V3 7
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TV12/PWM.vhd 2018/10/08.16:01:11 P.58f
+EN work/PWM 0 FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TV12/PWM.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/PWM/arq_PWM 0 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TV12/PWM.vhd EN work/PWM 0 \
+      CP Receptor
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TV12/receptor.vhd 2018/10/08.16:23:12 P.58f
+EN work/Receptor 1539033861 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TV12/receptor.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/Receptor/Arq_Receptor 1539033862 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TV12/receptor.vhd \
+      EN work/Receptor 1539033861

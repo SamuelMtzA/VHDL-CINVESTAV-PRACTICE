@@ -1,0 +1,20 @@
+Release 14.5 - netgen P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: netgen -intstyle ise -ar Structure -tm CAND -w -dir
+netgen/synthesis -ofmt vhdl -sim CAND.ngc CAND_synthesis.vhd  
+
+Reading design 'CAND.ngc' ...
+Flattening design ...
+Processing design ... 
+  Preping design's networks ...
+  Preping design's macros ...
+Writing VHDL netlist
+'C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\Compuerta_AND_VHDL\netgen\synthes
+is\CAND_synthesis.vhd' ...
+INFO:NetListWriters:635 - The generated VHDL netlist contains Xilinx UNISIM
+   simulation primitives and has to be used with UNISIM library for correct
+   compilation and simulation. 
+Number of warnings: 0
+Number of info messages: 1
+Total memory usage is 133340 kilobytes

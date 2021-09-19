@@ -1,0 +1,4 @@
+AR pwm arq_pwm C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/prueba_motor/PWM.vhd sub00/vhpl03 1539707820
+EN pwm NULL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/prueba_motor/PWM.vhd sub00/vhpl02 1539707819
+AR antirrebote behavioral C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/prueba_motor/Antirrebote.vhd sub00/vhpl01 1539707818
+EN antirrebote NULL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/prueba_motor/Antirrebote.vhd sub00/vhpl00 1539707817

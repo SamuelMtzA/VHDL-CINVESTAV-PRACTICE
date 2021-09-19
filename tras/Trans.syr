@@ -1,0 +1,481 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: Trans.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Trans.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Trans"
+Output Format                      : NGC
+Target Device                      : xc6slx45-3-csg324
+
+---- Source Options
+Top Module Name                    : Trans
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\tras\Transmision.vhd" into library work
+Parsing entity <Trans>.
+Parsing architecture <Arq_Trans> of entity <trans>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Trans> (architecture <Arq_Trans>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Trans>.
+    Related source file is "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\tras\Transmision.vhd".
+    Found 8-bit register for signal <caracter>.
+    Found 4-bit register for signal <ttx>.
+    Found 1-bit register for signal <cnttx<15>>.
+    Found 1-bit register for signal <cnttx<14>>.
+    Found 1-bit register for signal <cnttx<13>>.
+    Found 1-bit register for signal <cnttx<12>>.
+    Found 1-bit register for signal <cnttx<11>>.
+    Found 1-bit register for signal <cnttx<10>>.
+    Found 1-bit register for signal <cnttx<9>>.
+    Found 1-bit register for signal <cnttx<8>>.
+    Found 1-bit register for signal <cnttx<7>>.
+    Found 1-bit register for signal <cnttx<6>>.
+    Found 1-bit register for signal <cnttx<5>>.
+    Found 1-bit register for signal <cnttx<4>>.
+    Found 1-bit register for signal <cnttx<3>>.
+    Found 1-bit register for signal <cnttx<2>>.
+    Found 1-bit register for signal <cnttx<1>>.
+    Found 1-bit register for signal <cnttx<0>>.
+    Found 16-bit adder for signal <cnttx[15]_GND_5_o_add_1_OUT> created at line 40.
+    Found 4-bit adder for signal <ttx[3]_GND_5_o_add_3_OUT> created at line 42.
+    Found 8-bit adder for signal <caracter[7]_GND_5_o_add_5_OUT> created at line 45.
+    Found 32x8-bit Read Only RAM for signal <_n0112>
+    Found 1-bit 12-to-1 multiplexer for signal <tx> created at line 80.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  28 D-type flip-flop(s).
+	inferred   4 Multiplexer(s).
+Unit <Trans> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 32x8-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 3
+ 16-bit adder                                          : 1
+ 4-bit adder                                           : 1
+ 8-bit adder                                           : 1
+# Registers                                            : 18
+ 1-bit register                                        : 16
+ 4-bit register                                        : 1
+ 8-bit register                                        : 1
+# Multiplexers                                         : 4
+ 1-bit 12-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Trans>.
+The following registers are absorbed into counter <caracter>: 1 register on signal <caracter>.
+The following registers are absorbed into counter <ttx>: 1 register on signal <ttx>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0112> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <caracter<4:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <Trans> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 32x8-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 1
+ 16-bit adder                                          : 1
+# Counters                                             : 2
+ 4-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Registers                                            : 16
+ Flip-Flops                                            : 16
+# Multiplexers                                         : 3
+ 1-bit 12-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set or reset and opposite initialization value:
+    cnttx_5 in unit <Trans>
+    cnttx_4 in unit <Trans>
+    cnttx_7 in unit <Trans>
+    cnttx_11 in unit <Trans>
+    cnttx_13 in unit <Trans>
+
+
+Optimizing unit <Trans> ...
+WARNING:Xst:1293 - FF/Latch <cnttx_14> has a constant value of 0 in block <Trans>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <cnttx_15> has a constant value of 0 in block <Trans>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Trans, actual ratio is 0.
+WARNING:Xst:1426 - The value init of the FF/Latch cnttx_13_LD hinder the constant cleaning in the block Trans.
+   You should achieve better results by setting this init to 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 31
+ Flip-Flops                                            : 31
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Trans.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 131
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 20
+#      LUT2                        : 2
+#      LUT3                        : 11
+#      LUT4                        : 3
+#      LUT5                        : 16
+#      LUT6                        : 30
+#      MUXCY                       : 20
+#      MUXF7                       : 3
+#      VCC                         : 1
+#      XORCY                       : 22
+# FlipFlops/Latches                : 32
+#      FD                          : 5
+#      FDC                         : 9
+#      FDCE                        : 12
+#      FDP                         : 5
+#      LD                          : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 2
+#      IBUF                        : 1
+#      OBUF                        : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              32  out of  54576     0%  
+ Number of Slice LUTs:                   84  out of  27288     0%  
+    Number used as Logic:                84  out of  27288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     89
+   Number with an unused Flip Flop:      57  out of     89    64%  
+   Number with an unused LUT:             5  out of     89     5%  
+   Number of fully used LUT-FF pairs:    27  out of     89    30%  
+   Number of unique control sets:         5
+
+IO Utilization: 
+ Number of IOs:                           3
+ Number of bonded IOBs:                   3  out of    218     1%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRL/BUFHCEs:         1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+--------------------------------------------------+------------------------+-------+
+Clock Signal                                      | Clock buffer(FF name)  | Load  |
+--------------------------------------------------+------------------------+-------+
+clk                                               | BUFGP                  | 31    |
+caracter[7]_rst_OR_42_o(caracter[7]_rst_OR_42_o:O)| NONE(*)(cnttx_13_LD)   | 1     |
+--------------------------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.903ns (Maximum Frequency: 256.210MHz)
+   Minimum input arrival time before clock: 4.120ns
+   Maximum output required time after clock: 8.329ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.903ns (frequency: 256.210MHz)
+  Total number of paths / destination ports: 1113 / 61
+-------------------------------------------------------------------------
+Delay:               3.903ns (Levels of Logic = 3)
+  Source:            cnttx_2 (FF)
+  Destination:       ttx_2 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: cnttx_2 to ttx_2
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.447   1.048  cnttx_2 (cnttx_2)
+     LUT6:I0->O           21   0.203   1.114  cnttx[15]_GND_5_o_equal_3_o<15>2 (cnttx[15]_GND_5_o_equal_3_o<15>1)
+     LUT6:I5->O            1   0.205   0.580  ttx_2_dpot (ttx_2_dpot)
+     LUT3:I2->O            1   0.205   0.000  ttx_2_dpot1 (ttx_2_dpot1)
+     FDCE:D                    0.102          ttx_2
+    ----------------------------------------
+    Total                      3.903ns (1.162ns logic, 2.741ns route)
+                                       (29.8% logic, 70.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 26 / 26
+-------------------------------------------------------------------------
+Offset:              4.120ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       cnttx_10 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to cnttx_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   1.222   1.194  rst_IBUF (rst_IBUF)
+     LUT6:I0->O           19   0.203   1.071  caracter[7]_rst_OR_42_o (caracter[7]_rst_OR_42_o)
+     FDC:CLR                   0.430          cnttx_10
+    ----------------------------------------
+    Total                      4.120ns (1.855ns logic, 2.265ns route)
+                                       (45.0% logic, 55.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 64 / 1
+-------------------------------------------------------------------------
+Offset:              8.329ns (Levels of Logic = 6)
+  Source:            ttx_2 (FF)
+  Destination:       tx (PAD)
+  Source Clock:      clk rising
+
+  Data Path: ttx_2 to tx
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            15   0.447   1.326  ttx_2 (ttx_2)
+     LUT6:I1->O            1   0.203   0.000  Mmux_tx315_G (N33)
+     MUXF7:I1->O           1   0.140   0.827  Mmux_tx315 (Mmux_tx314)
+     LUT5:I1->O            1   0.203   0.944  Mmux_tx316 (Mmux_tx315)
+     LUT6:I0->O            1   0.203   0.684  Mmux_tx317_SW0 (N28)
+     LUT6:I4->O            1   0.203   0.579  Mmux_tx317 (tx_OBUF)
+     OBUF:I->O                 2.571          tx_OBUF (tx)
+    ----------------------------------------
+    Total                      8.329ns (3.970ns logic, 4.359ns route)
+                                       (47.7% logic, 52.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+-----------------------+---------+---------+---------+---------+
+                       | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock           |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-----------------------+---------+---------+---------+---------+
+caracter[7]_rst_OR_42_o|         |    3.987|         |         |
+clk                    |    3.903|         |         |         |
+-----------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.50 secs
+ 
+--> 
+
+Total memory usage is 258284 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    4 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

@@ -1,0 +1,468 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: DAC.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "DAC.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "DAC"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : DAC
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/DAC/DAC.vhd" in Library work.
+Architecture arq of Entity dac is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <DAC> in library <work> (architecture <arq>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <DAC> in library <work> (Architecture <arq>).
+Entity <DAC> analyzed. Unit <DAC> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <DAC>.
+    Related source file is "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/DAC/DAC.vhd".
+    Found 1-bit register for signal <SPI_MOSI>.
+    Found 1-bit register for signal <SPI_SCK>.
+    Found 1-bit register for signal <DAC_CS>.
+    Found 32-bit register for signal <aux>.
+    Found 32-bit adder for signal <aux$add0000> created at line 56.
+    Found 32-bit comparator less for signal <aux$cmp_lt0000> created at line 60.
+    Found 32-bit comparator less for signal <aux$cmp_lt0001> created at line 62.
+    Found 32-bit comparator less for signal <aux$cmp_lt0002> created at line 63.
+    Found 32-bit comparator less for signal <aux$cmp_lt0003> created at line 65.
+    Found 12-bit up counter for signal <cnt>.
+    Found 32-bit comparator less for signal <DAC_CS$cmp_lt0000> created at line 57.
+    Found 32-bit comparator less for signal <DAC_CS$cmp_lt0001> created at line 58.
+    Found 32-bit up counter for signal <i>.
+    Found 32-bit comparator greatequal for signal <SPI_MOSI$cmp_ge0000> created at line 62.
+    Found 32-bit comparator greatequal for signal <SPI_SCK$cmp_ge0000> created at line 65.
+    Found 32-bit comparator greatequal for signal <SPI_SCK$cmp_ge0001> created at line 60.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  35 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+Unit <DAC> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 2
+ 12-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 4
+ 1-bit register                                        : 3
+ 32-bit register                                       : 1
+# Comparators                                          : 9
+ 32-bit comparator greatequal                          : 3
+ 32-bit comparator less                                : 6
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 2
+ 12-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 35
+ Flip-Flops                                            : 35
+# Comparators                                          : 9
+ 32-bit comparator greatequal                          : 3
+ 32-bit comparator less                                : 6
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <DAC> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block DAC, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 79
+ Flip-Flops                                            : 79
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : DAC.ngr
+Top Level Output File Name         : DAC
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 11
+
+Cell Usage :
+# BELS                             : 405
+#      GND                         : 1
+#      INV                         : 17
+#      LUT1                        : 80
+#      LUT2                        : 37
+#      LUT2_L                      : 1
+#      LUT3                        : 10
+#      LUT4                        : 43
+#      LUT4_D                      : 2
+#      MUXCY                       : 135
+#      MUXF5                       : 2
+#      VCC                         : 1
+#      XORCY                       : 76
+# FlipFlops/Latches                : 79
+#      FDC                         : 12
+#      FDE                         : 2
+#      FDR                         : 30
+#      FDRE                        : 32
+#      FDRS                        : 2
+#      FDSE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 10
+#      IBUF                        : 1
+#      OBUF                        : 9
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      100  out of   4656     2%  
+ Number of Slice Flip Flops:             79  out of   9312     0%  
+ Number of 4 input LUTs:                190  out of   9312     2%  
+ Number of IOs:                          11
+ Number of bonded IOBs:                  11  out of    232     4%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 67    |
+DAC_CS_OBUF                        | NONE(cnt_0)            | 12    |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+RST                                | IBUF                   | 12    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 11.878ns (Maximum Frequency: 84.189MHz)
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: 4.846ns
+   Maximum combinational path delay: 6.597ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 11.878ns (frequency: 84.189MHz)
+  Total number of paths / destination ports: 174860 / 168
+-------------------------------------------------------------------------
+Delay:               11.878ns (Levels of Logic = 36)
+  Source:            aux_1 (FF)
+  Destination:       aux_0 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: aux_1 to aux_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRS:C->Q             1   0.591   0.595  aux_1 (aux_1)
+     LUT1:I0->O            1   0.704   0.000  Madd_aux_add0000_cy<1>_rt (Madd_aux_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  Madd_aux_add0000_cy<1> (Madd_aux_add0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<2> (Madd_aux_add0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<3> (Madd_aux_add0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<4> (Madd_aux_add0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<5> (Madd_aux_add0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<6> (Madd_aux_add0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<7> (Madd_aux_add0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<8> (Madd_aux_add0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<9> (Madd_aux_add0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<10> (Madd_aux_add0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<11> (Madd_aux_add0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<12> (Madd_aux_add0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<13> (Madd_aux_add0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<14> (Madd_aux_add0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<15> (Madd_aux_add0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<16> (Madd_aux_add0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<17> (Madd_aux_add0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<18> (Madd_aux_add0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<19> (Madd_aux_add0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<20> (Madd_aux_add0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<21> (Madd_aux_add0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<22> (Madd_aux_add0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<23> (Madd_aux_add0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<24> (Madd_aux_add0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<25> (Madd_aux_add0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<26> (Madd_aux_add0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<27> (Madd_aux_add0000_cy<27>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_aux_add0000_cy<28> (Madd_aux_add0000_cy<28>)
+     XORCY:CI->O           6   0.804   0.844  Madd_aux_add0000_xor<29> (aux_add0000<29>)
+     LUT2:I0->O            1   0.704   0.000  Mcompar_DAC_CS_cmp_lt0001_lut<9>1 (Mcompar_DAC_CS_cmp_lt0001_lut<9>1)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_DAC_CS_cmp_lt0001_cy<9>_0 (Mcompar_DAC_CS_cmp_lt0001_cy<9>1)
+     MUXCY:CI->O           3   0.459   0.706  Mcompar_DAC_CS_cmp_lt0001_cy<10>_0 (Mcompar_DAC_CS_cmp_lt0001_cy<10>1)
+     LUT2:I0->O            2   0.704   0.451  aux_mux0006<0>1_SW1 (N17)
+     LUT4_D:I3->O         14   0.704   1.079  aux_mux0006<0>1 (N0)
+     LUT2:I1->O            1   0.704   0.000  aux_mux0006<22>1 (aux_mux0006<22>)
+     FDR:D                     0.308          aux_22
+    ----------------------------------------
+    Total                     11.878ns (8.203ns logic, 3.675ns route)
+                                       (69.1% logic, 30.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'DAC_CS_OBUF'
+  Clock period: 4.024ns (frequency: 248.509MHz)
+  Total number of paths / destination ports: 78 / 12
+-------------------------------------------------------------------------
+Delay:               4.024ns (Levels of Logic = 12)
+  Source:            cnt_1 (FF)
+  Destination:       cnt_11 (FF)
+  Source Clock:      DAC_CS_OBUF rising
+  Destination Clock: DAC_CS_OBUF rising
+
+  Data Path: cnt_1 to cnt_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.591   0.622  cnt_1 (cnt_1)
+     LUT1:I0->O            1   0.704   0.000  Mcount_cnt_cy<1>_rt (Mcount_cnt_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  Mcount_cnt_cy<1> (Mcount_cnt_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cnt_cy<2> (Mcount_cnt_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cnt_cy<3> (Mcount_cnt_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cnt_cy<4> (Mcount_cnt_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cnt_cy<5> (Mcount_cnt_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cnt_cy<6> (Mcount_cnt_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cnt_cy<7> (Mcount_cnt_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cnt_cy<8> (Mcount_cnt_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_cnt_cy<9> (Mcount_cnt_cy<9>)
+     MUXCY:CI->O           0   0.059   0.000  Mcount_cnt_cy<10> (Mcount_cnt_cy<10>)
+     XORCY:CI->O           1   0.804   0.000  Mcount_cnt_xor<11> (Result<11>)
+     FDC:D                     0.308          cnt_11
+    ----------------------------------------
+    Total                      4.024ns (3.402ns logic, 0.622ns route)
+                                       (84.5% logic, 15.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              4.846ns (Levels of Logic = 1)
+  Source:            DAC_CS (FF)
+  Destination:       DAC_CS (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: DAC_CS to DAC_CS
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDSE:C->Q            13   0.591   0.983  DAC_CS (DAC_CS_OBUF)
+     OBUF:I->O                 3.272          DAC_CS_OBUF (DAC_CS)
+    ----------------------------------------
+    Total                      4.846ns (3.863ns logic, 0.983ns route)
+                                       (79.7% logic, 20.3% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               6.597ns (Levels of Logic = 3)
+  Source:            RST (PAD)
+  Destination:       DAC_CLR (PAD)
+
+  Data Path: RST to DAC_CLR
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            13   1.218   0.983  RST_IBUF (RST_IBUF)
+     INV:I->O              1   0.704   0.420  DAC_CLR1_INV_0 (DAC_CLR_OBUF)
+     OBUF:I->O                 3.272          DAC_CLR_OBUF (DAC_CLR)
+    ----------------------------------------
+    Total                      6.597ns (5.194ns logic, 1.403ns route)
+                                       (78.7% logic, 21.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.48 secs
+ 
+--> 
+
+Total memory usage is 260836 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

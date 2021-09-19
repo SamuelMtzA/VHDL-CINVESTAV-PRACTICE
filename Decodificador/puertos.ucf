@@ -1,0 +1,12 @@
+net '[0]in' loc = 'G18';
+net '[1]in' loc = 'H18';
+net '[2]in' loc = 'K18';
+
+net '[0]out' loc = 'J14';
+net '[1]out' loc = 'J15';
+net '[2]out' loc = 'K15';
+net '[3]out' loc = 'K14';
+net '[4]out' loc = 'E17';
+net '[5]out' loc = 'P15';
+net '[6]out' loc = 'F4';
+net '[7]out' loc = 'R4';

@@ -1,0 +1,456 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: LCD.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "LCD.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "LCD"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : LCD
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/LCD_clase/LCD.vhd" in Library work.
+Entity <LCD> compiled.
+Entity <LCD> (Architecture <Behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <LCD> in library <work> (architecture <Behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <LCD> in library <work> (Architecture <Behavioral>).
+INFO:Xst:1432 - Contents of array <ROM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ROM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ROM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ROM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ROM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ROM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ROM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ROM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ROM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ROM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Entity <LCD> analyzed. Unit <LCD> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <LCD>.
+    Related source file is "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/LCD_clase/LCD.vhd".
+WARNING:Xst:1781 - Signal <ROM> is used but never assigned. Tied to default value.
+    Found 33x32-bit ROM for signal <$varindex0000> created at line 88.
+    Found 4-bit register for signal <DATA>.
+    Found 1-bit register for signal <LCD_E>.
+    Found 1-bit register for signal <LCD_RS>.
+    Found 1-bit register for signal <LCD_RW>.
+    Found 24-bit up counter for signal <CNTR>.
+    Found 24-bit comparator greatequal for signal <CNTR$cmp_ge0000> created at line 88.
+    Found 32-bit up counter for signal <index>.
+    Found 32-bit comparator less for signal <index$cmp_lt0000> created at line 96.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred   7 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <LCD> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 33x32-bit ROM                                         : 1
+# Counters                                             : 2
+ 24-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 4
+ 1-bit register                                        : 3
+ 4-bit register                                        : 1
+# Comparators                                          : 2
+ 24-bit comparator greatequal                          : 1
+ 32-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 33x32-bit ROM                                         : 1
+# Counters                                             : 2
+ 24-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 7
+ Flip-Flops                                            : 7
+# Comparators                                          : 2
+ 24-bit comparator greatequal                          : 1
+ 32-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <LCD_RW> has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <LCD> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block LCD, actual ratio is 1.
+FlipFlop index_3 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 63
+ Flip-Flops                                            : 63
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : LCD.ngr
+Top Level Output File Name         : LCD
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 10
+
+Cell Usage :
+# BELS                             : 293
+#      GND                         : 1
+#      INV                         : 4
+#      LUT1                        : 1
+#      LUT2                        : 6
+#      LUT2_D                      : 2
+#      LUT3                        : 70
+#      LUT4                        : 48
+#      LUT4_D                      : 1
+#      LUT4_L                      : 3
+#      MUXCY                       : 87
+#      MUXF5                       : 9
+#      MUXF6                       : 4
+#      VCC                         : 1
+#      XORCY                       : 56
+# FlipFlops/Latches                : 63
+#      FDC                         : 24
+#      FDCE                        : 33
+#      FDE                         : 6
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 9
+#      IBUF                        : 1
+#      OBUF                        : 8
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       70  out of   4656     1%  
+ Number of Slice Flip Flops:             63  out of   9312     0%  
+ Number of 4 input LUTs:                135  out of   9312     1%  
+ Number of IOs:                          10
+ Number of bonded IOBs:                  10  out of    232     4%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | BUFGP                  | 63    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+RST                                | IBUF                   | 57    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 12.194ns (Maximum Frequency: 82.010MHz)
+   Minimum input arrival time before clock: 4.591ns
+   Maximum output required time after clock: 4.283ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 12.194ns (frequency: 82.010MHz)
+  Total number of paths / destination ports: 113454 / 102
+-------------------------------------------------------------------------
+Delay:               12.194ns (Levels of Logic = 52)
+  Source:            index_4 (FF)
+  Destination:       CNTR_0 (FF)
+  Source Clock:      CLK rising
+  Destination Clock: CLK rising
+
+  Data Path: index_4 to CNTR_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            31   0.591   1.341  index_4 (index_4)
+     LUT2_D:I1->LO         1   0.704   0.104  Mrom__varindex00002112111 (N55)
+     LUT4:I3->O           16   0.704   1.069  N211 (N161)
+     LUT3:I2->O            1   0.704   0.000  Mcompar_CNTR_cmp_ge0000_lut<0> (Mcompar_CNTR_cmp_ge0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_CNTR_cmp_ge0000_cy<0> (Mcompar_CNTR_cmp_ge0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<1> (Mcompar_CNTR_cmp_ge0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<2> (Mcompar_CNTR_cmp_ge0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<3> (Mcompar_CNTR_cmp_ge0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<4> (Mcompar_CNTR_cmp_ge0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<5> (Mcompar_CNTR_cmp_ge0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<6> (Mcompar_CNTR_cmp_ge0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<7> (Mcompar_CNTR_cmp_ge0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<8> (Mcompar_CNTR_cmp_ge0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<9> (Mcompar_CNTR_cmp_ge0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<10> (Mcompar_CNTR_cmp_ge0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<11> (Mcompar_CNTR_cmp_ge0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<12> (Mcompar_CNTR_cmp_ge0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<13> (Mcompar_CNTR_cmp_ge0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<14> (Mcompar_CNTR_cmp_ge0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<15> (Mcompar_CNTR_cmp_ge0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<16> (Mcompar_CNTR_cmp_ge0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<17> (Mcompar_CNTR_cmp_ge0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<18> (Mcompar_CNTR_cmp_ge0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<19> (Mcompar_CNTR_cmp_ge0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<20> (Mcompar_CNTR_cmp_ge0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<21> (Mcompar_CNTR_cmp_ge0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Mcompar_CNTR_cmp_ge0000_cy<22> (Mcompar_CNTR_cmp_ge0000_cy<22>)
+     MUXCY:CI->O          59   0.331   1.306  Mcompar_CNTR_cmp_ge0000_cy<23> (CNTR_cmp_ge0000)
+     LUT3:I2->O            1   0.704   0.000  Mcount_CNTR_lut<0> (Mcount_CNTR_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Mcount_CNTR_cy<0> (Mcount_CNTR_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<1> (Mcount_CNTR_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<2> (Mcount_CNTR_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<3> (Mcount_CNTR_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<4> (Mcount_CNTR_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<5> (Mcount_CNTR_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<6> (Mcount_CNTR_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<7> (Mcount_CNTR_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<8> (Mcount_CNTR_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<9> (Mcount_CNTR_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<10> (Mcount_CNTR_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<11> (Mcount_CNTR_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<12> (Mcount_CNTR_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<13> (Mcount_CNTR_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<14> (Mcount_CNTR_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<15> (Mcount_CNTR_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<16> (Mcount_CNTR_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<17> (Mcount_CNTR_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<18> (Mcount_CNTR_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<19> (Mcount_CNTR_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<20> (Mcount_CNTR_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Mcount_CNTR_cy<21> (Mcount_CNTR_cy<21>)
+     MUXCY:CI->O           0   0.059   0.000  Mcount_CNTR_cy<22> (Mcount_CNTR_cy<22>)
+     XORCY:CI->O           1   0.804   0.000  Mcount_CNTR_xor<23> (Mcount_CNTR23)
+     FDC:D                     0.308          CNTR_0
+    ----------------------------------------
+    Total                     12.194ns (8.374ns logic, 3.820ns route)
+                                       (68.7% logic, 31.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              4.591ns (Levels of Logic = 2)
+  Source:            RST (PAD)
+  Destination:       LCD_RS (FF)
+  Destination Clock: CLK rising
+
+  Data Path: RST to LCD_RS
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            58   1.218   1.445  RST_IBUF (RST_IBUF)
+     LUT2:I0->O            6   0.704   0.669  LCD_E_and00001 (LCD_E_and0000)
+     FDE:CE                    0.555          LCD_RS
+    ----------------------------------------
+    Total                      4.591ns (2.477ns logic, 2.114ns route)
+                                       (53.9% logic, 46.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              4.283ns (Levels of Logic = 1)
+  Source:            LCD_E (FF)
+  Destination:       LCD_E (PAD)
+  Source Clock:      CLK rising
+
+  Data Path: LCD_E to LCD_E
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.591   0.420  LCD_E (LCD_E_OBUF)
+     OBUF:I->O                 3.272          LCD_E_OBUF (LCD_E)
+    ----------------------------------------
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.44 secs
+ 
+--> 
+
+Total memory usage is 260564 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :   10 (   0 filtered)
+

@@ -1,0 +1,7 @@
+vhdl work "PWM.vhd"
+vhdl work "Modulos.vhd"
+vhdl work "LCD.vhd"
+vhdl work "BCD.vhd"
+vhdl work "ADC.vhd"
+vhdl work "Ventilador1.vhd"
+vhdl work "prueba.vhd"

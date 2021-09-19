@@ -1,0 +1,28 @@
+Command line:
+   Cerradura_sim_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  56713
+
+Sat Sep 29 12:59:57 2018
+
+
+ Elaboration Time: 0.0468 sec
+
+ Current Memory Usage: 506.872 Meg
+
+ Total Signals          : 41
+ Total Nets             : 47
+ Total Signal Drivers   : 12
+ Total Blocks           : 12
+ Total Primitive Blocks : 10
+ Total Processes        : 11
+ Total Traceable Variables  : 17
+ Total Scalar Nets and Variables : 550
+
+ Total Simulation Time: 0.670804 sec
+
+ Current Memory Usage: 506.872 Meg
+
+Sat Sep 29 13:16:27 2018
+

@@ -1,0 +1,22 @@
+Running: C:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/contador/contador_sim_isim_beh.exe -prj C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/contador/contador_sim_beh.prj work.contador_sim 
+ISim P.58f (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/contador/contad.vhd" into library work
+Starting static elaboration
+WARNING:HDLCompiler:89 - "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/contador/contad.vhd" Line 37: <contador> remains a black-box since it has no binding entity.
+Completed static elaboration
+WARNING:Simulator:648 - "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/contador/contad.vhd" Line 37. Instance contador is unbound
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling architecture behavior of entity contador_sim
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 6 VHDL Units
+Built simulation executable C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/contador/contador_sim_isim_beh.exe
+Fuse Memory Usage: 36396 KB
+Fuse CPU Usage: 639 ms

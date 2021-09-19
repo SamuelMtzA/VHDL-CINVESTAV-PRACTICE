@@ -1,0 +1,10 @@
+V3 5
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/ADC/ADC.vhd 2018/10/12.20:48:12 P.58f
+AR work/ADC/ADC_Arq 1539383669 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/ADC/ADC.vhd EN work/ADC 1539383668
+EN work/LCD 1539395295 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/ADC/ADC.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/LCD/Behavioral 1539395296 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/ADC/ADC.vhd EN work/LCD 1539395295

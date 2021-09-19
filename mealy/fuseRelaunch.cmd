@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/mealy/m_tb_isim_par.exe" -prj "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/mealy/m_tb_par.prj" "work.m_tb" 

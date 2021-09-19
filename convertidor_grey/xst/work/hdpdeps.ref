@@ -1,0 +1,9 @@
+V3 3
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/convertidor_grey/convertidor.vhd 2018/09/12.19:34:36 P.58f
+EN work/convertidor 1537121873 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/convertidor_grey/convertidor.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221 PB ieee/NUMERIC_STD 1364358223
+AR work/convertidor/Arq_convertidor 1537121874 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/convertidor_grey/convertidor.vhd \
+      EN work/convertidor 1537121873

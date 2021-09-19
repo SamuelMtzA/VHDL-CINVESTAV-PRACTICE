@@ -1,0 +1,32 @@
+Running: C:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib simprims_ver -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/convertidor_grey/convertidor_sim_isim_par.exe -prj C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/convertidor_grey/convertidor_sim_par.prj work.convertidor_sim work.glbl 
+ISim P.58f (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/convertidor_grey/netgen/par/convertidor_timesim.v" into library work
+Parsing VHDL file "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/convertidor_grey/convertidor_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module glbl
+Compiling module X_OPAD
+Compiling module X_OBUF
+Compiling module X_IPAD
+Compiling module X_PU
+Compiling module X_BUF
+Compiling module X_LUT4(INIT=16'b0101010110101010...
+Compiling module X_ONE
+Compiling module convertidor
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package numeric_std
+Compiling package vl_types
+Compiling architecture behavior of entity convertidor_sim
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 7 VHDL Units
+Compiled 30 Verilog Units
+Built simulation executable C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/convertidor_grey/convertidor_sim_isim_par.exe
+Fuse Memory Usage: 38340 KB
+Fuse CPU Usage: 826 ms

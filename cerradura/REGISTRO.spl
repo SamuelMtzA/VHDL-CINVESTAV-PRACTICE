@@ -1,0 +1,7 @@
+[Inputs]
+PULSO
+RESET
+=CON[2:0]=
+[Outputs]
+[BiDir]
+=REGOUT[3:0]=

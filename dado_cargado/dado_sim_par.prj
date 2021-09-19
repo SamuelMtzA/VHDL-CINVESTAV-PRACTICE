@@ -1,0 +1,2 @@
+vhdl work "netgen/par/dado_timesim.vhd"
+vhdl work "dado_tb.vhd"

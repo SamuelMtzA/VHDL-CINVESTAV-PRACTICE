@@ -1,0 +1,6 @@
+AR moduloprincipal behavioral C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TVIN/Moduloprincipal.vhd sub00/vhpl01 1539036349
+AR pwm arq_pwm C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TVIN/pwm.vhd sub00/vhpl03 1539036732
+EN pwm NULL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TVIN/pwm.vhd sub00/vhpl02 1539036731
+EN receptor NULL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TVIN/receptor.vhd sub00/vhpl04 1539036774
+EN moduloprincipal NULL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TVIN/Moduloprincipal.vhd sub00/vhpl00 1539036348
+AR receptor arq_receptor C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TVIN/receptor.vhd sub00/vhpl05 1539036775

@@ -1,0 +1,7 @@
+[Inputs]
+CAPTURA
+=DATOA[3:0]=
+=DATOB[3:0]=
+[Outputs]
+COMP
+[BiDir]

@@ -1,0 +1,30 @@
+Command line:
+   multiplicador_sim_isim_par.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/par/multiplicador_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  0
+     -socket  56745
+
+Sun Sep 16 14:49:19 2018
+
+
+ Elaboration Time: 0.078 sec
+
+ Current Memory Usage: 522.625 Meg
+
+ Total Signals          : 1016
+ Total Nets             : 2109
+ Total Signal Drivers   : 782
+ Total Blocks           : 677
+ Total Primitive Blocks : 519
+ Total Processes        : 761
+ Total Traceable Variables  : 1780
+ Total Scalar Nets and Variables : 56328
+
+ Total Simulation Time: 3.49442 sec
+
+ Current Memory Usage: 522.625 Meg
+
+Sun Sep 16 14:57:18 2018
+

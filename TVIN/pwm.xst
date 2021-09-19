@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TVIN/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TVIN/xst"
+elaborate
+-ifn PWM.prj
+-ifmt mixed

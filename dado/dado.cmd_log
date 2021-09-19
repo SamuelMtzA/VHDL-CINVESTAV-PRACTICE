@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/dado/dado.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/dado/dado.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/dado/dado.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/dado/dado.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-fg320-5 dado.ngc dado.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o dado_map.ncd dado.ngd dado.pcf 
+par -w -intstyle ise -ol high -t 1 dado_map.ncd dado.ncd dado.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml dado.twx dado.ncd -o dado.twr dado.pcf 

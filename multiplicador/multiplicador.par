@@ -1,0 +1,240 @@
+Release 14.5 par P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+SAMUEL-HP::  Wed Sep 12 20:48:05 2018
+
+par -w -intstyle ise -ol high -t 1 multiplicador_map.ncd multiplicador.ncd
+multiplicador.pcf 
+
+
+Constraints file: multiplicador.pcf.
+Loading device for application Rf_Device from file '3s1200e.nph' in environment C:\Xilinx\14.5\ISE_DS\ISE\.
+   "multiplicador" is an NCD, version 3.2, device xc3s1200e, package fg320, speed -5
+
+Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.320 Volts)
+
+INFO:Par:282 - No user timing constraints were detected or you have set the option to ignore timing constraints ("par
+   -x"). Place and Route will run in "Performance Evaluation Mode" to automatically improve the performance of all
+   internal clocks in this design. Because there are not defined timing requirements, a timing score will not be
+   reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock.
+   Note: For the fastest runtime, set the effort level to "std".  For best performance, set the effort level to "high".
+
+Device speed data version:  "PRODUCTION 1.27 2013-03-26".
+
+
+Design Summary Report:
+
+ Number of External IOBs                          69 out of 250    27%
+
+   Number of External Input IOBs                 34
+
+      Number of External Input IBUFs             34
+        Number of LOCed External Input IBUFs      4 out of 34     11%
+
+
+   Number of External Output IOBs                35
+
+      Number of External Output IOBs             35
+        Number of LOCed External Output IOBs      4 out of 35     11%
+
+
+   Number of External Bidir IOBs                  0
+
+
+   Number of MULT18X18SIOs                   1 out of 28      3%
+
+
+Overall effort level (-ol):   High 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 1 secs 
+Finished initial Timing Analysis.  REAL time: 1 secs 
+
+
+Starting Placer
+Total REAL time at the beginning of Placer: 1 secs 
+Total CPU  time at the beginning of Placer: 1 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:9f23e13e) REAL time: 1 secs 
+
+Phase 2.7  Design Feasibility Check
+WARNING:Place:837 - Partially locked IO Bus is found. 
+    Following components of the bus are not locked: 
+   	 Comp: P<34>
+   	 Comp: P<33>
+   	 Comp: P<32>
+   	 Comp: P<31>
+   	 Comp: P<30>
+   	 Comp: P<29>
+   	 Comp: P<28>
+   	 Comp: P<27>
+   	 Comp: P<26>
+   	 Comp: P<25>
+   	 Comp: P<24>
+   	 Comp: P<23>
+   	 Comp: P<22>
+   	 Comp: P<21>
+   	 Comp: P<20>
+   	 Comp: P<19>
+   	 Comp: P<18>
+   	 Comp: P<17>
+   	 Comp: P<16>
+   	 Comp: P<15>
+   	 Comp: P<14>
+   	 Comp: P<13>
+   	 Comp: P<12>
+   	 Comp: P<11>
+   	 Comp: P<10>
+   	 Comp: P<9>
+   	 Comp: P<8>
+   	 Comp: P<7>
+   	 Comp: P<6>
+   	 Comp: P<5>
+   	 Comp: P<4>
+
+WARNING:Place:838 - An IO Bus with more than one IO standard is found.
+   Components associated with this bus are as follows: 
+   	 Comp: P<0>   IOSTANDARD = LVTTL
+   	 Comp: P<1>   IOSTANDARD = LVTTL
+   	 Comp: P<2>   IOSTANDARD = LVTTL
+   	 Comp: P<3>   IOSTANDARD = LVTTL
+   	 Comp: P<4>   IOSTANDARD = LVCMOS25
+   	 Comp: P<5>   IOSTANDARD = LVCMOS25
+   	 Comp: P<6>   IOSTANDARD = LVCMOS25
+   	 Comp: P<7>   IOSTANDARD = LVCMOS25
+   	 Comp: P<8>   IOSTANDARD = LVCMOS25
+   	 Comp: P<9>   IOSTANDARD = LVCMOS25
+   	 Comp: P<10>   IOSTANDARD = LVCMOS25
+   	 Comp: P<11>   IOSTANDARD = LVCMOS25
+   	 Comp: P<12>   IOSTANDARD = LVCMOS25
+   	 Comp: P<13>   IOSTANDARD = LVCMOS25
+   	 Comp: P<14>   IOSTANDARD = LVCMOS25
+   	 Comp: P<15>   IOSTANDARD = LVCMOS25
+   	 Comp: P<16>   IOSTANDARD = LVCMOS25
+   	 Comp: P<17>   IOSTANDARD = LVCMOS25
+   	 Comp: P<18>   IOSTANDARD = LVCMOS25
+   	 Comp: P<19>   IOSTANDARD = LVCMOS25
+   	 Comp: P<20>   IOSTANDARD = LVCMOS25
+   	 Comp: P<21>   IOSTANDARD = LVCMOS25
+   	 Comp: P<22>   IOSTANDARD = LVCMOS25
+   	 Comp: P<23>   IOSTANDARD = LVCMOS25
+   	 Comp: P<24>   IOSTANDARD = LVCMOS25
+   	 Comp: P<25>   IOSTANDARD = LVCMOS25
+   	 Comp: P<26>   IOSTANDARD = LVCMOS25
+   	 Comp: P<27>   IOSTANDARD = LVCMOS25
+   	 Comp: P<28>   IOSTANDARD = LVCMOS25
+   	 Comp: P<29>   IOSTANDARD = LVCMOS25
+   	 Comp: P<30>   IOSTANDARD = LVCMOS25
+   	 Comp: P<31>   IOSTANDARD = LVCMOS25
+   	 Comp: P<32>   IOSTANDARD = LVCMOS25
+   	 Comp: P<33>   IOSTANDARD = LVCMOS25
+   	 Comp: P<34>   IOSTANDARD = LVCMOS25
+
+
+INFO:Place:834 - Only a subset of IOs are locked. Out of 35 IOs, 4 are locked and 31 are not locked. If you would like
+   to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+Phase 2.7  Design Feasibility Check (Checksum:9f23e13e) REAL time: 1 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:9f23e13e) REAL time: 1 secs 
+
+Phase 4.2  Initial Clock and IO Placement
+....
+Phase 4.2  Initial Clock and IO Placement (Checksum:9f23e13e) REAL time: 1 secs 
+
+Phase 5.30  Global Clock Region Assignment
+Phase 5.30  Global Clock Region Assignment (Checksum:9f23e13e) REAL time: 1 secs 
+
+Phase 6.36  Local Placement Optimization
+Phase 6.36  Local Placement Optimization (Checksum:9f23e13e) REAL time: 1 secs 
+
+Phase 7.3  Local Placement Optimization
+....
+Phase 7.3  Local Placement Optimization (Checksum:bc56ab3) REAL time: 1 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:772fb8a5) REAL time: 1 secs 
+
+Phase 9.8  Global Placement
+.....
+Phase 9.8  Global Placement (Checksum:68828bf4) REAL time: 1 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:68828bf4) REAL time: 1 secs 
+
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:67665564) REAL time: 1 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:67665564) REAL time: 1 secs 
+
+Total REAL time to Placer completion: 1 secs 
+Total CPU  time to Placer completion: 1 secs 
+Writing design to file multiplicador.ncd
+
+
+
+Starting Router
+
+
+Phase  1  : 78 unrouted;      REAL time: 8 secs 
+
+Phase  2  : 78 unrouted;      REAL time: 8 secs 
+
+Phase  3  : 28 unrouted;      REAL time: 8 secs 
+
+Phase  4  : 28 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+
+Updating file: multiplicador.ncd with current fully routed design.
+
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 9 secs 
+
+Total REAL time to Router completion: 9 secs 
+Total CPU time to Router completion: 9 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+Timing Score: 0 (Setup: 0, Hold: 0)
+
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 9 secs 
+Total CPU time to PAR completion: 9 secs 
+
+Peak Memory Usage:  288 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 2
+Number of info messages: 2
+
+Writing design to file multiplicador.ncd
+
+
+
+PAR done!

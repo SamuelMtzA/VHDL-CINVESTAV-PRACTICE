@@ -1,0 +1,4 @@
+AR pwm arq_pwm C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TV/PWM.vhd sub00/vhpl03 1539017397
+EN pwm NULL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TV/PWM.vhd sub00/vhpl02 1539017396
+EN receptor NULL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TV/receptor.vhd sub00/vhpl00 1539017394
+AR receptor arq_receptor C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TV/receptor.vhd sub00/vhpl01 1539017395

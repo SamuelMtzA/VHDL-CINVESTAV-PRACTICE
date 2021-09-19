@@ -1,0 +1,30 @@
+Command line:
+   tes_isim_par.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/par/MOORE_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  0
+     -socket  50916
+
+Mon Sep 24 15:55:16 2018
+
+
+ Elaboration Time: 0.0468 sec
+
+ Current Memory Usage: 506.999 Meg
+
+ Total Signals          : 234
+ Total Nets             : 155
+ Total Signal Drivers   : 130
+ Total Blocks           : 64
+ Total Primitive Blocks : 38
+ Total Processes        : 131
+ Total Traceable Variables  : 375
+ Total Scalar Nets and Variables : 5328
+
+ Total Simulation Time: 0.078 sec
+
+ Current Memory Usage: 506.999 Meg
+
+Mon Sep 24 17:50:46 2018
+

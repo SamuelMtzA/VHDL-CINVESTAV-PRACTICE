@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\prueba_motor\PWM.ncd
+OUTFILE=C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\prueba_motor\PWM.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\prueba_motor
+LICENSE=WebPack
+USER_INFO=__0_0_0

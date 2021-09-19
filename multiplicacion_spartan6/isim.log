@@ -1,0 +1,28 @@
+ISim log file
+Running: C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\multiplicacion_spartan6\multiplicador_sim_isim_par.exe -intstyle ise -gui -sdfmax /uut/=netgen/par/multiplicador_timesim.sdf -sdfroot /uut -tclbatch isim.cmd -wdb C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/multiplicacion_spartan6/multiplicador_sim_isim_par.wdb 
+ISim P.58f (signature 0x7708f090)
+This is a Full version of ISim.
+INFO: SDF backannotation was successful with SDF file netgen/par/multiplicador_timesim.sdf, for root module /uut/.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 1607 ps(2), Instance /multiplicador_sim/uut/Mmult_P/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us

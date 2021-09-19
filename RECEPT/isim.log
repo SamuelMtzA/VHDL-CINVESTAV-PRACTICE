@@ -1,0 +1,18 @@
+ISim log file
+Running: C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\RECEPT\Recepcion_tb_isim_par.exe -intstyle ise -gui -sdfmax /uut/=netgen/par/Recep_timesim.sdf -sdfroot /uut -tclbatch isim.cmd -wdb C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/RECEPT/Recepcion_tb_isim_par.wdb 
+ISim P.58f (signature 0x7708f090)
+This is a Full version of ISim.
+INFO: SDF backannotation was successful with SDF file netgen/par/Recep_timesim.sdf, for root module /uut/.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run 200.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 108688012 ps(1), Instance /recepcion_tb/uut/cntrx_5/ : Warning: /X_FF SETUP  Low VIOLATION ON CE WITH RESPECT TO CLK;
+  Expected := 0.042 ns; Observed := 0.003 ns; At : 108688.012 ns
+# run 200.00us

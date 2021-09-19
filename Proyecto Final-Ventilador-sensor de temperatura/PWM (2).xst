@@ -1,0 +1,5 @@
+set -tmpdir "C:/Users/dania/OneDrive/Escritorio/Ventilador/xst/projnav.tmp"
+set -xsthdpdir "C:/Users/dania/OneDrive/Escritorio/Ventilador/xst"
+elaborate
+-ifn PWM.prj
+-ifmt mixed

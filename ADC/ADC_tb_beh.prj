@@ -1,0 +1,2 @@
+vhdl work "ADC.vhd"
+vhdl work "ADC_tb.vhd"

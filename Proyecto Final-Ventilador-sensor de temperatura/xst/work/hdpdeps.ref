@@ -1,0 +1,52 @@
+V3 28
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/ADC.vhd 2018/10/16.19:55:41 P.58f
+EN work/ADC 1539744608 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/ADC.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/ADC/ADC_Arq 1539744609 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/ADC.vhd \
+      EN work/ADC 1539744608
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/BCD.vhd 2018/10/16.21:50:05 P.58f
+EN work/Convertidor 1539744612 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/BCD.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/Convertidor/arq_Convertidor 1539744613 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/BCD.vhd \
+      EN work/Convertidor 1539744612
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/LCD.vhd 2018/10/16.19:01:20 P.58f
+EN work/LCD 1539744614 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/LCD.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/LCD/Behavioral 1539744615 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/LCD.vhd \
+      EN work/LCD 1539744614
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Modulos.vhd 2018/10/16.21:22:25 P.58f
+PH work/MODULOS 1539744607 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Modulos.vhd \
+      PB ieee/std_logic_1164 1364358218 CD ADC CD PWM CD Convertidor CD LCD
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/PWM.vhd 2018/10/16.18:47:32 P.58f
+EN work/PWM 1539744610 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/PWM.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/PWM/arq_PWM 1539744611 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/PWM.vhd \
+      EN work/PWM 1539744610
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.vhd 2018/10/16.20:06:23 P.58f
+EN work/Volante 1539738395 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221 PH work/MODULOS 1539744607
+AR work/Volante/arq_Volante 1539738396 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.vhd \
+      EN work/Volante 1539738395 CP ADC CP PWM CP Convertidor CP LCD
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador1.vhd 2018/10/16.21:13:10 P.58f
+EN work/Ventilador 1539744616 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador1.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221 PH work/MODULOS 1539744607
+AR work/Ventilador/arq_Ventilador 1539744617 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador1.vhd \
+      EN work/Ventilador 1539744616 CP ADC CP PWM CP Convertidor CP LCD

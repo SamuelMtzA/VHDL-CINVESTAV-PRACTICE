@@ -1,0 +1,23 @@
+V3 12
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TVIN/Moduloprincipal.vhd 2018/10/08.16:39:06 P.58f
+EN work/motor 0 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TVIN/Moduloprincipal.vhd \
+      PB ieee/std_logic_1164 1364358218 PH work/p 0
+AR work/motor/u4 0 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TVIN/Moduloprincipal.vhd \
+      EN work/motor 0 CP receptor CP PWM
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TVIN/pwm.vhd 2018/10/08.17:12:09 P.58f
+EN work/PWM 1539036731 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TVIN/pwm.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/PWM/arq_PWM 1539036732 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TVIN/pwm.vhd EN work/PWM 1539036731
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TVIN/receptor.vhd 2018/10/08.17:05:18 P.58f
+EN work/Receptor 1539036774 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TVIN/receptor.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/Receptor/Arq_Receptor 1539036775 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TVIN/receptor.vhd \
+      EN work/Receptor 1539036774

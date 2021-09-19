@@ -1,0 +1,6 @@
+net 'a' loc = 'G18';
+net 'b' loc = 'H18';
+net 'b' loc = 'K18';
+net 'sel[1]' loc = 'R17';
+net 'sel[0]' loc = 'N17';
+net 'out' loc = 'J15';

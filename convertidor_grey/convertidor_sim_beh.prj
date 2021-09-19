@@ -1,0 +1,2 @@
+vhdl work "convertidor.vhd"
+vhdl work "convertidor_tb.vhd"

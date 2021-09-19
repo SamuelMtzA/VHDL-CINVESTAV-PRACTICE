@@ -1,0 +1,25 @@
+V3 10
+FL "C:/Users/Samuel/Desktop/cinvestav_1er_cuatri/Electrónica Digital/Unidad 1/Códigos VHDL/Spartan 3E/Practica 6/Infrarrojos/receptor.vhd" 2013/04/26.09:16:22 P.58f
+EN work/Receptor 1539029125 \
+      FL "C:/Users/Samuel/Desktop/cinvestav_1er_cuatri/Electrónica Digital/Unidad 1/Códigos VHDL/Spartan 3E/Practica 6/Infrarrojos/receptor.vhd" \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/Receptor/Arq_Receptor 1539029126 \
+      FL "C:/Users/Samuel/Desktop/cinvestav_1er_cuatri/Electrónica Digital/Unidad 1/Códigos VHDL/Spartan 3E/Practica 6/Infrarrojos/receptor.vhd" \
+      EN work/Receptor 1539029125
+FL "C:/Users/Samuel/Desktop/cinvestav_1er_cuatri/Electrónica Digital/Unidad 1/Códigos VHDL/Spartan 3E/Practica 6/PWM/Antirrebote.vhd" 2013/04/29.11:15:08 P.58f
+EN work/ANTIRREBOTE 1539029459 \
+      FL "C:/Users/Samuel/Desktop/cinvestav_1er_cuatri/Electrónica Digital/Unidad 1/Códigos VHDL/Spartan 3E/Practica 6/PWM/Antirrebote.vhd" \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/ANTIRREBOTE/Behavioral 1539029460 \
+      FL "C:/Users/Samuel/Desktop/cinvestav_1er_cuatri/Electrónica Digital/Unidad 1/Códigos VHDL/Spartan 3E/Practica 6/PWM/Antirrebote.vhd" \
+      EN work/ANTIRREBOTE 1539029459
+FL "C:/Users/Samuel/Desktop/cinvestav_1er_cuatri/Electrónica Digital/Unidad 1/Códigos VHDL/Spartan 3E/Practica 6/PWM/PWM.vhd" 2013/10/03.11:12:12 P.58f
+EN work/PWM 1539029461 \
+      FL "C:/Users/Samuel/Desktop/cinvestav_1er_cuatri/Electrónica Digital/Unidad 1/Códigos VHDL/Spartan 3E/Practica 6/PWM/PWM.vhd" \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/PWM/arq_PWM 1539029462 \
+      FL "C:/Users/Samuel/Desktop/cinvestav_1er_cuatri/Electrónica Digital/Unidad 1/Códigos VHDL/Spartan 3E/Practica 6/PWM/PWM.vhd" \
+      EN work/PWM 1539029461 CP ANTIRREBOTE

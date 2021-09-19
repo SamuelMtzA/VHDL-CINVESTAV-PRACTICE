@@ -1,0 +1,18 @@
+ 
+ NET "P<0>" LOC = "U18";
+ NET "P<1>" LOC = "M14";
+ NET "P<2>" LOC = "N14";
+ NET "P<3>" LOC = "L14";
+ NET "P<4>" LOC = "M13";
+ NET "P<5>" LOC = "D4"; 
+ NET "P<6>" LOC = "P16";
+ NET "P<7>" LOC = "N12";
+ NET "A<0>" LOC = "A10";
+ NET "A<1>" LOC = "D14";
+ NET "A<2>" LOC = "C14";
+ NET "A<3>" LOC = "P15";
+ NET "B<0>" LOC = "P12";
+ NET "B<1>" LOC = "R5"; 
+ NET "B<2>" LOC = "T5"; 
+ NET "B<3>" LOC = "E4"; 
+

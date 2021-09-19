@@ -1,0 +1,18 @@
+//! **************************************************************************
+// Written by: Map P.58f on Fri Oct 12 12:28:59 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "CLK" LOCATE = SITE "C9" LEVEL 1;
+COMP "RST" LOCATE = SITE "V16" LEVEL 1;
+COMP "LCD_RW" LOCATE = SITE "L17" LEVEL 1;
+COMP "SF_CE0" LOCATE = SITE "D16" LEVEL 1;
+COMP "LCD_RS" LOCATE = SITE "L18" LEVEL 1;
+COMP "LCD_E" LOCATE = SITE "M18" LEVEL 1;
+COMP "DATA<0>" LOCATE = SITE "M15" LEVEL 1;
+COMP "DATA<1>" LOCATE = SITE "P17" LEVEL 1;
+COMP "DATA<2>" LOCATE = SITE "R16" LEVEL 1;
+COMP "DATA<3>" LOCATE = SITE "R15" LEVEL 1;
+NET "CLK_BUFGP/IBUFG" BEL "CLK_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

@@ -1,0 +1,1097 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: Ventilador.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Ventilador.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Ventilador"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Ventilador
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Modulos.vhd" in Library work.
+Compiling vhdl file "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/ADC.vhd" in Library work.
+Architecture adc_arq of Entity adc is up to date.
+Compiling vhdl file "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/PWM.vhd" in Library work.
+Architecture arq_pwm of Entity pwm is up to date.
+Compiling vhdl file "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/BCD.vhd" in Library work.
+Entity <convertidor> compiled.
+Entity <convertidor> (Architecture <arq_convertidor>) compiled.
+Compiling vhdl file "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/LCD.vhd" in Library work.
+Architecture behavioral of Entity lcd is up to date.
+Compiling vhdl file "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador1.vhd" in Library work.
+Architecture arq_ventilador of Entity ventilador is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Ventilador> in library <work> (architecture <arq_ventilador>).
+
+Analyzing hierarchy for entity <ADC> in library <work> (architecture <adc_arq>).
+
+Analyzing hierarchy for entity <PWM> in library <work> (architecture <arq_pwm>).
+
+Analyzing hierarchy for entity <Convertidor> in library <work> (architecture <arq_convertidor>) with generics.
+	NBITS = 24
+	NSALIDA = 28
+
+Analyzing hierarchy for entity <LCD> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Ventilador> in library <work> (Architecture <arq_ventilador>).
+Entity <Ventilador> analyzed. Unit <Ventilador> generated.
+
+Analyzing Entity <ADC> in library <work> (Architecture <adc_arq>).
+INFO:Xst:1432 - Contents of array <conv> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <conv> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:1610 - "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/ADC.vhd" line 109: Width mismatch. <volt> has a width of 24 bits but assigned expression is 26-bit wide.
+WARNING:Xst:1610 - "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/ADC.vhd" line 112: Width mismatch. <volt> has a width of 24 bits but assigned expression is 26-bit wide.
+Entity <ADC> analyzed. Unit <ADC> generated.
+
+Analyzing Entity <PWM> in library <work> (Architecture <arq_pwm>).
+Entity <PWM> analyzed. Unit <PWM> generated.
+
+Analyzing generic Entity <Convertidor> in library <work> (Architecture <arq_convertidor>).
+	NBITS = 24
+	NSALIDA = 28
+Entity <Convertidor> analyzed. Unit <Convertidor> generated.
+
+Analyzing Entity <LCD> in library <work> (Architecture <behavioral>).
+INFO:Xst:1432 - Contents of array <ROM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ROM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ROM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ROM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ROM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ROM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ROM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ROM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ROM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ROM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ROM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ROM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ROM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ROM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ROM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ROM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ROM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ROM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ROM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ROM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ROM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ROM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ROM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ROM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1432 - Contents of array <ROM> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <ROM> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Entity <LCD> analyzed. Unit <LCD> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ADC>.
+    Related source file is "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/ADC.vhd".
+WARNING:Xst:646 - Signal <gan> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <conv<33:16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <conv<1:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <sig_estado>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 5                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | inicio                                         |
+    | Power Up State     | inicio                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+WARNING:Xst:643 - "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/ADC.vhd" line 112: The result of a 14x12-bit multiplication is partially used. Only the 24 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/ADC.vhd" line 109: The result of a 14x12-bit multiplication is partially used. Only the 24 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+    Found 1-bit register for signal <AD_CONV>.
+    Found 1-bit register for signal <AMP_CS>.
+    Found 24-bit register for signal <volt>.
+    Found 1-bit register for signal <SPI_SCK>.
+    Found 1-bit register for signal <SPI_MOSI>.
+    Found 24-bit register for signal <volt1>.
+    Found 32-bit comparator lessequal for signal <AD_CONV$cmp_le0000> created at line 78.
+    Found 32-bit comparator less for signal <AD_CONV$cmp_lt0000> created at line 80.
+    Found 32-bit register for signal <cnt>.
+    Found 32-bit comparator less for signal <cnt$cmp_lt0000> created at line 56.
+    Found 32-bit comparator less for signal <cnt$cmp_lt0001> created at line 57.
+    Found 32-bit comparator less for signal <cnt$cmp_lt0002> created at line 59.
+    Found 32-bit comparator less for signal <cnt$cmp_lt0003> created at line 87.
+    Found 32-bit comparator less for signal <cnt$cmp_lt0004> created at line 89.
+    Found 34-bit register for signal <conv>.
+    Found 32-bit comparator greatequal for signal <conv_33$cmp_ge0000> created at line 87.
+    Found 32-bit comparator greatequal for signal <conv_33$cmp_ge0001> created at line 77.
+    Found 1-bit register for signal <enable>.
+    Found 32-bit register for signal <i>.
+    Found 32-bit adder for signal <i$share0000> created at line 38.
+    Found 32-bit adder for signal <sig_estado$add0000> created at line 105.
+    Found 32-bit comparator less for signal <sig_estado$cmp_lt0000> created at line 40.
+    Found 32-bit comparator less for signal <sig_estado$cmp_lt0001> created at line 55.
+    Found 32-bit comparator less for signal <sig_estado$cmp_lt0002> created at line 77.
+    Found 32-bit comparator less for signal <sig_estado$cmp_lt0003> created at line 106.
+    Found 14-bit register for signal <vnoc>.
+    Found 32-bit comparator greatequal for signal <vnoc$cmp_ge0000> created at line 106.
+    Found 14-bit comparator less for signal <volt$cmp_lt0000> created at line 108.
+    Found 14x12-bit multiplier for signal <volt$mult0002> created at line 109.
+    Found 14x12-bit multiplier for signal <volt$mult0003> created at line 112.
+    Found 24-bit adder for signal <volt$mux0001>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred 165 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   2 Multiplier(s).
+	inferred  15 Comparator(s).
+Unit <ADC> synthesized.
+
+
+Synthesizing Unit <PWM>.
+    Related source file is "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/PWM.vhd".
+    Found 1-bit register for signal <pwm_servo>.
+    Found 12-bit register for signal <a>.
+    Found 25-bit comparator greatequal for signal <a$cmp_ge0000> created at line 53.
+    Found 24-bit comparator greatequal for signal <a$cmp_ge0001> created at line 71.
+    Found 24-bit comparator greatequal for signal <a$cmp_ge0002> created at line 69.
+    Found 24-bit comparator greatequal for signal <a$cmp_ge0003> created at line 67.
+    Found 24-bit comparator greatequal for signal <a$cmp_ge0004> created at line 65.
+    Found 24-bit comparator greatequal for signal <a$cmp_ge0005> created at line 63.
+    Found 24-bit comparator greatequal for signal <a$cmp_ge0006> created at line 61.
+    Found 24-bit comparator greatequal for signal <a$cmp_ge0007> created at line 59.
+    Found 24-bit comparator greatequal for signal <a$cmp_ge0008> created at line 55.
+    Found 24-bit comparator less for signal <a$cmp_lt0000> created at line 52.
+    Found 24-bit comparator less for signal <a$cmp_lt0001> created at line 53.
+    Found 24-bit comparator less for signal <a$cmp_lt0002> created at line 69.
+    Found 24-bit comparator less for signal <a$cmp_lt0003> created at line 67.
+    Found 24-bit comparator less for signal <a$cmp_lt0004> created at line 65.
+    Found 24-bit comparator less for signal <a$cmp_lt0005> created at line 63.
+    Found 24-bit comparator less for signal <a$cmp_lt0006> created at line 61.
+    Found 24-bit comparator less for signal <a$cmp_lt0007> created at line 59.
+    Found 24-bit comparator less for signal <a$cmp_lt0008> created at line 55.
+    Found 12-bit up counter for signal <aux>.
+    Found 1-bit register for signal <clk100K>.
+    Found 13-bit up counter for signal <cnt>.
+    Found 12-bit comparator equal for signal <pwm_servo$cmp_eq0000> created at line 43.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  14 D-type flip-flop(s).
+	inferred  19 Comparator(s).
+Unit <PWM> synthesized.
+
+
+Synthesizing Unit <Convertidor>.
+    Related source file is "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/BCD.vhd".
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0000> created at line 68.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0001> created at line 69.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0002> created at line 71.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0003> created at line 73.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0004> created at line 75.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0005> created at line 77.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0006> created at line 79.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0007> created at line 81.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0008> created at line 83.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0009> created at line 85.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0010> created at line 87.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0011> created at line 89.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0012> created at line 91.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0013> created at line 93.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0014> created at line 95.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0015> created at line 97.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0016> created at line 99.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0017> created at line 101.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0018> created at line 103.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0019> created at line 105.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0020> created at line 107.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0021> created at line 109.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0022> created at line 111.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0023> created at line 113.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0024> created at line 115.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0025> created at line 117.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0026> created at line 119.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0027> created at line 121.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0028> created at line 123.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0029> created at line 125.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0030> created at line 127.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0031> created at line 129.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0032> created at line 131.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0033> created at line 133.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0034> created at line 135.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0035> created at line 137.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0036> created at line 139.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0037> created at line 141.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0038> created at line 143.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0039> created at line 145.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0040> created at line 147.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0041> created at line 149.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0042> created at line 151.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0043> created at line 153.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0044> created at line 155.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0045> created at line 157.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0046> created at line 159.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0047> created at line 161.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0048> created at line 163.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0049> created at line 165.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0050> created at line 167.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0051> created at line 169.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0052> created at line 171.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0053> created at line 173.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0054> created at line 175.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0055> created at line 177.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0056> created at line 179.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0057> created at line 181.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0058> created at line 183.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0059> created at line 185.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0060> created at line 187.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0061> created at line 189.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0062> created at line 191.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0063> created at line 193.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0064> created at line 195.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0065> created at line 197.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0066> created at line 199.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0067> created at line 201.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0068> created at line 203.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0069> created at line 205.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0070> created at line 207.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0071> created at line 209.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0072> created at line 211.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0073> created at line 213.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0074> created at line 215.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0075> created at line 217.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0076> created at line 219.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0077> created at line 221.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0078> created at line 223.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0079> created at line 225.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0080> created at line 227.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0081> created at line 229.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0082> created at line 231.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0083> created at line 233.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0084> created at line 235.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0085> created at line 237.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0086> created at line 239.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0087> created at line 241.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0088> created at line 243.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0089> created at line 245.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0090> created at line 247.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0091> created at line 249.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0092> created at line 251.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0093> created at line 253.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0094> created at line 255.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0095> created at line 257.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0096> created at line 259.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0097> created at line 261.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0098> created at line 263.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0099> created at line 265.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0100> created at line 267.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0101> created at line 269.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0102> created at line 271.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0103> created at line 273.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0104> created at line 275.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0105> created at line 277.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0106> created at line 279.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0107> created at line 281.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0108> created at line 283.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0109> created at line 285.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0110> created at line 287.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0111> created at line 289.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0112> created at line 291.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0113> created at line 293.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0114> created at line 295.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0115> created at line 297.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0116> created at line 299.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0117> created at line 301.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0118> created at line 303.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0119> created at line 305.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0120> created at line 307.
+    Found 28-bit comparator less for signal <num_bcd$cmp_lt0121> created at line 309.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0000> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0001> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0002> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0003> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0004> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0005> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0006> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0007> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0008> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0009> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0010> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0011> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0012> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0013> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0014> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0015> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0016> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0017> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0018> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0019> created at line 29.
+    Found 5-bit comparator greater for signal <z_27$cmp_gt0020> created at line 29.
+    Found 4-bit adder for signal <z_27_24$add0000> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0001> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0002> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0003> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0004> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0005> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0006> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0007> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0008> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0009> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0010> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0011> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0012> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0013> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0014> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0015> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0016> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0017> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0018> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0019> created at line 30.
+    Found 4-bit adder for signal <z_27_24$add0020> created at line 30.
+    Found 5-bit comparator greater for signal <z_29$cmp_gt0000> created at line 33.
+    Found 5-bit comparator greater for signal <z_29$cmp_gt0001> created at line 33.
+    Found 5-bit comparator greater for signal <z_29$cmp_gt0002> created at line 33.
+    Found 5-bit comparator greater for signal <z_29$cmp_gt0003> created at line 33.
+    Found 5-bit comparator greater for signal <z_29$cmp_gt0004> created at line 33.
+    Found 5-bit comparator greater for signal <z_29$cmp_gt0005> created at line 33.
+    Found 5-bit comparator greater for signal <z_29$cmp_gt0006> created at line 33.
+    Found 5-bit comparator greater for signal <z_29$cmp_gt0007> created at line 33.
+    Found 5-bit comparator greater for signal <z_29$cmp_gt0008> created at line 33.
+    Found 5-bit comparator greater for signal <z_29$cmp_gt0009> created at line 33.
+    Found 5-bit comparator greater for signal <z_29$cmp_gt0010> created at line 33.
+    Found 5-bit comparator greater for signal <z_29$cmp_gt0011> created at line 33.
+    Found 5-bit comparator greater for signal <z_29$cmp_gt0012> created at line 33.
+    Found 5-bit comparator greater for signal <z_29$cmp_gt0013> created at line 33.
+    Found 5-bit comparator greater for signal <z_29$cmp_gt0014> created at line 33.
+    Found 5-bit comparator greater for signal <z_29$cmp_gt0015> created at line 33.
+    Found 5-bit comparator greater for signal <z_29$cmp_gt0016> created at line 33.
+    Found 5-bit comparator greater for signal <z_29$cmp_gt0017> created at line 33.
+    Found 4-bit adder for signal <z_31_28$add0000> created at line 34.
+    Found 4-bit adder for signal <z_31_28$add0001> created at line 34.
+    Found 4-bit adder for signal <z_31_28$add0002> created at line 34.
+    Found 4-bit adder for signal <z_31_28$add0003> created at line 34.
+    Found 4-bit adder for signal <z_31_28$add0004> created at line 34.
+    Found 4-bit adder for signal <z_31_28$add0005> created at line 34.
+    Found 4-bit adder for signal <z_31_28$add0006> created at line 34.
+    Found 4-bit adder for signal <z_31_28$add0007> created at line 34.
+    Found 4-bit adder for signal <z_31_28$add0008> created at line 34.
+    Found 4-bit adder for signal <z_31_28$add0009> created at line 34.
+    Found 4-bit adder for signal <z_31_28$add0010> created at line 34.
+    Found 4-bit adder for signal <z_31_28$add0011> created at line 34.
+    Found 4-bit adder for signal <z_31_28$add0012> created at line 34.
+    Found 4-bit adder for signal <z_31_28$add0013> created at line 34.
+    Found 4-bit adder for signal <z_31_28$add0014> created at line 34.
+    Found 4-bit adder for signal <z_31_28$add0015> created at line 34.
+    Found 4-bit adder for signal <z_31_28$add0016> created at line 34.
+    Found 4-bit adder for signal <z_31_28$add0017> created at line 34.
+    Found 5-bit comparator greater for signal <z_35$cmp_gt0000> created at line 37.
+    Found 5-bit comparator greater for signal <z_35$cmp_gt0001> created at line 37.
+    Found 5-bit comparator greater for signal <z_35$cmp_gt0002> created at line 37.
+    Found 5-bit comparator greater for signal <z_35$cmp_gt0003> created at line 37.
+    Found 5-bit comparator greater for signal <z_35$cmp_gt0004> created at line 37.
+    Found 5-bit comparator greater for signal <z_35$cmp_gt0005> created at line 37.
+    Found 5-bit comparator greater for signal <z_35$cmp_gt0006> created at line 37.
+    Found 5-bit comparator greater for signal <z_35$cmp_gt0007> created at line 37.
+    Found 5-bit comparator greater for signal <z_35$cmp_gt0008> created at line 37.
+    Found 5-bit comparator greater for signal <z_35$cmp_gt0009> created at line 37.
+    Found 5-bit comparator greater for signal <z_35$cmp_gt0010> created at line 37.
+    Found 5-bit comparator greater for signal <z_35$cmp_gt0011> created at line 37.
+    Found 5-bit comparator greater for signal <z_35$cmp_gt0012> created at line 37.
+    Found 5-bit comparator greater for signal <z_35$cmp_gt0013> created at line 37.
+    Found 5-bit comparator greater for signal <z_35$cmp_gt0014> created at line 37.
+    Found 4-bit adder for signal <z_35_32$add0000> created at line 38.
+    Found 4-bit adder for signal <z_35_32$add0001> created at line 38.
+    Found 4-bit adder for signal <z_35_32$add0002> created at line 38.
+    Found 4-bit adder for signal <z_35_32$add0003> created at line 38.
+    Found 4-bit adder for signal <z_35_32$add0004> created at line 38.
+    Found 4-bit adder for signal <z_35_32$add0005> created at line 38.
+    Found 4-bit adder for signal <z_35_32$add0006> created at line 38.
+    Found 4-bit adder for signal <z_35_32$add0007> created at line 38.
+    Found 4-bit adder for signal <z_35_32$add0008> created at line 38.
+    Found 4-bit adder for signal <z_35_32$add0009> created at line 38.
+    Found 4-bit adder for signal <z_35_32$add0010> created at line 38.
+    Found 4-bit adder for signal <z_35_32$add0011> created at line 38.
+    Found 4-bit adder for signal <z_35_32$add0012> created at line 38.
+    Found 4-bit adder for signal <z_35_32$add0013> created at line 38.
+    Found 4-bit adder for signal <z_35_32$add0014> created at line 38.
+    Found 5-bit comparator greater for signal <z_38$cmp_gt0000> created at line 41.
+    Found 5-bit comparator greater for signal <z_38$cmp_gt0001> created at line 41.
+    Found 5-bit comparator greater for signal <z_38$cmp_gt0002> created at line 41.
+    Found 5-bit comparator greater for signal <z_38$cmp_gt0003> created at line 41.
+    Found 5-bit comparator greater for signal <z_38$cmp_gt0004> created at line 41.
+    Found 5-bit comparator greater for signal <z_39$cmp_gt0000> created at line 41.
+    Found 5-bit comparator greater for signal <z_39$cmp_gt0001> created at line 41.
+    Found 5-bit comparator greater for signal <z_39$cmp_gt0002> created at line 41.
+    Found 5-bit comparator greater for signal <z_39$cmp_gt0003> created at line 41.
+    Found 5-bit comparator greater for signal <z_39$cmp_gt0004> created at line 41.
+    Found 5-bit comparator greater for signal <z_39$cmp_gt0005> created at line 41.
+    Found 5-bit comparator greater for signal <z_39$cmp_gt0006> created at line 41.
+    Found 4-bit adder for signal <z_39_36$add0000> created at line 42.
+    Found 4-bit adder for signal <z_39_36$add0001> created at line 42.
+    Found 4-bit adder for signal <z_39_36$add0002> created at line 42.
+    Found 4-bit adder for signal <z_39_36$add0003> created at line 42.
+    Found 4-bit adder for signal <z_39_36$add0004> created at line 42.
+    Found 4-bit adder for signal <z_39_36$add0005> created at line 42.
+    Found 4-bit adder for signal <z_39_36$add0006> created at line 42.
+    Found 4-bit adder for signal <z_39_36$add0007> created at line 42.
+    Found 4-bit adder for signal <z_39_36$add0008> created at line 42.
+    Found 4-bit adder for signal <z_39_36$add0009> created at line 42.
+    Found 4-bit adder for signal <z_39_36$add0010> created at line 42.
+    Found 4-bit adder for signal <z_39_36$add0011> created at line 42.
+    Found 5-bit comparator greater for signal <z_43$cmp_gt0000> created at line 46.
+    Found 5-bit comparator greater for signal <z_43$cmp_gt0001> created at line 46.
+    Found 5-bit comparator greater for signal <z_43$cmp_gt0002> created at line 46.
+    Found 5-bit comparator greater for signal <z_43$cmp_gt0003> created at line 46.
+    Found 5-bit comparator greater for signal <z_43$cmp_gt0004> created at line 46.
+    Found 5-bit comparator greater for signal <z_43$cmp_gt0005> created at line 46.
+    Found 5-bit comparator greater for signal <z_43$cmp_gt0006> created at line 46.
+    Found 5-bit comparator greater for signal <z_43$cmp_gt0007> created at line 46.
+    Found 5-bit comparator greater for signal <z_43$cmp_gt0008> created at line 46.
+    Found 4-bit adder for signal <z_43_40$add0000> created at line 47.
+    Found 4-bit adder for signal <z_43_40$add0001> created at line 47.
+    Found 4-bit adder for signal <z_43_40$add0002> created at line 47.
+    Found 4-bit adder for signal <z_43_40$add0003> created at line 47.
+    Found 4-bit adder for signal <z_43_40$add0004> created at line 47.
+    Found 4-bit adder for signal <z_43_40$add0005> created at line 47.
+    Found 4-bit adder for signal <z_43_40$add0006> created at line 47.
+    Found 4-bit adder for signal <z_43_40$add0007> created at line 47.
+    Found 4-bit adder for signal <z_43_40$add0008> created at line 47.
+    Found 5-bit comparator greater for signal <z_44$cmp_gt0000> created at line 51.
+    Found 5-bit comparator greater for signal <z_47$cmp_gt0000> created at line 51.
+    Found 5-bit comparator greater for signal <z_47$cmp_gt0001> created at line 51.
+    Found 5-bit comparator greater for signal <z_47$cmp_gt0002> created at line 51.
+    Found 5-bit comparator greater for signal <z_47$cmp_gt0003> created at line 51.
+    Found 5-bit comparator greater for signal <z_47$cmp_gt0004> created at line 51.
+    Found 4-bit adder for signal <z_47_44$add0000> created at line 52.
+    Found 4-bit adder for signal <z_47_44$add0001> created at line 52.
+    Found 4-bit adder for signal <z_47_44$add0002> created at line 52.
+    Found 4-bit adder for signal <z_47_44$add0003> created at line 52.
+    Found 4-bit adder for signal <z_47_44$add0004> created at line 52.
+    Found 4-bit adder for signal <z_47_44$add0005> created at line 52.
+    Found 5-bit comparator greater for signal <z_49$cmp_gt0000> created at line 56.
+    Found 5-bit comparator greater for signal <z_49$cmp_gt0001> created at line 56.
+    Found 5-bit comparator greater for signal <z_49$cmp_gt0002> created at line 56.
+    Found 4-bit adder for signal <z_51_48$add0000> created at line 57.
+    Found 4-bit adder for signal <z_51_48$add0001> created at line 57.
+    Found 4-bit adder for signal <z_51_48$add0002> created at line 57.
+    Summary:
+	inferred  84 Adder/Subtractor(s).
+	inferred 206 Comparator(s).
+Unit <Convertidor> synthesized.
+
+
+Synthesizing Unit <LCD>.
+    Related source file is "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/LCD.vhd".
+WARNING:Xst:647 - Input <H4> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <H5> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <H6> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <H7> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <q> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1780 - Signal <clkdiv> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:1781 - Signal <ROM> is used but never assigned. Tied to default value.
+    Found 89x32-bit ROM for signal <$varindex0000> created at line 153.
+    Found 1-bit register for signal <LCD_E>.
+    Found 1-bit register for signal <LCD_RS>.
+    Found 1-bit register for signal <LCD_RW>.
+    Found 4-bit register for signal <DATA>.
+    Found 24-bit up counter for signal <CNTR>.
+    Found 24-bit comparator greatequal for signal <CNTR$cmp_ge0000> created at line 153.
+    Found 32-bit comparator less for signal <DATA$cmp_lt0000> created at line 160.
+    Found 32-bit comparator less for signal <DATA$cmp_lt0001> created at line 162.
+    Found 32-bit comparator less for signal <DATA$cmp_lt0002> created at line 165.
+    Found 32-bit comparator less for signal <DATA$cmp_lt0003> created at line 168.
+    Found 32-bit comparator less for signal <DATA$cmp_lt0004> created at line 171.
+    Found 32-bit up counter for signal <index>.
+    Found 32-bit comparator less for signal <index$cmp_lt0000> created at line 179.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   2 Counter(s).
+	inferred   7 D-type flip-flop(s).
+	inferred   7 Comparator(s).
+Unit <LCD> synthesized.
+
+
+Synthesizing Unit <Ventilador>.
+    Related source file is "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador1.vhd".
+Unit <Ventilador> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 89x32-bit ROM                                         : 1
+# Multipliers                                          : 2
+ 14x12-bit multiplier                                  : 2
+# Adders/Subtractors                                   : 87
+ 24-bit adder                                          : 1
+ 32-bit adder                                          : 2
+ 4-bit adder                                           : 84
+# Counters                                             : 4
+ 12-bit up counter                                     : 1
+ 13-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 51
+ 1-bit register                                        : 44
+ 12-bit register                                       : 1
+ 14-bit register                                       : 1
+ 24-bit register                                       : 2
+ 32-bit register                                       : 2
+ 4-bit register                                        : 1
+# Comparators                                          : 247
+ 12-bit comparator equal                               : 1
+ 14-bit comparator less                                : 1
+ 24-bit comparator greatequal                          : 9
+ 24-bit comparator less                                : 9
+ 25-bit comparator greatequal                          : 1
+ 28-bit comparator less                                : 122
+ 32-bit comparator greatequal                          : 3
+ 32-bit comparator less                                : 16
+ 32-bit comparator lessequal                           : 1
+ 5-bit comparator greater                              : 84
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <MODULO_1/sig_estado/FSM> on signal <sig_estado[1:2]> with gray encoding.
+------------------------
+ State      | Encoding
+------------------------
+ inicio     | 00
+ config_gan | 01
+ conversion | 11
+ resultado  | 10
+------------------------
+INFO:Xst:2261 - The FF/Latch <a_0> in Unit <MODULO_2> is equivalent to the following 3 FFs/Latches, which will be removed : <a_9> <a_10> <a_11> 
+WARNING:Xst:1426 - The value init of the FF/Latch enable hinder the constant cleaning in the block MODULO_1.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch <a_0> (without init value) has a constant value of 0 in block <MODULO_2>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <ADC>.
+	Found pipelined multiplier on signal <volt_mult0003>:
+		- 1 pipeline level(s) found in a register on signal <vnoc>.
+		Pushing register(s) into the multiplier macro.
+	Found pipelined multiplier on signal <volt_mult0002>:
+		- 1 pipeline level(s) found in a register on signal <vnoc>.
+		Pushing register(s) into the multiplier macro.
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_volt_mult0003 by adding 1 register level(s).
+INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_volt_mult0002 by adding 1 register level(s).
+Unit <ADC> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# ROMs                                                 : 1
+ 89x32-bit ROM                                         : 1
+# Multipliers                                          : 2
+ 14x12-bit registered multiplier                       : 2
+# Adders/Subtractors                                   : 87
+ 24-bit adder                                          : 1
+ 3-bit adder                                           : 3
+ 32-bit adder                                          : 2
+ 4-bit adder                                           : 81
+# Counters                                             : 4
+ 12-bit up counter                                     : 1
+ 13-bit up counter                                     : 1
+ 24-bit up counter                                     : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 166
+ Flip-Flops                                            : 166
+# Comparators                                          : 247
+ 12-bit comparator equal                               : 1
+ 14-bit comparator less                                : 1
+ 24-bit comparator greatequal                          : 9
+ 24-bit comparator less                                : 9
+ 25-bit comparator greatequal                          : 1
+ 28-bit comparator less                                : 122
+ 32-bit comparator greatequal                          : 3
+ 32-bit comparator less                                : 16
+ 32-bit comparator lessequal                           : 1
+ 5-bit comparator greater                              : 84
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch enable hinder the constant cleaning in the block ADC.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch <a_0> (without init value) has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <a_9> (without init value) has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <a_10> (without init value) has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <a_11> (without init value) has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <vnoc_0> of sequential type is unconnected in block <ADC>.
+WARNING:Xst:2677 - Node <vnoc_1> of sequential type is unconnected in block <ADC>.
+WARNING:Xst:2677 - Node <vnoc_2> of sequential type is unconnected in block <ADC>.
+WARNING:Xst:2677 - Node <vnoc_3> of sequential type is unconnected in block <ADC>.
+WARNING:Xst:2677 - Node <vnoc_4> of sequential type is unconnected in block <ADC>.
+WARNING:Xst:2677 - Node <vnoc_5> of sequential type is unconnected in block <ADC>.
+WARNING:Xst:2677 - Node <vnoc_6> of sequential type is unconnected in block <ADC>.
+WARNING:Xst:2677 - Node <vnoc_7> of sequential type is unconnected in block <ADC>.
+WARNING:Xst:2677 - Node <vnoc_8> of sequential type is unconnected in block <ADC>.
+WARNING:Xst:2677 - Node <vnoc_9> of sequential type is unconnected in block <ADC>.
+WARNING:Xst:2677 - Node <vnoc_10> of sequential type is unconnected in block <ADC>.
+WARNING:Xst:2677 - Node <vnoc_11> of sequential type is unconnected in block <ADC>.
+WARNING:Xst:2677 - Node <vnoc_12> of sequential type is unconnected in block <ADC>.
+WARNING:Xst:1293 - FF/Latch <LCD_RW> has a constant value of 0 in block <LCD>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Ventilador> ...
+
+Optimizing unit <ADC> ...
+
+Optimizing unit <PWM> ...
+
+Optimizing unit <Convertidor> ...
+
+Optimizing unit <LCD> ...
+WARNING:Xst:2677 - Node <MODULO_1/volt1_5> of sequential type is unconnected in block <Ventilador>.
+WARNING:Xst:2677 - Node <MODULO_1/volt1_4> of sequential type is unconnected in block <Ventilador>.
+WARNING:Xst:2677 - Node <MODULO_1/volt1_3> of sequential type is unconnected in block <Ventilador>.
+WARNING:Xst:2677 - Node <MODULO_1/volt1_2> of sequential type is unconnected in block <Ventilador>.
+WARNING:Xst:2677 - Node <MODULO_1/volt1_1> of sequential type is unconnected in block <Ventilador>.
+WARNING:Xst:2677 - Node <MODULO_1/volt1_0> of sequential type is unconnected in block <Ventilador>.
+WARNING:Xst:2677 - Node <MODULO_1/volt_4> of sequential type is unconnected in block <Ventilador>.
+WARNING:Xst:2677 - Node <MODULO_1/volt_3> of sequential type is unconnected in block <Ventilador>.
+WARNING:Xst:2677 - Node <MODULO_1/volt_2> of sequential type is unconnected in block <Ventilador>.
+WARNING:Xst:2677 - Node <MODULO_1/volt_1> of sequential type is unconnected in block <Ventilador>.
+WARNING:Xst:2677 - Node <MODULO_1/volt_0> of sequential type is unconnected in block <Ventilador>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Ventilador, actual ratio is 20.
+FlipFlop MODULO_1/volt_20 has been replicated 1 time(s)
+FlipFlop MODULO_1/volt_21 has been replicated 1 time(s)
+FlipFlop MODULO_1/volt_22 has been replicated 1 time(s)
+FlipFlop MODULO_1/volt_23 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 224
+ Flip-Flops                                            : 224
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Ventilador.ngr
+Top Level Output File Name         : Ventilador
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 20
+
+Cell Usage :
+# BELS                             : 3507
+#      GND                         : 1
+#      INV                         : 53
+#      LUT1                        : 141
+#      LUT2                        : 151
+#      LUT2_D                      : 3
+#      LUT2_L                      : 6
+#      LUT3                        : 321
+#      LUT3_D                      : 40
+#      LUT3_L                      : 21
+#      LUT4                        : 1369
+#      LUT4_D                      : 172
+#      LUT4_L                      : 88
+#      MUXCY                       : 742
+#      MUXF5                       : 234
+#      VCC                         : 1
+#      XORCY                       : 164
+# FlipFlops/Latches                : 224
+#      FD                          : 33
+#      FDC                         : 49
+#      FDCE                        : 32
+#      FDE                         : 62
+#      FDPE                        : 2
+#      FDR                         : 33
+#      FDRE                        : 7
+#      FDRS                        : 1
+#      FDRSE                       : 2
+#      FDS                         : 3
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 19
+#      IBUF                        : 2
+#      OBUF                        : 17
+# MULTs                            : 2
+#      MULT18X18SIO                : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     1229  out of   4656    26%  
+ Number of Slice Flip Flops:            224  out of   9312     2%  
+ Number of 4 input LUTs:               2365  out of   9312    25%  
+ Number of IOs:                          20
+ Number of bonded IOBs:                  20  out of    232     8%  
+ Number of MULT18X18SIOs:                 2  out of     20    10%  
+ Number of GCLKs:                         2  out of     24     8%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 205   |
+MODULO_2/clk100K1                  | BUFG                   | 21    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+--------------------------------------------------------+------------------------+-------+
+Control Signal                                          | Buffer(FF name)        | Load  |
+--------------------------------------------------------+------------------------+-------+
+rst                                                     | IBUF                   | 56    |
+MODULO_2/cnt_or0000(MODULO_2/cnt_or0000_f5:O)           | NONE(MODULO_2/clk100K) | 14    |
+MODULO_2/pwm_servo_or0000(MODULO_2/pwm_servo_or000053:O)| NONE(MODULO_2/aux_0)   | 13    |
+--------------------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 48.145ns (Maximum Frequency: 20.771MHz)
+   Minimum input arrival time before clock: 4.604ns
+   Maximum output required time after clock: 4.394ns
+   Maximum combinational path delay: 5.773ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 48.145ns (frequency: 20.771MHz)
+  Total number of paths / destination ports: 675142608067331 / 316
+-------------------------------------------------------------------------
+Delay:               48.145ns (Levels of Logic = 41)
+  Source:            MODULO_1/volt_19 (FF)
+  Destination:       MODULO_4/DATA_3 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: MODULO_1/volt_19 to MODULO_4/DATA_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             11   0.591   1.108  MODULO_1/volt_19 (MODULO_1/volt_19)
+     LUT4:I0->O            7   0.704   0.712  MODULO_3/z_26_mux0002_SW2 (N608)
+     LUT4:I3->O            1   0.704   0.000  MODULO_3/z_25_mux00032_G (N2175)
+     MUXF5:I1->O           8   0.321   0.792  MODULO_3/z_25_mux00032 (MODULO_3/Madd_z_27_24_add0004_lut<2>)
+     LUT4:I2->O            5   0.704   0.668  MODULO_3/z_26_mux00051_SW1 (N614)
+     LUT3:I2->O            2   0.704   0.526  MODULO_3/z_26_mux00051 (MODULO_3/Madd_z_27_24_add0006_lut<3>)
+     LUT4:I1->O           12   0.704   0.965  MODULO_3/z_25_mux000711 (MODULO_3/N60)
+     LUT4:I3->O            1   0.704   0.595  MODULO_3/z_26_mux00071 (MODULO_3/Madd_z_27_24_add0008_lut<3>)
+     LUT4:I0->O            1   0.704   0.000  MODULO_3/z_27_mux00091_G (N2443)
+     MUXF5:I1->O           9   0.321   0.824  MODULO_3/z_27_mux00091 (MODULO_3/Madd_z_31_28_add0007_cy<0>)
+     LUT4:I3->O            1   0.704   0.000  MODULO_3/z_31_mux00071_SW1_F (N2152)
+     MUXF5:I0->O           1   0.321   0.455  MODULO_3/z_31_mux00071_SW1 (N653)
+     LUT3_D:I2->O         15   0.704   1.021  MODULO_3/z_31_mux00071 (MODULO_3/Madd_z_35_32_add0005_cy<0>)
+     LUT4:I3->O            1   0.704   0.000  MODULO_3/z_35_mux00051_SW0_F (N2104)
+     MUXF5:I0->O           1   0.321   0.499  MODULO_3/z_35_mux00051_SW0 (N234)
+     LUT3:I1->O           14   0.704   1.004  MODULO_3/z_35_mux00051 (MODULO_3/Madd_z_39_36_add0003_cy<0>)
+     LUT4:I3->O            4   0.704   0.622  MODULO_3/z_37_mux00032_SW4 (N1979)
+     LUT3:I2->O            9   0.704   0.824  MODULO_3/z_37_mux00032 (MODULO_3/Madd_z_39_36_add0004_lut<2>)
+     LUT4:I3->O            2   0.704   0.482  MODULO_3/z_37_mux000611_SW3 (N1688)
+     LUT3_D:I2->O          2   0.704   0.451  MODULO_3/z_37_mux000611 (MODULO_3/N8)
+     LUT4:I3->O            1   0.704   0.000  MODULO_3/z_39_mux00061_F (N2306)
+     MUXF5:I0->O          29   0.321   1.265  MODULO_3/z_39_mux00061 (MODULO_3/Madd_z_43_40_add0004_cy<0>)
+     LUT4:I3->O            1   0.704   0.000  MODULO_3/z_43_mux00051_SW3_F (N2280)
+     MUXF5:I0->O           1   0.321   0.499  MODULO_3/z_43_mux00051_SW3 (N1338)
+     LUT3_D:I1->O         18   0.704   1.147  MODULO_3/z_43_mux00051 (MODULO_3/Madd_z_47_44_add0003_cy<0>)
+     LUT4:I1->O           30   0.704   1.297  MODULO_3/z_46_mux00031_SW2 (N785)
+     LUT3:I2->O           17   0.704   1.055  MODULO_3/z_46_mux00031 (MODULO_3/Madd_z_47_44_add0004_lut<3>)
+     LUT4:I3->O          124   0.704   1.295  MODULO_3/z_45_mux000511 (MODULO_3/N9)
+     LUT4_D:I3->O         30   0.704   1.266  MODULO_3/z_44_mux00051_4 (MODULO_3/z_44_mux00051)
+     LUT4:I3->O            1   0.704   0.000  MODULO_3/Mcompar_num_bcd_cmp_lt0000_lut<2>15 (MODULO_3/Mcompar_num_bcd_cmp_lt0000_lut<2>15)
+     MUXCY:S->O            1   0.464   0.000  MODULO_3/Mcompar_num_bcd_cmp_lt0000_cy<2>_35 (MODULO_3/Mcompar_num_bcd_cmp_lt0000_cy<2>36)
+     MUXCY:CI->O           1   0.059   0.000  MODULO_3/Mcompar_num_bcd_cmp_lt0000_cy<3>_35 (MODULO_3/Mcompar_num_bcd_cmp_lt0000_cy<3>36)
+     MUXCY:CI->O           1   0.059   0.000  MODULO_3/Mcompar_num_bcd_cmp_lt0000_cy<4>_33 (MODULO_3/Mcompar_num_bcd_cmp_lt0000_cy<4>34)
+     MUXCY:CI->O           6   0.459   0.844  MODULO_3/Mcompar_num_bcd_cmp_lt0000_cy<5>_22 (MODULO_3/Mcompar_num_bcd_cmp_lt0000_cy<5>23)
+     LUT4:I0->O            4   0.704   0.622  MODULO_3/num_bcd<20>1231 (MODULO_3/N222)
+     LUT4:I2->O            1   0.704   0.455  MODULO_4/DATA_mux0005<3>2071 (MODULO_4/DATA_mux0005<3>2071)
+     LUT4_L:I2->LO         1   0.704   0.104  MODULO_4/DATA_mux0005<3>2138 (MODULO_4/DATA_mux0005<3>2138)
+     LUT4:I3->O            3   0.704   0.535  MODULO_4/DATA_mux0005<3>2187 (MODULO_4/DATA_mux0005<3>2187)
+     LUT4:I3->O            2   0.704   0.451  MODULO_4/DATA_mux0005<3>2001_SW0 (N312)
+     LUT4:I3->O            1   0.704   0.000  MODULO_4/DATA_mux0005<3>1899_SW0_G (N2115)
+     MUXF5:I1->O           1   0.321   0.455  MODULO_4/DATA_mux0005<3>1899_SW0 (N787)
+     LUT4:I2->O            1   0.704   0.000  MODULO_4/DATA_mux0005<3>2309 (MODULO_4/DATA_mux0005<3>)
+     FDE:D                     0.308          MODULO_4/DATA_3
+    ----------------------------------------
+    Total                     48.145ns (25.307ns logic, 22.838ns route)
+                                       (52.6% logic, 47.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'MODULO_2/clk100K1'
+  Clock period: 4.108ns (frequency: 243.427MHz)
+  Total number of paths / destination ports: 98 / 13
+-------------------------------------------------------------------------
+Delay:               4.108ns (Levels of Logic = 12)
+  Source:            MODULO_2/aux_1 (FF)
+  Destination:       MODULO_2/aux_11 (FF)
+  Source Clock:      MODULO_2/clk100K1 rising
+  Destination Clock: MODULO_2/clk100K1 rising
+
+  Data Path: MODULO_2/aux_1 to MODULO_2/aux_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              3   0.591   0.706  MODULO_2/aux_1 (MODULO_2/aux_1)
+     LUT1:I0->O            1   0.704   0.000  MODULO_2/Mcount_aux_cy<1>_rt (MODULO_2/Mcount_aux_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  MODULO_2/Mcount_aux_cy<1> (MODULO_2/Mcount_aux_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  MODULO_2/Mcount_aux_cy<2> (MODULO_2/Mcount_aux_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  MODULO_2/Mcount_aux_cy<3> (MODULO_2/Mcount_aux_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  MODULO_2/Mcount_aux_cy<4> (MODULO_2/Mcount_aux_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  MODULO_2/Mcount_aux_cy<5> (MODULO_2/Mcount_aux_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  MODULO_2/Mcount_aux_cy<6> (MODULO_2/Mcount_aux_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  MODULO_2/Mcount_aux_cy<7> (MODULO_2/Mcount_aux_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  MODULO_2/Mcount_aux_cy<8> (MODULO_2/Mcount_aux_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  MODULO_2/Mcount_aux_cy<9> (MODULO_2/Mcount_aux_cy<9>)
+     MUXCY:CI->O           0   0.059   0.000  MODULO_2/Mcount_aux_cy<10> (MODULO_2/Mcount_aux_cy<10>)
+     XORCY:CI->O           1   0.804   0.000  MODULO_2/Mcount_aux_xor<11> (MODULO_2/Result<11>)
+     FDC:D                     0.308          MODULO_2/aux_11
+    ----------------------------------------
+    Total                      4.108ns (3.402ns logic, 0.706ns route)
+                                       (82.8% logic, 17.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 57 / 57
+-------------------------------------------------------------------------
+Offset:              4.604ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       MODULO_4/LCD_RS (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to MODULO_4/LCD_RS
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            97   1.218   1.458  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            6   0.704   0.669  MODULO_4/LCD_E_and00001 (MODULO_4/LCD_E_and0000)
+     FDE:CE                    0.555          MODULO_4/DATA_3
+    ----------------------------------------
+    Total                      4.604ns (2.477ns logic, 2.127ns route)
+                                       (53.8% logic, 46.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              4.394ns (Levels of Logic = 1)
+  Source:            MODULO_1/AD_CONV (FF)
+  Destination:       AD_CONV (PAD)
+  Source Clock:      clk rising
+
+  Data Path: MODULO_1/AD_CONV to AD_CONV
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              3   0.591   0.531  MODULO_1/AD_CONV (MODULO_1/AD_CONV)
+     OBUF:I->O                 3.272          AD_CONV_OBUF (AD_CONV)
+    ----------------------------------------
+    Total                      4.394ns (3.863ns logic, 0.531ns route)
+                                       (87.9% logic, 12.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'MODULO_2/clk100K1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.283ns (Levels of Logic = 1)
+  Source:            MODULO_2/pwm_servo (FF)
+  Destination:       pwm_servo (PAD)
+  Source Clock:      MODULO_2/clk100K1 rising
+
+  Data Path: MODULO_2/pwm_servo to pwm_servo
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             1   0.591   0.420  MODULO_2/pwm_servo (MODULO_2/pwm_servo)
+     OBUF:I->O                 3.272          pwm_servo_OBUF (pwm_servo)
+    ----------------------------------------
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               5.773ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       AMP_SHDN (PAD)
+
+  Data Path: rst to AMP_SHDN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            97   1.218   1.283  rst_IBUF (rst_IBUF)
+     OBUF:I->O                 3.272          AMP_SHDN_OBUF (AMP_SHDN)
+    ----------------------------------------
+    Total                      5.773ns (4.490ns logic, 1.283ns route)
+                                       (77.8% logic, 22.2% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 49.00 secs
+Total CPU time to Xst completion: 48.88 secs
+ 
+--> 
+
+Total memory usage is 363268 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   46 (   0 filtered)
+Number of infos    :   32 (   0 filtered)
+

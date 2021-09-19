@@ -1,0 +1,9 @@
+#Terminal del Reloj de 50 Mhz
+NET "clk" LOC = "C9" | IOSTANDARD = LVCMOS33 ;
+#Terminal de Reset
+NET "rst" LOC = "K17" | IOSTANDARD = LVTTL | PULLDOWN;
+#Terminal de los Pulsadores
+NET "btderecha"   LOC = "D18" | IOSTANDARD = LVTTL | PULLDOWN;
+NET "btizquierda" LOC = "H13" | IOSTANDARD = LVTTL | PULLDOWN;
+#Terminal de salida PWM
+NET "pwm_servo"LOC = "A6"|IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 12;

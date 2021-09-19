@@ -1,0 +1,12 @@
+Command line:
+   m_tb_isim_par.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/par/MEALY_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  0
+     -socket  51006
+
+Mon Sep 24 15:58:37 2018
+
+
+ Elaboration Time: 0.0468 sec

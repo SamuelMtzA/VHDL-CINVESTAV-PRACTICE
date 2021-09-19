@@ -1,0 +1,9 @@
+V3 3
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/LCD_extra/LCD_2.vhd 2018/10/11.11:35:52 P.58f
+EN work/LCD 1539365322 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/LCD_extra/LCD_2.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/LCD/Behavioral 1539365323 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/LCD_extra/LCD_2.vhd \
+      EN work/LCD 1539365322

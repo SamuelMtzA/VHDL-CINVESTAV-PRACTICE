@@ -1,0 +1,209 @@
+Release 14.5 Map P.58f (nt64)
+Xilinx Map Application Log File for Design 'multiplicador'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o multiplicador_map.ncd multiplicador.ngd
+multiplicador.pcf 
+Target Device  : xc6slx45
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Sun Sep 16 15:10:12 2018
+
+Mapping design into LUTs...
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 5 secs 
+Total CPU  time at the beginning of Placer: 4 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:75c89111) REAL time: 5 secs 
+
+Phase 2.7  Design Feasibility Check
+WARNING:Place:837 - Partially locked IO Bus is found. 
+    Following components of the bus are not locked: 
+   	 Comp: A<16>
+   	 Comp: A<15>
+   	 Comp: A<14>
+   	 Comp: A<13>
+   	 Comp: A<12>
+   	 Comp: A<11>
+   	 Comp: A<10>
+   	 Comp: A<9>
+   	 Comp: A<8>
+   	 Comp: A<7>
+   	 Comp: A<6>
+   	 Comp: A<5>
+   	 Comp: A<4>
+
+WARNING:Place:837 - Partially locked IO Bus is found. 
+    Following components of the bus are not locked: 
+   	 Comp: B<16>
+   	 Comp: B<15>
+   	 Comp: B<14>
+   	 Comp: B<13>
+   	 Comp: B<12>
+   	 Comp: B<11>
+   	 Comp: B<10>
+   	 Comp: B<9>
+   	 Comp: B<8>
+   	 Comp: B<7>
+   	 Comp: B<6>
+   	 Comp: B<5>
+   	 Comp: B<4>
+
+WARNING:Place:837 - Partially locked IO Bus is found. 
+    Following components of the bus are not locked: 
+   	 Comp: P<33>
+   	 Comp: P<32>
+   	 Comp: P<31>
+   	 Comp: P<30>
+   	 Comp: P<29>
+   	 Comp: P<28>
+   	 Comp: P<27>
+   	 Comp: P<26>
+   	 Comp: P<25>
+   	 Comp: P<24>
+   	 Comp: P<23>
+   	 Comp: P<22>
+   	 Comp: P<21>
+   	 Comp: P<20>
+   	 Comp: P<19>
+   	 Comp: P<18>
+   	 Comp: P<17>
+   	 Comp: P<16>
+   	 Comp: P<15>
+   	 Comp: P<14>
+   	 Comp: P<13>
+   	 Comp: P<12>
+   	 Comp: P<11>
+   	 Comp: P<10>
+   	 Comp: P<9>
+   	 Comp: P<8>
+
+INFO:Place:834 - Only a subset of IOs are locked. Out of 68 IOs, 16 are locked
+   and 52 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+Phase 2.7  Design Feasibility Check (Checksum:75c89111) REAL time: 5 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:75c89111) REAL time: 5 secs 
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+...
+Phase 4.2  Initial Placement for Architecture Specific Features
+(Checksum:75c89111) REAL time: 6 secs 
+
+Phase 5.36  Local Placement Optimization
+Phase 5.36  Local Placement Optimization (Checksum:75c89111) REAL time: 6 secs 
+
+Phase 6.30  Global Clock Region Assignment
+Phase 6.30  Global Clock Region Assignment (Checksum:75c89111) REAL time: 6 secs 
+
+Phase 7.3  Local Placement Optimization
+...
+Phase 7.3  Local Placement Optimization (Checksum:7f3c9a30) REAL time: 7 secs 
+
+Phase 8.5  Local Placement Optimization
+Phase 8.5  Local Placement Optimization (Checksum:7f3c9a30) REAL time: 7 secs 
+
+Phase 9.8  Global Placement
+.............
+........
+Phase 9.8  Global Placement (Checksum:6af87cdf) REAL time: 7 secs 
+
+Phase 10.5  Local Placement Optimization
+Phase 10.5  Local Placement Optimization (Checksum:6af87cdf) REAL time: 7 secs 
+
+Phase 11.18  Placement Optimization
+Phase 11.18  Placement Optimization (Checksum:d3eb10b4) REAL time: 8 secs 
+
+Phase 12.5  Local Placement Optimization
+Phase 12.5  Local Placement Optimization (Checksum:d3eb10b4) REAL time: 8 secs 
+
+Phase 13.34  Placement Validation
+Phase 13.34  Placement Validation (Checksum:d3eb10b4) REAL time: 8 secs 
+
+Total REAL time to Placer completion: 8 secs 
+Total CPU  time to Placer completion: 8 secs 
+Running post-placement packing...
+Writing output files...
+
+Design Summary
+--------------
+
+Design Summary:
+Number of errors:      0
+Number of warnings:    3
+Slice Logic Utilization:
+  Number of Slice Registers:                     0 out of  54,576    0%
+  Number of Slice LUTs:                        337 out of  27,288    1%
+    Number used as logic:                      333 out of  27,288    1%
+      Number using O6 output only:             172
+      Number using O5 output only:              17
+      Number using O5 and O6:                  144
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   6,408    0%
+    Number used exclusively as route-thrus:      4
+      Number with same-slice register load:      0
+      Number with same-slice carry load:         4
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                    90 out of   6,822    1%
+  Number of MUXCYs used:                       356 out of  13,644    2%
+  Number of LUT Flip Flop pairs used:          337
+    Number with an unused Flip Flop:           337 out of     337  100%
+    Number with an unused LUT:                   0 out of     337    0%
+    Number of fully used LUT-FF pairs:           0 out of     337    0%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  54,576    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        68 out of     218   31%
+    Number of LOCed IOBs:                       16 out of      68   23%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         0 out of     116    0%
+  Number of RAMB8BWERs:                          0 out of     232    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 0 out of      32    0%
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             0 out of      32    0%
+  Number of BUFG/BUFGMUXs:                       0 out of      16    0%
+  Number of DCM/DCM_CLKGENs:                     0 out of       8    0%
+  Number of ILOGIC2/ISERDES2s:                   0 out of     376    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     376    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     376    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     256    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      58    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       4    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                2.58
+
+Peak Memory Usage:  413 MB
+Total REAL time to MAP completion:  8 secs 
+Total CPU time to MAP completion:   8 secs 
+
+Mapping completed.
+See MAP report file "multiplicador_map.mrp" for details.

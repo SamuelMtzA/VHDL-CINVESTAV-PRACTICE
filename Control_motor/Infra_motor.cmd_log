@@ -1,0 +1,24 @@
+xst -intstyle ise -ifn "C:/Users/hp_g301/Documents/Cinvestav/1_Cuatrimestre/Control_motor/Infra_motor.xst" -ofn "C:/Users/hp_g301/Documents/Cinvestav/1_Cuatrimestre/Control_motor/Infra_motor.syr" 
+xst -intstyle ise -ifn "C:/Users/hp_g301/Documents/Cinvestav/1_Cuatrimestre/Control_motor/Infra_motor.xst" -ofn "C:/Users/hp_g301/Documents/Cinvestav/1_Cuatrimestre/Control_motor/Infra_motor.syr" 
+xst -intstyle ise -ifn "C:/Users/hp_g301/Documents/Cinvestav/1_Cuatrimestre/Control_motor/Infra_motor.xst" -ofn "C:/Users/hp_g301/Documents/Cinvestav/1_Cuatrimestre/Control_motor/Infra_motor.syr" 
+xst -intstyle ise -ifn "C:/Users/hp_g301/Documents/Cinvestav/1_Cuatrimestre/Control_motor/Infra_motor.xst" -ofn "C:/Users/hp_g301/Documents/Cinvestav/1_Cuatrimestre/Control_motor/Infra_motor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc receptor.ucf -p xc3s500e-fg320-4 Infra_motor.ngc Infra_motor.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Infra_motor_map.ncd Infra_motor.ngd Infra_motor.pcf 
+par -w -intstyle ise -ol high -t 1 Infra_motor_map.ncd Infra_motor.ncd Infra_motor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Infra_motor.twx Infra_motor.ncd -o Infra_motor.twr Infra_motor.pcf -ucf receptor.ucf 
+bitgen -intstyle ise -f Infra_motor.ut Infra_motor.ncd 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.xst" -ofn "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.xst" -ofn "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.xst" -ofn "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.xst" -ofn "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.xst" -ofn "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.xst" -ofn "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.xst" -ofn "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.xst" -ofn "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc receptor.ucf -p xc3s500e-fg320-4 Infra_motor.ngc Infra_motor.ngd  
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.xst" -ofn "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc receptor.ucf -p xc3s500e-fg320-4 Infra_motor.ngc Infra_motor.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Infra_motor_map.ncd Infra_motor.ngd Infra_motor.pcf 
+par -w -intstyle ise -ol high -t 1 Infra_motor_map.ncd Infra_motor.ncd Infra_motor.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Infra_motor.twx Infra_motor.ncd -o Infra_motor.twr Infra_motor.pcf -ucf receptor.ucf 
+bitgen -intstyle ise -f Infra_motor.ut Infra_motor.ncd 

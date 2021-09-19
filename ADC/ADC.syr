@@ -1,0 +1,502 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: ADC.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ADC.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ADC"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : ADC
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/ADC/ADC.vhd" in Library work.
+Architecture adc_arq of Entity adc is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <ADC> in library <work> (architecture <adc_arq>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <ADC> in library <work> (Architecture <adc_arq>).
+INFO:Xst:1432 - Contents of array <conv> may be accessed with a negative index, causing simulation mismatch.
+INFO:Xst:1433 - Contents of array <conv> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+INFO:Xst:1561 - "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/ADC/ADC.vhd" line 116: Mux is complete : default of case is discarded
+Entity <ADC> analyzed. Unit <ADC> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ADC>.
+    Related source file is "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/ADC/ADC.vhd".
+WARNING:Xst:646 - Signal <gan> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <conv<33:32>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <conv<17:16>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <conv<1:0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found finite state machine <FSM_0> for signal <sig_estado>.
+    -----------------------------------------------------------------------
+    | States             | 4                                              |
+    | Transitions        | 9                                              |
+    | Inputs             | 5                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Reset              | rst                       (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | inicio                                         |
+    | Power Up State     | inicio                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 7-bit register for signal <LEDS>.
+    Found 1-bit register for signal <SPI_SCK>.
+    Found 1-bit register for signal <SPI_MOSI>.
+    Found 1-bit register for signal <AMP_CS>.
+    Found 1-bit register for signal <AD_CONV>.
+    Found 32-bit comparator lessequal for signal <AD_CONV$cmp_le0000> created at line 83.
+    Found 32-bit comparator less for signal <AD_CONV$cmp_lt0000> created at line 85.
+    Found 32-bit register for signal <cnt>.
+    Found 32-bit comparator less for signal <cnt$cmp_lt0000> created at line 61.
+    Found 32-bit comparator less for signal <cnt$cmp_lt0001> created at line 62.
+    Found 32-bit comparator less for signal <cnt$cmp_lt0002> created at line 64.
+    Found 32-bit comparator less for signal <cnt$cmp_lt0003> created at line 92.
+    Found 32-bit comparator less for signal <cnt$cmp_lt0004> created at line 94.
+    Found 34-bit register for signal <conv>.
+    Found 32-bit comparator greatequal for signal <conv_33$cmp_ge0000> created at line 92.
+    Found 32-bit comparator greatequal for signal <conv_33$cmp_ge0001> created at line 82.
+    Found 1-bit register for signal <enable>.
+    Found 32-bit register for signal <i>.
+    Found 32-bit adder for signal <i$share0000> created at line 43.
+    Found 32-bit comparator greatequal for signal <LEDS$cmp_ge0000> created at line 111.
+    Found 7-bit 4-to-1 multiplexer for signal <LEDS$mux0001> created at line 112.
+    Found 32-bit adder for signal <sig_estado$add0000> created at line 110.
+    Found 32-bit comparator less for signal <sig_estado$cmp_lt0000> created at line 45.
+    Found 32-bit comparator less for signal <sig_estado$cmp_lt0001> created at line 60.
+    Found 32-bit comparator less for signal <sig_estado$cmp_lt0002> created at line 82.
+    Found 32-bit comparator less for signal <sig_estado$cmp_lt0003> created at line 111.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred 110 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  14 Comparator(s).
+	inferred   7 Multiplexer(s).
+Unit <ADC> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 2
+# Registers                                            : 42
+ 1-bit register                                        : 39
+ 32-bit register                                       : 2
+ 7-bit register                                        : 1
+# Comparators                                          : 14
+ 32-bit comparator greatequal                          : 3
+ 32-bit comparator less                                : 10
+ 32-bit comparator lessequal                           : 1
+# Multiplexers                                         : 1
+ 7-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <sig_estado/FSM> on signal <sig_estado[1:2]> with gray encoding.
+------------------------
+ State      | Encoding
+------------------------
+ inicio     | 00
+ config_gan | 01
+ conversion | 11
+ resultado  | 10
+------------------------
+WARNING:Xst:1426 - The value init of the FF/Latch enable hinder the constant cleaning in the block ADC.
+   You should achieve better results by setting this init to 1.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 2
+ 32-bit adder                                          : 2
+# Registers                                            : 104
+ Flip-Flops                                            : 104
+# Comparators                                          : 14
+ 32-bit comparator greatequal                          : 3
+ 32-bit comparator less                                : 10
+ 32-bit comparator lessequal                           : 1
+# Multiplexers                                         : 1
+ 7-bit 4-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch enable hinder the constant cleaning in the block ADC.
+   You should achieve better results by setting this init to 1.
+
+Optimizing unit <ADC> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ADC, actual ratio is 4.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 106
+ Flip-Flops                                            : 106
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ADC.ngr
+Top Level Output File Name         : ADC
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 21
+
+Cell Usage :
+# BELS                             : 602
+#      GND                         : 1
+#      INV                         : 20
+#      LUT1                        : 75
+#      LUT2                        : 48
+#      LUT2_D                      : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 50
+#      LUT3_D                      : 3
+#      LUT3_L                      : 1
+#      LUT4                        : 135
+#      LUT4_D                      : 6
+#      LUT4_L                      : 1
+#      MUXCY                       : 182
+#      MUXF5                       : 13
+#      VCC                         : 1
+#      XORCY                       : 64
+# FlipFlops/Latches                : 106
+#      FD                          : 33
+#      FDE                         : 29
+#      FDR                         : 33
+#      FDRE                        : 7
+#      FDRS                        : 1
+#      FDS                         : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 20
+#      IBUF                        : 4
+#      OBUF                        : 16
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                      184  out of   4656     3%  
+ Number of Slice Flip Flops:            106  out of   9312     1%  
+ Number of 4 input LUTs:                341  out of   9312     3%  
+ Number of IOs:                          21
+ Number of bonded IOBs:                  21  out of    232     9%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 106   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 13.049ns (Maximum Frequency: 76.635MHz)
+   Minimum input arrival time before clock: 3.726ns
+   Maximum output required time after clock: 4.532ns
+   Maximum combinational path delay: 5.755ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 13.049ns (frequency: 76.635MHz)
+  Total number of paths / destination ports: 476825 / 117
+-------------------------------------------------------------------------
+Delay:               13.049ns (Levels of Logic = 36)
+  Source:            cnt_1 (FF)
+  Destination:       i_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: cnt_1 to i_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.591   0.595  cnt_1 (cnt_1)
+     LUT1:I0->O            1   0.704   0.000  Madd_sig_estado_add0000_cy<1>_rt (Madd_sig_estado_add0000_cy<1>_rt)
+     MUXCY:S->O            1   0.464   0.000  Madd_sig_estado_add0000_cy<1> (Madd_sig_estado_add0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<2> (Madd_sig_estado_add0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<3> (Madd_sig_estado_add0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<4> (Madd_sig_estado_add0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<5> (Madd_sig_estado_add0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<6> (Madd_sig_estado_add0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<7> (Madd_sig_estado_add0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<8> (Madd_sig_estado_add0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<9> (Madd_sig_estado_add0000_cy<9>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<10> (Madd_sig_estado_add0000_cy<10>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<11> (Madd_sig_estado_add0000_cy<11>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<12> (Madd_sig_estado_add0000_cy<12>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<13> (Madd_sig_estado_add0000_cy<13>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<14> (Madd_sig_estado_add0000_cy<14>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<15> (Madd_sig_estado_add0000_cy<15>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<16> (Madd_sig_estado_add0000_cy<16>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<17> (Madd_sig_estado_add0000_cy<17>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<18> (Madd_sig_estado_add0000_cy<18>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<19> (Madd_sig_estado_add0000_cy<19>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<20> (Madd_sig_estado_add0000_cy<20>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<21> (Madd_sig_estado_add0000_cy<21>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<22> (Madd_sig_estado_add0000_cy<22>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<23> (Madd_sig_estado_add0000_cy<23>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<24> (Madd_sig_estado_add0000_cy<24>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<25> (Madd_sig_estado_add0000_cy<25>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<26> (Madd_sig_estado_add0000_cy<26>)
+     MUXCY:CI->O           1   0.059   0.000  Madd_sig_estado_add0000_cy<27> (Madd_sig_estado_add0000_cy<27>)
+     XORCY:CI->O           9   0.804   0.995  Madd_sig_estado_add0000_xor<28> (sig_estado_add0000<28>)
+     LUT3:I0->O            1   0.704   0.000  Mcompar_sig_estado_cmp_lt0003_lut<9>1 (Mcompar_sig_estado_cmp_lt0003_lut<9>1)
+     MUXCY:S->O            1   0.464   0.000  Mcompar_sig_estado_cmp_lt0003_cy<9>_0 (Mcompar_sig_estado_cmp_lt0003_cy<9>1)
+     MUXCY:CI->O           3   0.459   0.706  Mcompar_sig_estado_cmp_lt0003_cy<10>_0 (Mcompar_sig_estado_cmp_lt0003_cy<10>1)
+     LUT2_L:I0->LO         1   0.704   0.104  cnt_mux0011<0>1130_SW0 (N43)
+     LUT4:I3->O            3   0.704   0.535  cnt_mux0011<0>1130 (cnt_mux0011<0>1130)
+     LUT4_D:I3->O         31   0.704   1.266  i_mux0000<0>11 (N1)
+     LUT4:I3->O            1   0.704   0.000  i_mux0000<9>1 (i_mux0000<9>)
+     FD:D                      0.308          i_9
+    ----------------------------------------
+    Total                     13.049ns (8.848ns logic, 4.201ns route)
+                                       (67.8% logic, 32.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 90 / 76
+-------------------------------------------------------------------------
+Offset:              3.726ns (Levels of Logic = 3)
+  Source:            SEL<0> (PAD)
+  Destination:       LEDS_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: SEL<0> to LEDS_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            14   1.218   1.175  SEL_0_IBUF (SEL_0_IBUF)
+     LUT3:I0->O            1   0.704   0.000  Mmux_LEDS_mux0001_3 (Mmux_LEDS_mux0001_3)
+     MUXF5:I1->O           1   0.321   0.000  Mmux_LEDS_mux0001_2_f5 (LEDS_mux0001<25>)
+     FDRE:D                    0.308          LEDS_0
+    ----------------------------------------
+    Total                      3.726ns (2.551ns logic, 1.175ns route)
+                                       (68.5% logic, 31.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 11 / 11
+-------------------------------------------------------------------------
+Offset:              4.532ns (Levels of Logic = 1)
+  Source:            SPI_SCK (FF)
+  Destination:       SPI_SCK (PAD)
+  Source Clock:      clk rising
+
+  Data Path: SPI_SCK to SPI_SCK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDS:C->Q              6   0.591   0.669  SPI_SCK (SPI_SCK_OBUF)
+     OBUF:I->O                 3.272          SPI_SCK_OBUF (SPI_SCK)
+    ----------------------------------------
+    Total                      4.532ns (3.863ns logic, 0.669ns route)
+                                       (85.2% logic, 14.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               5.755ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       AMP_SHDN (PAD)
+
+  Data Path: rst to AMP_SHDN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            42   1.218   1.265  rst_IBUF (AMP_SHDN_OBUF)
+     OBUF:I->O                 3.272          AMP_SHDN_OBUF (AMP_SHDN)
+    ----------------------------------------
+    Total                      5.755ns (4.490ns logic, 1.265ns route)
+                                       (78.0% logic, 22.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.88 secs
+ 
+--> 
+
+Total memory usage is 261876 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    6 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\tras\Trans.ncd
+OUTFILE=C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\tras\Trans.bit
+FAMILY=Spartan6
+PART=xc6slx45-3csg324
+WORKINGDIR=C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\tras
+LICENSE=WebPack
+USER_INFO=__0_0_0

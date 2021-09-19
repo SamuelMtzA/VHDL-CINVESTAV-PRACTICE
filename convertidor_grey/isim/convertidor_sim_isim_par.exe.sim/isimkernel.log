@@ -1,0 +1,28 @@
+Command line:
+   convertidor_sim_isim_par.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  54243
+
+Sun Sep 16 13:20:58 2018
+
+
+ Elaboration Time: 0.0468 sec
+
+ Current Memory Usage: 502.661 Meg
+
+ Total Signals          : 113
+ Total Nets             : 68
+ Total Signal Drivers   : 59
+ Total Blocks           : 43
+ Total Primitive Blocks : 38
+ Total Processes        : 60
+ Total Traceable Variables  : 100
+ Total Scalar Nets and Variables : 3221
+
+ Total Simulation Time: 0.280802 sec
+
+ Current Memory Usage: 502.661 Meg
+
+Sun Sep 16 13:38:30 2018
+

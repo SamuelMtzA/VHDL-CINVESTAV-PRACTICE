@@ -1,0 +1,295 @@
+# ==== 6-pin header J1 ====
+# These four connections are shared with the FX2 connector
+NET "ent" LOC = "B4" | IOSTANDARD = LVTTL;
+NET "ent" CLOCK_DEDICATED_ROUTE = FALSE;
+
+# ==== 50 MHZ clock source and push botton reset ==== 
+NET "clk"  LOC = "C9"  ;
+NET "rst"  LOC = "V16" | IOSTANDARD = LVTTL | PULLDOWN;
+
+# === Despliegue de datos en leds ===
+//NET "leds<0>" LOC = "F12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+//NET "leds<1>" LOC = "E12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+//NET "leds<2>" LOC = "E11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+//NET "leds<3>" LOC = "F11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+//NET "leds<4>" LOC = "C11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+//NET "leds<5>" LOC = "D11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+//NET "leds<6>" LOC = "E9"  | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+
+#Terminal del Reloj de 50 Mhz
+//NET "clk" LOC = "C9" | IOSTANDARD = LVCMOS33 ;
+#Terminal de Reset
+//NET "rst" LOC = "K17" | IOSTANDARD = LVTTL | PULLDOWN;
+#Terminal de los Pulsadores
+#Terminal de salida PWM
+NET "pwm_servo"LOC = "A6"|IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 12;
+#library IEEE;
+#use IEEE.STD_LOGIC_1164.ALL;
+#use IEEE.STD_LOGIC_ARITH.ALL;
+#use IEEE.STD_LOGIC_UNSIGNED.ALL;
+#
+#entity Receptor is
+#    port ( ent,clk,rst: in   STD_LOGIC;
+#			  posicion:	out STD_LOGIC_VECTOR (6 downto 0));
+#end Receptor;
+#
+#architecture Arq_Receptor of Receptor is
+#
+#signal vector:		STD_LOGIC_VECTOR (12 downto 0):= "0000000000000";	--Vector que almacena la informacion de la trama detectada
+#signal npulsos:	STD_LOGIC_VECTOR (3 downto 0):= "0000";				--Bandera de cuenta de pulsos para identificar una trama
+#signal clkdiv:		STD_LOGIC_VECTOR (12 downto 0):= "0000000000000";	--Señal de referencia de 100 us
+#signal nref:		STD_LOGIC_VECTOR (4 downto 0):= "00000";				--Señal que determina el tiempo de duracion de cada estado alto
+#signal pivote:		STD_LOGIC_VECTOR (4 downto 0):= "00000";				--Recibe la cuenta de nref para evaluar y asignar '1' o '0' al vector de datos
+#signal rstin:		STD_LOGIC:='0';												--Señal de reinicio de trama
+#signal sony:		STD_LOGIC:='0';												--Invierte la salida del receptor para leer los 12 bits correctamente
+#
+#begin
+#
+#-- Señal de entrada invertida (protocolo Sony standard)
+#sony <= not ent ;
+#
+#-- Señal de referencia de 100us
+#process(clk,rst,clkdiv,rstin) begin
+#
+#if rst='1' or clkdiv="1001110001000" or rstin ='1' then
+#	clkdiv <=(others => '0');
+#elsif clk 'event and clk = '1' then
+#		clkdiv <= clkdiv + 1;
+#end if;
+#
+#end process; 
+#
+#-- Se detecta el pulso de sincronia
+#process(clkdiv(12),rst,nref,rstin) begin
+#
+#if rst='1' or rstin='1'  then
+#		rstin <='0';
+#elsif clkdiv(12)'event and clkdiv(12)='0' then
+#	if nref = "01101" then
+#		rstin <= '1';
+#	end if;
+#end if;
+# 
+#end process;
+#
+#-- Se cuenta el numero de pulsos a partir del flanco de bajada del pulso de sincronia
+#process (sony,rst,npulsos,rstin) begin
+#
+#if rst='1' or rstin ='1' then
+#	   npulsos <= "0000";
+#elsif sony'event and sony='0' then
+#		npulsos <= npulsos + 1;	
+#end if;
+#
+#end process;
+#
+#-- Contador de tiempo en estado alto
+#process(clkdiv(12),rst,nref,sony,rstin) begin
+#
+#if rst='1' or rstin ='1'  then
+#		nref <=(others => '0');
+#		pivote  <=(others => '0');
+#elsif clkdiv(12)'event and clkdiv(12)='0' then
+#	if sony = '1' then 
+#			nref <= nref+1;
+#	elsif sony = '0' then
+#			pivote <= nref;
+#			nref<=(others => '0');
+#	end if;
+#end if;
+# 
+#end process;
+#
+#-- Generación del vector de datos
+#process (clkdiv(12),rst,pivote,rstin) 
+#
+#variable i: integer range 0 to 11 := 0 ;
+#begin
+#if rst = '1' or rstin ='1' then
+#	vector <=(others => '0');
+#	i:= 0;
+#elsif clkdiv(12)'event and clkdiv(12)='1' and pivote > "0000" then
+#	if pivote  < "1000" then
+#			vector(i)<= '0';
+#			i:= i+1;
+#	else
+#			vector(i)<= '1';
+#			i:= i+1;
+#	end if;
+#end if;
+#
+#end process;
+#
+#-- Proceso de despliegue de datos en leds
+#process (clkdiv(12),rst,npulsos,vector) begin
+#if rst = '1' then
+#		posicion <= (others => '0');
+#elsif clkdiv(12)'event and clkdiv(12)='0' then
+#	if npulsos="1101" then
+#		posicion <= vector(7 downto 1);
+#	end if;
+#		
+#end if;
+#end process;
+#end Arq_Receptor;
+#
+#
+#
+#
+#
+#library IEEE;
+#use IEEE.STD_LOGIC_1164.ALL;
+#use IEEE.STD_LOGIC_ARITH.ALL;
+#use IEEE.STD_LOGIC_UNSIGNED.ALL;
+#
+#entity PWM is
+#    Port ( clk,rst: in  STD_LOGIC;
+#				push: in std_logic_vector(6 downto 0);
+#			  	pwm_servo : out std_logic);
+#end PWM;
+#
+#architecture arq_PWM of PWM is
+#
+#signal clk100K: std_logic;
+#signal cnt: std_logic_vector (12 downto 0);
+#signal aux: std_logic_vector (11 downto 0);
+#signal a: std_logic_vector (11 downto 0);
+#signal B: std_logic_vector (11 downto 0);
+#signal DER: std_logic;
+#signal IZQ: std_logic;
+#
+#begin
+#			
+#-- Periodo PWM (50% duty cycle)
+#process (clk,rst,cnt)
+#begin
+#	if rst='1' or cnt=X"1F3" then -- 20ns * 500 ciclos = referencia 10us
+#	   cnt <= (others => '0');
+#		clk100K <= '1';
+#	elsif clk'event and clk='1' then
+#		cnt <= cnt + 1 ;
+#		if cnt= X"0F9" then	--20ns * 249 ciclos = 1/2 Periodo
+#			clk100K <= '0';
+#		end if;
+#	end if;
+#end process;	
+#
+#process (clk100K,rst,aux)
+#begin
+#	if rst='1' or aux=X"5DC" then  -- Tiempo (15ms)
+#	   aux <= (others => '0');
+#		pwm_servo <= '1';
+#	elsif clk100K'event and clk100K='1' then
+#		aux <= aux + 1 ;
+#		if aux = a then
+#			pwm_servo <= '0';
+#		end if;
+#	end if;
+#end process;
+#
+#process (clk100k,DER,IZQ,rst,a)
+#	begin
+#		if rst ='1' then
+#		  a <= x"091";		--1.45ms
+#		  DER <= '0';
+#		  IZQ <= '0';
+#		elsif clk100k'event and clk100k ='1' then
+#			case push is
+#				when "0000000" => B <= X"00A";--10º
+#				when "0000001" => B <= X"014";--20º
+#				when "0000010" => B <= X"01D";--30º
+#				when "0000011" => B <= X"028";--40º
+#				when "0000100" => B <= X"032";--50º
+#				when "0000101" => B <= X"03C";--60º
+#				when "0000110" => B <= X"046";--70º
+#				when "0000111" => B <= X"050";--80º
+#				when "0001000" => B <= X"05A";--90º
+#				when "0010000" => DER <= '1'; --Canal+
+#				when "0010001" => IZQ <= '1'; --Canal-
+#				when "1111111" => a <= a; 
+#				When others    => a <= X"091";-- Se reinicia en la posición de 90°
+#			end case;
+#			if DER = '1' then 
+#			   if push = "0000000" then
+#				a <= a+B;
+#				DER <= '0';
+#				B <= (others => '0');
+#				elsif push = "0000001" then
+#				a <= a+B;
+#				DER <= '0';
+#				B <= (others => '0');
+#				elsif push = "0000010" then
+#				a <= a+B;
+#				DER <= '0';
+#				B <= (others => '0');
+#				elsif push = "0000011" then
+#				a <= a+B;
+#				DER <= '0';
+#				B <= (others => '0');
+#				elsif push = "0000100" then
+#				a <= a+B;
+#				DER <= '0';
+#				B <= (others => '0');
+#				elsif push = "0000101" then
+#				a <= a+B;
+#				DER <= '0';
+#				B <= (others => '0');
+#				elsif push = "0000110" then
+#				a <= a+B;
+#				DER <= '0';
+#				B <= (others => '0');
+#				elsif push = "0000111" then
+#				a <= a+B;
+#				DER <= '0';
+#				B <= (others => '0');
+#				elsif push = "0001000" then
+#				a <= a+B;
+#				DER <= '0';
+#				B <= (others => '0');
+#				end if;
+#			elsif IZQ = '1' then
+#				if push = "0000000" then
+#				a <= a-B;
+#				IZQ <= '0';
+#				B <= (others => '0');
+#				elsif push = "0000001" then
+#				a <= a-B;
+#				B <= (others => '0');
+#				IZQ <= '0';
+#				elsif push = "0000010" then
+#				a <= a-B;
+#				B <= (others => '0');
+#				IZQ <= '0';
+#				elsif push = "0000011" then
+#				a <= a-B;
+#				B <= (others => '0');
+#				IZQ <= '0';
+#				elsif push = "0000100" then
+#				a <= a-B;
+#				B <= (others => '0');
+#				IZQ <= '0';
+#				elsif push = "0000101" then
+#				a <= a-B;
+#				B <= (others => '0');
+#				IZQ <= '0';
+#				elsif push = "0000110" then
+#				a <= a-B;
+#				B <= (others => '0');
+#				IZQ <= '0';
+#				elsif push = "0000111" then
+#				a <= a-B;
+#				B <= (others => '0');
+#				IZQ <= '0';
+#				elsif push = "0001000" then
+#				a <= a-B;
+#				B <= (others => '0');
+#				IZQ <= '0';
+#				end if;
+#			end if;
+#		end if;
+#end process;
+#end arq_PWM;
+#
+#%===================================================================
+#
+#

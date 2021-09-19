@@ -1,0 +1,16 @@
+ISim log file
+Running: C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\convertidor_grey\convertidor_sim_isim_par.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/convertidor_grey/convertidor_sim_isim_par.wdb 
+ISim P.58f (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+INFO: SDF backannotation was successful with SDF file netgen/par/convertidor_timesim.sdf, for root module /convertidor_sim/uut/.
+Finished circuit initialization process.
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us
+# run 1.00us

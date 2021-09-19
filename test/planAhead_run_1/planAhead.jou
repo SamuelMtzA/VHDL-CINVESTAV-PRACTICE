@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.5 (64-bit)
+# Build 247527 by xbuild on Mon Mar 25 17:13:07 MDT 2013
+# Start of session at: Tue Feb 13 20:37:31 2018
+# Process ID: 8400
+# Log file: C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/test/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/test/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/test/pa.fromNcd.tcl

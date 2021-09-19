@@ -1,0 +1,30 @@
+Command line:
+   contador_sim_isim_par.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/par/contador_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  0
+     -socket  51170
+
+Mon Sep 24 16:07:03 2018
+
+
+ Elaboration Time: 0.0624 sec
+
+ Current Memory Usage: 511.406 Meg
+
+ Total Signals          : 722
+ Total Nets             : 482
+ Total Signal Drivers   : 415
+ Total Blocks           : 146
+ Total Primitive Blocks : 85
+ Total Processes        : 415
+ Total Traceable Variables  : 1023
+ Total Scalar Nets and Variables : 8548
+
+ Total Simulation Time: 0.280801 sec
+
+ Current Memory Usage: 511.406 Meg
+
+Mon Sep 24 16:40:17 2018
+

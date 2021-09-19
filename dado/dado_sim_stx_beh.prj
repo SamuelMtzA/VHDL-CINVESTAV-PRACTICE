@@ -1,0 +1,2 @@
+vhdl isim_temp "dado.vhd"
+vhdl isim_temp "dado_tb.vhd"

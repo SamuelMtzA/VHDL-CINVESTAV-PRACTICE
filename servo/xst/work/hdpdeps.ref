@@ -1,0 +1,17 @@
+V3 7
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/servo/Antirrebote.vhd 2013/04/29.11:15:08 P.58f
+EN work/ANTIRREBOTE 1538591812 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/servo/Antirrebote.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/ANTIRREBOTE/Behavioral 1538591813 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/servo/Antirrebote.vhd \
+      EN work/ANTIRREBOTE 1538591812
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/servo/PWM.vhd 2013/10/03.11:12:12 P.58f
+EN work/PWM 1538591814 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/servo/PWM.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/PWM/arq_PWM 1538591815 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/servo/PWM.vhd EN work/PWM 1538591814 \
+      CP ANTIRREBOTE

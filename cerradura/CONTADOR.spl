@@ -1,0 +1,6 @@
+[Inputs]
+CAPTURA
+RESET
+[Outputs]
+[BiDir]
+=CONTEO[2:0]=

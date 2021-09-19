@@ -1,0 +1,2 @@
+vhdl work "netgen/par/MEALY_timesim.vhd"
+vhdl work "m_tb.vhd"

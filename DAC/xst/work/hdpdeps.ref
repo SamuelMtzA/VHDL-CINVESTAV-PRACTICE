@@ -1,0 +1,8 @@
+V3 3
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/DAC/DAC.vhd 2018/10/10.12:35:43 P.58f
+EN work/DAC 1539620701 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/DAC/DAC.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/DAC/Arq 1539620702 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/DAC/DAC.vhd EN work/DAC 1539620701

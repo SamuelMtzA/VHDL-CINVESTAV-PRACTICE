@@ -1,0 +1,9 @@
+V3 3
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/contador/conta.vhd 2018/09/22.13:16:32 P.58f
+EN work/conta 1537640194 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/contador/conta.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/conta/arq_cont 1537640195 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/contador/conta.vhd \
+      EN work/conta 1537640194

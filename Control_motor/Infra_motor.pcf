@@ -1,0 +1,14 @@
+//! **************************************************************************
+// Written by: Map P.58f on Mon Oct 08 17:57:51 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "pwm_servo" LOCATE = SITE "A6" LEVEL 1;
+COMP "clk" LOCATE = SITE "C9" LEVEL 1;
+COMP "ent" LOCATE = SITE "B4" LEVEL 1;
+PIN ent_pin<0> = BEL "ent" PINNAME PAD;
+PIN "ent_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
+COMP "rst" LOCATE = SITE "V16" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

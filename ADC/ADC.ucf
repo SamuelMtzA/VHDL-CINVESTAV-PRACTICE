@@ -1,0 +1,28 @@
+#Terminal de Reloj 50 Mhz
+	NET "CLK"  LOC = "C9" | IOSTANDARD = LVCMOS33 ;
+#Terminal de Reset
+	NET "RST" LOC = "K17" | IOSTANDARD = LVTTL | PULLDOWN ;
+#Terminales de Seleccion de Vi y parte de la trama;
+	NET "SEL<0>"    LOC = "L13" | IOSTANDARD = LVTTL ; 
+	NET "SEL<1>"    LOC = "L14" | IOSTANDARD = LVTTL ;
+#Terminales I/O para la interfaz con el preamplificador
+	NET "SPI_MOSI" LOC = "T4" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 6 ;
+	NET "AMP_CS"   LOC = "N7" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 6 ;
+	NET "AMP_SHDN" LOC = "P7" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 6 ;
+#Terminales I/O para la interfaz con el ADC
+	NET "AD_CONV"  LOC = "P11" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 6 ;
+	NET "SPI_SCK"  LOC = "U16" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;
+	NET "SPI_MISO" LOC = "N10" | IOSTANDARD = LVCMOS33 ;
+# Señales de visualización de la conversión
+	NET "LEDS<6>"   LOC = "E12" | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = SLOW ; 
+	NET "LEDS<5>"   LOC = "E11" | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = SLOW ; 
+	NET "LEDS<4>"   LOC = "F11" | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = SLOW ; 
+	NET "LEDS<3>"   LOC = "C11" | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = SLOW ; 
+	NET "LEDS<2>"   LOC = "D11" | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = SLOW ; 
+	NET "LEDS<1>"   LOC = "E9"  | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = SLOW ; 
+	NET "LEDS<0>"   LOC = "F9"  | IOSTANDARD = LVTTL  | DRIVE = 8  | SLEW = SLOW ;
+# Terminales para deshabilitar  sobre el bus SPI
+	NET "DIS_SIG<3>" LOC = "U3" | IOSTANDARD = LVCMOS33  | DRIVE = 6  | SLEW = SLOW ; 
+	NET "DIS_SIG<2>" LOC = "N8" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = SLOW ; 
+	NET "DIS_SIG<1>" LOC = "D16"| IOSTANDARD = LVCMOS33  | DRIVE = 4  | SLEW = SLOW ; 
+	NET "DIS_SIG<0>" LOC = "T3" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = SLOW ;

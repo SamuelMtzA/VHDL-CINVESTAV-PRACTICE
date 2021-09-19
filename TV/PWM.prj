@@ -1,0 +1,2 @@
+vhdl work "receptor.vhd"
+vhdl work "PWM.vhd"

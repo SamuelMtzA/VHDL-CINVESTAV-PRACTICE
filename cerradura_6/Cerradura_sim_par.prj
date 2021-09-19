@@ -1,0 +1,2 @@
+vhdl work "netgen/par/CERRADURA_timesim.vhd"
+vhdl work "Cerradura_tb.vhd"

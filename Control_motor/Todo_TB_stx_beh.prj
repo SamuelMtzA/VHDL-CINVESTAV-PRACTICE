@@ -1,0 +1,5 @@
+vhdl isim_temp "PWM.vhd"
+vhdl isim_temp "modulos.vhd"
+vhdl isim_temp "Infrarrojo.vhd"
+vhdl isim_temp "Infra_motor.vhd"
+vhdl isim_temp "Todo_TB.vhd"

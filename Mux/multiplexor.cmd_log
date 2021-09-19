@@ -1,0 +1,16 @@
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Mux/multiplexor.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Mux/multiplexor.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Mux/multiplexor.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Mux/multiplexor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s1200e-fg320-5 multiplexor.ngc multiplexor.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o multiplexor_map.ncd multiplexor.ngd multiplexor.pcf 
+par -w -intstyle ise -ol high -t 1 multiplexor_map.ncd multiplexor.ncd multiplexor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multiplexor.twx multiplexor.ncd -o multiplexor.twr multiplexor.pcf 
+bitgen -intstyle ise -f multiplexor.ut multiplexor.ncd 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Mux/multiplexor.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Mux/multiplexor.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Mux/multiplexor.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Mux/multiplexor.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Mux/multiplexor.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Mux/multiplexor.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc puertos_mux.ucf -p xc3s1200e-fg320-5 multiplexor.ngc multiplexor.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc puertos_mux.ucf -p xc3s1200e-fg320-5 multiplexor.ngc multiplexor.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o multiplexor_map.ncd multiplexor.ngd multiplexor.pcf 
+par -w -intstyle ise -ol high -t 1 multiplexor_map.ncd multiplexor.ncd multiplexor.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml multiplexor.twx multiplexor.ncd -o multiplexor.twr multiplexor.pcf -ucf puertos_mux.ucf 
+bitgen -intstyle ise -f multiplexor.ut multiplexor.ncd 

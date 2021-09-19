@@ -1,0 +1,28 @@
+V3 19
+FL C:/Users/hp_g301/Documents/Cinvestav/1_Cuatrimestre/Control_motor/Infrarrojo.vhd 2018/10/07.21:51:23 P.58f
+FL C:/Users/hp_g301/Documents/Cinvestav/1_Cuatrimestre/Control_motor/Infra_motor.vhd 2018/10/07.22:55:37 P.58f
+FL C:/Users/hp_g301/Documents/Cinvestav/1_Cuatrimestre/Control_motor/modulos.vhd 2018/10/07.21:56:35 P.58f
+FL C:/Users/hp_g301/Documents/Cinvestav/1_Cuatrimestre/Control_motor/PWM.vhd 2018/10/07.21:56:35 P.58f
+FL C:/Users/Samuel/Desktop/Control_motor/Infrarrojo.vhd 2018/10/08.17:56:28 P.58f
+EN work/Receptor 1539039458 \
+      FL C:/Users/Samuel/Desktop/Control_motor/Infrarrojo.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/Receptor/Arq_Receptor 1539039459 \
+      FL C:/Users/Samuel/Desktop/Control_motor/Infrarrojo.vhd EN work/Receptor 1539039458
+FL C:/Users/Samuel/Desktop/Control_motor/Infra_motor.vhd 2018/10/08.17:56:28 P.58f
+EN work/Infra_motor 1539039462 \
+      FL C:/Users/Samuel/Desktop/Control_motor/Infra_motor.vhd \
+      PB ieee/std_logic_1164 1381692176 PH work/modulos 1539039457
+AR work/Infra_motor/completo 1539039463 \
+      FL C:/Users/Samuel/Desktop/Control_motor/Infra_motor.vhd \
+      EN work/Infra_motor 1539039462 CP Receptor CP PWM
+FL C:/Users/Samuel/Desktop/Control_motor/modulos.vhd 2018/10/08.17:56:28 P.58f
+PH work/modulos 1539039457 FL C:/Users/Samuel/Desktop/Control_motor/modulos.vhd \
+      PB ieee/std_logic_1164 1381692176 CD PWM CD Receptor
+FL C:/Users/Samuel/Desktop/Control_motor/PWM.vhd 2018/10/08.17:56:28 P.58f
+EN work/PWM 1539039460 FL C:/Users/Samuel/Desktop/Control_motor/PWM.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/PWM/arq_PWM 1539039461 \
+      FL C:/Users/Samuel/Desktop/Control_motor/PWM.vhd EN work/PWM 1539039460

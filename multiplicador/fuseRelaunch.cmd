@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/multiplicador/multiplicador_sim_isim_beh.exe" -prj "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/multiplicador/multiplicador_sim_beh.prj" "work.multiplicador_sim" 

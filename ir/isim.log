@@ -1,0 +1,30 @@
+ISim log file
+Running: C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\ir\receptor_sim_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/ir/receptor_sim_isim_beh.wdb 
+ISim P.58f (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 1.00us
+# run 200.00us
+# run 200.00us
+# run 200.00us
+# restart
+# run 200.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 2000.00us
+# restart
+# run 180000.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 68984390 ns : File "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/ir/receptor_tb.vhd" Line 55
+# restart
+# run 180000.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 180000.00us
+Stopped at time : 261613570 ns : File "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/ir/receptor.vhd" Line 37

@@ -1,0 +1,30 @@
+Command line:
+   dado_sim_isim_par.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/par/dado_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  1
+     -socket  50374
+
+Mon Sep 24 15:12:56 2018
+
+
+ Elaboration Time: 0.0624 sec
+
+ Current Memory Usage: 511.406 Meg
+
+ Total Signals          : 578
+ Total Nets             : 381
+ Total Signal Drivers   : 344
+ Total Blocks           : 140
+ Total Primitive Blocks : 81
+ Total Processes        : 344
+ Total Traceable Variables  : 881
+ Total Scalar Nets and Variables : 7295
+
+ Total Simulation Time: 0.436802 sec
+
+ Current Memory Usage: 511.406 Meg
+
+Mon Sep 24 15:45:51 2018
+

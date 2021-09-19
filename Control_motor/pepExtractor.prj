@@ -1,0 +1,4 @@
+work	"Infra_motor.vhd"
+work	"Infrarrojo.vhd"
+work	"PWM.vhd"
+work	"modulos.vhd"

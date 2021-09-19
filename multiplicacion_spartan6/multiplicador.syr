@@ -1,0 +1,333 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: multiplicador.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "multiplicador.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "multiplicador"
+Output Format                      : NGC
+Target Device                      : xc6slx45-3-csg324
+
+---- Source Options
+Top Module Name                    : multiplicador
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : No
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\multiplicacion_spartan6\multiplicador.vhd" into library work
+Parsing entity <multiplicador>.
+Parsing architecture <Arq_multiplicador> of entity <multiplicador>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <multiplicador> (architecture <Arq_multiplicador>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <multiplicador>.
+    Related source file is "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\multiplicacion_spartan6\multiplicador.vhd".
+    Found 17x17-bit multiplier for signal <P> created at line 24.
+    Summary:
+	inferred   1 Multiplier(s).
+Unit <multiplicador> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 17x17-bit multiplier                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 17x17-bit multiplier                                  : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <multiplicador> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block multiplicador, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : multiplicador.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1074
+#      GND                         : 1
+#      LUT1                        : 17
+#      LUT2                        : 268
+#      LUT3                        : 36
+#      LUT4                        : 108
+#      MUXCY                       : 320
+#      XORCY                       : 324
+# IO Buffers                       : 68
+#      IBUF                        : 34
+#      OBUF                        : 34
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice LUTs:                  429  out of  27288     1%  
+    Number used as Logic:               429  out of  27288     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    429
+   Number with an unused Flip Flop:     429  out of    429   100%  
+   Number with an unused LUT:             0  out of    429     0%  
+   Number of fully used LUT-FF pairs:     0  out of    429     0%  
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                          68
+ Number of bonded IOBs:                  68  out of    218    31%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: 11.661ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 108832250 / 34
+-------------------------------------------------------------------------
+Delay:               11.661ns (Levels of Logic = 38)
+  Source:            B<6> (PAD)
+  Destination:       P<33> (PAD)
+
+  Data Path: B<6> to P<33>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            34   1.222   1.549  B_6_IBUF (Mmult_P_A<0>_x_B<6>_mand)
+     LUT4:I1->O            1   0.205   0.000  Mmult_P_Madd6_lut<3> (Mmult_P_Madd6_lut<3>)
+     MUXCY:S->O            1   0.172   0.000  Mmult_P_Madd6_cy<3> (Mmult_P_Madd6_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<4> (Mmult_P_Madd6_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<5> (Mmult_P_Madd6_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<6> (Mmult_P_Madd6_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<7> (Mmult_P_Madd6_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<8> (Mmult_P_Madd6_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<9> (Mmult_P_Madd6_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<10> (Mmult_P_Madd6_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<11> (Mmult_P_Madd6_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<12> (Mmult_P_Madd6_cy<12>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<13> (Mmult_P_Madd6_cy<13>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<14> (Mmult_P_Madd6_cy<14>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<15> (Mmult_P_Madd6_cy<15>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<16> (Mmult_P_Madd6_cy<16>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<17> (Mmult_P_Madd6_cy<17>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<18> (Mmult_P_Madd6_cy<18>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<19> (Mmult_P_Madd6_cy<19>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<20> (Mmult_P_Madd6_cy<20>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<21> (Mmult_P_Madd6_cy<21>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<22> (Mmult_P_Madd6_cy<22>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd6_cy<23> (Mmult_P_Madd6_cy<23>)
+     MUXCY:CI->O           1   0.213   0.684  Mmult_P_Madd6_cy<24> (Mmult_P_Madd6_cy<24>)
+     LUT2:I0->O            1   0.203   0.000  Mmult_P_Madd10_lut<27> (Mmult_P_Madd10_lut<27>)
+     MUXCY:S->O            1   0.172   0.000  Mmult_P_Madd10_cy<27> (Mmult_P_Madd10_cy<27>)
+     MUXCY:CI->O           1   0.019   0.000  Mmult_P_Madd10_cy<28> (Mmult_P_Madd10_cy<28>)
+     XORCY:CI->O           1   0.180   0.684  Mmult_P_Madd10_xor<29> (Mmult_P_Madd_303)
+     LUT2:I0->O            1   0.203   0.000  Mmult_P_Madd13_lut<30> (Mmult_P_Madd13_lut<30>)
+     MUXCY:S->O            1   0.172   0.000  Mmult_P_Madd13_cy<30> (Mmult_P_Madd13_cy<30>)
+     XORCY:CI->O           1   0.180   0.580  Mmult_P_Madd13_xor<31> (Mmult_P_Madd_3110)
+     LUT1:I0->O            1   0.205   0.000  Mmult_P_Madd14_cy<31>_rt (Mmult_P_Madd14_cy<31>_rt)
+     MUXCY:S->O            1   0.172   0.000  Mmult_P_Madd14_cy<31> (Mmult_P_Madd14_cy<31>)
+     XORCY:CI->O           1   0.180   0.580  Mmult_P_Madd14_xor<32> (Mmult_P_Madd_326)
+     LUT1:I0->O            1   0.205   0.000  Mmult_P_Madd15_cy<32>_rt (Mmult_P_Madd15_cy<32>_rt)
+     MUXCY:S->O            0   0.172   0.000  Mmult_P_Madd15_cy<32> (Mmult_P_Madd15_cy<32>)
+     XORCY:CI->O           1   0.180   0.579  Mmult_P_Madd15_xor<33> (P_33_OBUF)
+     OBUF:I->O                 2.571          P_33_OBUF (P<33>)
+    ----------------------------------------
+    Total                     11.661ns (7.006ns logic, 4.655ns route)
+                                       (60.1% logic, 39.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.38 secs
+ 
+--> 
+
+Total memory usage is 254668 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

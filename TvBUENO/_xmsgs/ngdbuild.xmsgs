@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="ConstraintSystem" num="8" delta="new" >The file &apos;<arg fmt="%s" index="1">C:/Users/Samuel/Desktop/cinvestav_1er_cuatri/Electrￃﾳnica Digital/Unidad 1/Cￃﾳdigos VHDL/Spartan 3E/Practica 6/PWM/PWM.ucf</arg>&apos; could not be opened for reading.
+</msg>
+
+</messages>
+

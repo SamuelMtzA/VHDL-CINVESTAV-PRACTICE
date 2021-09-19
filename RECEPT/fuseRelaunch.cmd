@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/RECEPT/Recepcion_tb_isim_par.exe" -prj "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/RECEPT/Recepcion_tb_par.prj" "work.Recepcion_tb" 

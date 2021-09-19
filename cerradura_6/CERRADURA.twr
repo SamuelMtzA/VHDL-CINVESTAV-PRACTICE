@@ -1,0 +1,218 @@
+--------------------------------------------------------------------------------
+Release 14.5 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml CERRADURA.twx CERRADURA.ncd -o CERRADURA.twr CERRADURA.pcf
+-ucf Cerradura.ucf
+
+Design file:              CERRADURA.ncd
+Physical constraint file: CERRADURA.pcf
+Device,package,speed:     xc6slx45,csg324,C,-3 (PRODUCTION 1.23 2013-03-26)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CAP
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |   -0.427(R)|      FAST  |    1.905(R)|      SLOW  |ANTIR1_inv        |   0.000|
+            |   -0.218(R)|      FAST  |    2.192(R)|      SLOW  |COMPARADOR1       |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock CLK
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |    3.293(R)|      SLOW  |   -1.920(R)|      FAST  |CLK_BUFGP         |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock ENTRADA<0>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |    0.910(R)|      FAST  |    0.640(R)|      SLOW  |COMPARADOR1       |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock ENTRADA<1>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |    0.400(R)|      FAST  |    1.367(R)|      SLOW  |COMPARADOR1       |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock ENTRADA<2>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |    0.667(R)|      FAST  |    0.958(R)|      SLOW  |COMPARADOR1       |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock ENTRADA<3>
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+RST         |    0.496(R)|      FAST  |    1.303(R)|      SLOW  |COMPARADOR1       |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock CAP to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+LEDS<0>     |        14.801(R)|      SLOW  |         8.635(R)|      FAST  |COMPARADOR1       |   0.000|
+LEDS<1>     |        15.618(R)|      SLOW  |         9.357(R)|      FAST  |COMPARADOR1       |   0.000|
+LEDS<2>     |        15.786(R)|      SLOW  |         9.428(R)|      FAST  |COMPARADOR1       |   0.000|
+LEDS<3>     |        15.711(R)|      SLOW  |         9.383(R)|      FAST  |COMPARADOR1       |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock ENTRADA<0> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+LEDS<0>     |        13.249(R)|      SLOW  |         7.507(R)|      FAST  |COMPARADOR1       |   0.000|
+LEDS<1>     |        14.066(R)|      SLOW  |         8.229(R)|      FAST  |COMPARADOR1       |   0.000|
+LEDS<2>     |        14.234(R)|      SLOW  |         8.300(R)|      FAST  |COMPARADOR1       |   0.000|
+LEDS<3>     |        14.159(R)|      SLOW  |         8.255(R)|      FAST  |COMPARADOR1       |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock ENTRADA<1> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+LEDS<0>     |        13.976(R)|      SLOW  |         8.017(R)|      FAST  |COMPARADOR1       |   0.000|
+LEDS<1>     |        14.793(R)|      SLOW  |         8.739(R)|      FAST  |COMPARADOR1       |   0.000|
+LEDS<2>     |        14.961(R)|      SLOW  |         8.810(R)|      FAST  |COMPARADOR1       |   0.000|
+LEDS<3>     |        14.886(R)|      SLOW  |         8.765(R)|      FAST  |COMPARADOR1       |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock ENTRADA<2> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+LEDS<0>     |        13.567(R)|      SLOW  |         7.750(R)|      FAST  |COMPARADOR1       |   0.000|
+LEDS<1>     |        14.384(R)|      SLOW  |         8.472(R)|      FAST  |COMPARADOR1       |   0.000|
+LEDS<2>     |        14.552(R)|      SLOW  |         8.543(R)|      FAST  |COMPARADOR1       |   0.000|
+LEDS<3>     |        14.477(R)|      SLOW  |         8.498(R)|      FAST  |COMPARADOR1       |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock ENTRADA<3> to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+LEDS<0>     |        13.912(R)|      SLOW  |         7.921(R)|      FAST  |COMPARADOR1       |   0.000|
+LEDS<1>     |        14.729(R)|      SLOW  |         8.643(R)|      FAST  |COMPARADOR1       |   0.000|
+LEDS<2>     |        14.897(R)|      SLOW  |         8.714(R)|      FAST  |COMPARADOR1       |   0.000|
+LEDS<3>     |        14.822(R)|      SLOW  |         8.669(R)|      FAST  |COMPARADOR1       |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CAP
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CAP            |    2.344|         |         |         |
+ENTRADA<0>     |    1.373|         |         |         |
+ENTRADA<1>     |    1.373|         |         |         |
+ENTRADA<2>     |    1.373|         |         |         |
+ENTRADA<3>     |    1.373|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    1.693|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ENTRADA<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CAP            |    2.344|         |         |         |
+ENTRADA<0>     |    1.373|         |         |         |
+ENTRADA<1>     |    1.373|         |         |         |
+ENTRADA<2>     |    1.373|         |         |         |
+ENTRADA<3>     |    1.373|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ENTRADA<1>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CAP            |    2.344|         |         |         |
+ENTRADA<0>     |    1.373|         |         |         |
+ENTRADA<1>     |    1.373|         |         |         |
+ENTRADA<2>     |    1.373|         |         |         |
+ENTRADA<3>     |    1.373|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ENTRADA<2>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CAP            |    2.344|         |         |         |
+ENTRADA<0>     |    1.373|         |         |         |
+ENTRADA<1>     |    1.373|         |         |         |
+ENTRADA<2>     |    1.373|         |         |         |
+ENTRADA<3>     |    1.373|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock ENTRADA<3>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CAP            |    2.344|         |         |         |
+ENTRADA<0>     |    1.373|         |         |         |
+ENTRADA<1>     |    1.373|         |         |         |
+ENTRADA<2>     |    1.373|         |         |         |
+ENTRADA<3>     |    1.373|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Wed Oct 03 09:29:51 2018 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 262 MB
+
+
+

@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TvBUENO/PWM.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TvBUENO/PWM.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc "C:/Users/Samuel/Desktop/cinvestav_1er_cuatri/Electrónica Digital/Unidad 1/Códigos VHDL/Spartan 3E/Practica 6/PWM/PWM.ucf" -p xc3s500e-fg320-4 PWM.ngc PWM.ngd  

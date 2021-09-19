@@ -1,0 +1,32 @@
+ISim log file
+Running: C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\Sumador_digital\sumador_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Sumador_digital/sumador_isim_beh.wdb 
+ISim P.58f (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force add /sumador/a 11 -radix unsigned
+# isim force add /sumador/a 11 -radix unsigned
+# isim force add /sumador/b 16 -radix unsigned
+# isim force add /sumador/b 16 -radix unsigned
+# run 20ns
+# isim force add /sumador/cin 0 -radix bin
+# isim force add /sumador/cin 0 -radix bin
+# run 20ns
+# isim force add /sumador/b 100 -radix unsigned
+# isim force add /sumador/b 100 -radix unsigned
+# run 20ns
+# isim force add /sumador/cin 1 -radix bin
+# isim force add /sumador/cin 1 -radix bin
+# run all
+# run 20ns
+# run 20ns
+# run 20ns
+# run 20ns
+# isim force add /sumador/cin 0 -radix bin
+# isim force add /sumador/cin 0 -radix bin
+# run 20ns
+# run 20ns

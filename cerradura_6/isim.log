@@ -1,0 +1,41 @@
+ISim log file
+Running: C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\cerradura_6\Cerradura_sim_isim_par.exe -intstyle ise -gui -sdfmax /uut/=netgen/par/CERRADURA_timesim.sdf -sdfroot /uut -tclbatch isim.cmd -wdb C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/cerradura_6/Cerradura_sim_isim_par.wdb 
+ISim P.58f (signature 0x7708f090)
+This is a Full version of ISim.
+INFO: SDF backannotation was successful with SDF file netgen/par/CERRADURA_timesim.sdf, for root module /uut/.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# run 70.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# restart
+# isim force add /cerradura_sim/entrada 9 -radix hex
+# run 20.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force add /cerradura_sim/entrada a -radix hex
+# isim force add /cerradura_sim/entrada b -radix hex
+# run 20.00us
+# isim force add /cerradura_sim/entrada 4 -radix hex
+# isim force add /cerradura_sim/entrada 4 -radix hex
+# run 20.00us
+# isim force add /cerradura_sim/entrada e -radix hex
+# run 20.00us
+# restart
+# isim force remove /cerradura_sim/entrada
+Signal was not forced.
+# run 70.00us
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+ISim P.58f (signature 0x7708f090)
+This is a Full version of ISim.
+INFO: SDF backannotation was successful with SDF file netgen/par/CERRADURA_timesim.sdf, for root module /uut/.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# run 70.00us

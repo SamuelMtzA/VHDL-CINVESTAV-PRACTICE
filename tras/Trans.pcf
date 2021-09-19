@@ -1,0 +1,10 @@
+//! **************************************************************************
+// Written by: Map P.58f on Tue Oct 02 18:37:50 2018
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "L15" LEVEL 1;
+COMP "tx" LOCATE = SITE "B16" LEVEL 1;
+COMP "rst" LOCATE = SITE "F5" LEVEL 1;
+SCHEMATIC END;
+

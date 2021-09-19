@@ -1,0 +1,12 @@
+
+ NET "CLK"   LOC = "L15";
+ NET "RST" LOC = "F5"; 
+ NET "CAP" LOC = "P3"; 
+ NET "LEDS<0>" LOC = "U18"; 
+ NET "LEDS<1>" LOC = "M14"; 
+ NET "LEDS<2>" LOC = "N14"; 
+ NET "LEDS<3>" LOC = "L14"; 
+ NET "ENTRADA<0>" LOC = "A10"; 
+ NET "ENTRADA<1>" LOC = "D14"; 
+ NET "ENTRADA<2>" LOC = "C14"; 
+ NET "ENTRADA<3>" LOC = "P15"; 

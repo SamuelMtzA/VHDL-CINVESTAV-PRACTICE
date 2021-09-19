@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/ir/receptor_sim_isim_beh.exe" -prj "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/ir/receptor_sim_beh.prj" "work.receptor_sim" 

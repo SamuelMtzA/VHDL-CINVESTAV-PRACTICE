@@ -1,0 +1,2 @@
+vhdtdtfi -lib work Comparador.vhd -prj cerradura -o COMPARADOR.spl -module COMPARADOR -template C:/Xilinx/14.5/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan6 COMPARADOR.spl C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/cerradura/COMPARADOR.sym 

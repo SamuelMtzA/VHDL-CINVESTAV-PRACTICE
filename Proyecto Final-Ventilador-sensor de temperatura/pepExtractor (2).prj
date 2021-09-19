@@ -1,0 +1,6 @@
+work	"ADC.vhd"
+work	"BCD.vhd"
+work	"LCD.vhd"
+work	"Modulos.vhd"
+work	"PWM.vhd"
+work	"Ventilador1.vhd"

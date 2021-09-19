@@ -1,0 +1,13 @@
+  NET "clk"   LOC = "B8";
+  NET "btn" LOC = "D18"; 
+  NET "rst" LOC = "B18"; 
+  NET "d<0>" LOC = "J14";
+  NET "d<1>" LOC = "J15";
+  NET "d<2>" LOC = "K15";
+ # Terminales para el dado digital
+#NET "clk"  LOC = "B8"  | IOSTANDARD = LVCMOS33 ;
+#NET "btn"  LOC = "D18" | IOSTANDARD = LVTTL | PULLDOWN ;
+#NET "rst"  LOC = "B18" | IOSTANDARD = LVTTL | PULLDOWN ;
+#NET "d<0>" LOC = "J14" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+#NET "d<1>" LOC = "J15" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;
+#NET "d<2>" LOC = "K15" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 8 ;

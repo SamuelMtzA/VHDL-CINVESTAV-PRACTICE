@@ -1,0 +1,34 @@
+#Terminal de Reloj 50 Mhz
+	NET "clk"  LOC = "C9" | IOSTANDARD = LVCMOS33 ;
+#Terminal de Reset
+	NET "rst" LOC = "K17" | IOSTANDARD = LVTTL | PULLDOWN ;
+#Terminales I/O para la interfaz con el preamplificador
+	NET "SPI_MOSI" LOC = "T4" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 6 ;
+	NET "AMP_CS"   LOC = "N7" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 6 ;
+	NET "AMP_SHDN" LOC = "P7" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 6 ;
+#Terminales I/O para la interfaz con el ADC
+	NET "AD_CONV"  LOC = "P11" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 6 ;
+	NET "SPI_SCK"  LOC = "U16" | IOSTANDARD = LVCMOS33 | SLEW = SLOW | DRIVE = 8 ;
+	NET "SPI_MISO" LOC = "N10" | IOSTANDARD = LVCMOS33 ;
+# Señales de visualización de la conversión
+
+# Terminales para deshabilitar  sobre el bus SPI
+	NET "DIS_SIG<3>" LOC = "U3" | IOSTANDARD = LVCMOS33  | DRIVE = 6  | SLEW = SLOW ; 
+	NET "DIS_SIG<2>" LOC = "N8" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = SLOW ; 
+	NET "DIS_SIG<1>" LOC = "D16"| IOSTANDARD = LVCMOS33  | DRIVE = 4  | SLEW = SLOW ; 
+	NET "DIS_SIG<0>" LOC = "T3" | IOSTANDARD = LVCMOS33  | DRIVE = 8  | SLEW = SLOW ;
+
+#Terminal de salida PWM
+	
+NET "pwm_servo"LOC = "A6"|IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 12;
+
+# LCD Control terminals
+NET "LCD_E" 	LOC = "M18" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "LCD_RS" 	LOC = "L18" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "LCD_RW" 	LOC = "L17" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+
+# The LCD four-bit data interface is shared with the StrataFlash.
+NET "DATA<3>" 	LOC = "R15" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "DATA<2>" 	LOC = "R16" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "DATA<1>" 	LOC = "P17" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "DATA<0>" 	LOC = "M15" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;

@@ -1,0 +1,28 @@
+Command line:
+   dado_sim_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  64128
+
+Sat Sep 22 15:43:08 2018
+
+
+ Elaboration Time: 0.0468 sec
+
+ Current Memory Usage: 506.868 Meg
+
+ Total Signals          : 10
+ Total Nets             : 8
+ Total Signal Drivers   : 6
+ Total Blocks           : 6
+ Total Primitive Blocks : 5
+ Total Processes        : 5
+ Total Traceable Variables  : 17
+ Total Scalar Nets and Variables : 511
+
+ Total Simulation Time: 0.0936 sec
+
+ Current Memory Usage: 506.868 Meg
+
+Sat Sep 22 15:43:30 2018
+

@@ -1,0 +1,30 @@
+Command line:
+   Transmision_tb_isim_par.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/par/Trans_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  2
+     -socket  63373
+
+Tue Oct 02 19:02:35 2018
+
+
+ Elaboration Time: 0.1248 sec
+
+ Current Memory Usage: 519.639 Meg
+
+ Total Signals          : 2954
+ Total Nets             : 1999
+ Total Signal Drivers   : 1593
+ Total Blocks           : 514
+ Total Primitive Blocks : 296
+ Total Processes        : 1587
+ Total Traceable Variables  : 3549
+ Total Scalar Nets and Variables : 25769
+
+ Total Simulation Time: 0.327602 sec
+
+ Current Memory Usage: 519.639 Meg
+
+Tue Oct 02 19:13:37 2018
+

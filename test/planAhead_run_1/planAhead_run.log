@@ -1,0 +1,74 @@
+
+****** PlanAhead v14.5 (64-bit)
+  **** Build 247527 by xbuild on Mon Mar 25 17:13:07 MDT 2013
+    ** Copyright 1986-1999, 2001-2012 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.5/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.5/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.5/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/test/pa.fromNcd.tcl
+# create_project -name test -dir "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/test/planAhead_run_2" -part xc3s1200efg320-4
+# set srcset [get_property srcset [current_run -impl]]
+# set_property design_mode GateLvl $srcset
+# set_property edif_top_file "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/test/Compuerta.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/test} }
+# set_property target_constrs_file "Salidas.ucf" [current_fileset -constrset]
+Adding file 'C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/test/Salidas.ucf' to fileset 'constrs_1'
+# add_files [list {Salidas.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xc3s1200efg320-4
+Release 14.5 - ngc2edif P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Reading design Compuerta.ngc ...
+WARNING:NetListWriters:298 - No output is written to Compuerta.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file Compuerta.edif ...
+ngc2edif: Total memory usage is 79056 kilobytes
+
+Parsing EDIF File [./planAhead_run_2/test.data/cache/Compuerta_ngc_zx.edif]
+Finished Parsing EDIF File [./planAhead_run_2/test.data/cache/Compuerta_ngc_zx.edif]
+INFO: [Designutils 20-910] Reading macro library C:/Xilinx/14.5/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn
+Parsing EDIF File [C:/Xilinx/14.5/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Finished Parsing EDIF File [C:/Xilinx/14.5/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/hd_int_macros.edn]
+Loading clock regions from C:/Xilinx/14.5/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.5/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/ClockBuffers.xml
+Loading package from C:/Xilinx/14.5/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/fg320/Package.xml
+Loading io standards from C:/Xilinx/14.5/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/IOStandards.xml
+INFO: [Device 21-19] Loading pkg sso from C:/Xilinx/14.5/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/xc3s1200e/fg320/SSORules.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.5/ISE_DS/PlanAhead/data\./parts/xilinx/spartan3e/spartan3e/drc.xml
+INFO: [Timing 38-77] Reading timing library C:/Xilinx/14.5/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+INFO: [Timing 38-34] Done reading timing library C:/Xilinx/14.5/ISE_DS/PlanAhead/data\parts/xilinx/spartan3e/spartan3e/spartan3e-4.lib.
+Parsing UCF File [C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/test/Salidas.ucf]
+Finished Parsing UCF File [C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/test/Salidas.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 979fb1f9
+link_design: Time (s): elapsed = 00:00:08 . Memory (MB): peak = 543.141 ; gain = 133.844
+# read_xdl -file "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/test/Compuerta.ncd"
+Release 14.5 - xdl P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+WARNING:XDL:213 - The resulting xdl output will not have LUT equation strings or RAM INIT strings.
+Loading device for application Rf_Device from file '3s1200e.nph' in environment C:\Xilinx\14.5\ISE_DS\ISE\.
+   "Compuerta" is an NCD, version 3.2, device xc3s1200e, package fg320, speed -4
+Successfully converted design 'C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\test\Compuerta.ncd' to 'C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\test\Compuerta.xdl'.
+INFO: [Designutils 20-669] Parsing Placement File : C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/test/Compuerta.ncd
+INFO: [Designutils 20-658] Finished Parsing Placement File : C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/test/Compuerta.ncd
+INFO: [Designutils 20-671] Placed 4 instances
+read_xdl: Time (s): elapsed = 00:00:06 . Memory (MB): peak = 547.730 ; gain = 4.590
+# if {[catch {read_twx -name results_1 -file "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/test/Compuerta.twx"} eInfo]} {
+#    puts "WARNING: there was a problem importing \"C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/test/Compuerta.twx\": $eInfo"
+# }
+exit
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Tue Feb 13 20:38:29 2018...
+INFO: [Common 17-83] Releasing license: PlanAhead

@@ -1,0 +1,6 @@
+[Inputs]
+CLK
+CAPTURA
+[Outputs]
+CAP
+[BiDir]

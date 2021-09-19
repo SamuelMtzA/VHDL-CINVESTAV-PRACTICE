@@ -1,0 +1,2 @@
+vhdl work "../MEALY.vhd"
+vhdl work "m_tb.vhd"

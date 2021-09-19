@@ -1,0 +1,36 @@
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Ventilador.ucf -p xc3s500e-fg320-4 Ventilador.ngc Ventilador.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Ventilador_map.ncd Ventilador.ngd Ventilador.pcf 
+par -w -intstyle ise -ol high -t 1 Ventilador_map.ncd Ventilador.ncd Ventilador.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Ventilador.twx Ventilador.ncd -o Ventilador.twr Ventilador.pcf -ucf Ventilador.ucf 
+bitgen -intstyle ise -f Ventilador.ut Ventilador.ncd 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Ventilador.ucf -p xc3s500e-fg320-4 Ventilador.ngc Ventilador.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Ventilador_map.ncd Ventilador.ngd Ventilador.pcf 
+par -w -intstyle ise -ol high -t 1 Ventilador_map.ncd Ventilador.ncd Ventilador.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Ventilador.twx Ventilador.ncd -o Ventilador.twr Ventilador.pcf -ucf Ventilador.ucf 
+bitgen -intstyle ise -f Ventilador.ut Ventilador.ncd 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Ventilador.ucf -p xc3s500e-fg320-4 Ventilador.ngc Ventilador.ngd  
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Ventilador.ucf -p xc3s500e-fg320-4 Ventilador.ngc Ventilador.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Ventilador_map.ncd Ventilador.ngd Ventilador.pcf 
+par -w -intstyle ise -ol high -t 1 Ventilador_map.ncd Ventilador.ncd Ventilador.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Ventilador.twx Ventilador.ncd -o Ventilador.twr Ventilador.pcf -ucf Ventilador.ucf 
+bitgen -intstyle ise -f Ventilador.ut Ventilador.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Ventilador.ucf -p xc3s500e-fg320-4 Ventilador.ngc Ventilador.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Ventilador_map.ncd Ventilador.ngd Ventilador.pcf 
+par -w -intstyle ise -ol high -t 1 Ventilador_map.ncd Ventilador.ncd Ventilador.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Ventilador.twx Ventilador.ncd -o Ventilador.twr Ventilador.pcf -ucf Ventilador.ucf 
+bitgen -intstyle ise -f Ventilador.ut Ventilador.ncd 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.syr" 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Ventilador.ucf -p xc3s500e-fg320-4 Ventilador.ngc Ventilador.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o Ventilador_map.ncd Ventilador.ngd Ventilador.pcf 
+par -w -intstyle ise -ol high -t 1 Ventilador_map.ncd Ventilador.ncd Ventilador.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Ventilador.twx Ventilador.ncd -o Ventilador.twr Ventilador.pcf -ucf Ventilador.ucf 

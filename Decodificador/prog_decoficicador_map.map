@@ -1,0 +1,101 @@
+Release 14.5 Map P.58f (nt64)
+Xilinx Map Application Log File for Design 'prog_decoficicador'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off
+-c 100 -o prog_decoficicador_map.ncd prog_decoficicador.ngd
+prog_decoficicador.pcf 
+Target Device  : xc3s1200e
+Target Package : fg320
+Target Speed   : -4
+Mapper Version : spartan3e -- $Revision: 1.55 $
+Mapped Date    : Mon Mar 26 17:00:29 2018
+
+Mapping design into LUTs...
+Running directed packing...
+ERROR:Pack:1107 - Pack was unable to combine the symbols listed below into a
+   single IOB component because the site type selected is not compatible. The
+   component type is determined by the types of logic and the properties and
+   configuration of the logic it contains. In this case an IO component of type
+   IOB was chosen because the IO contains symbols and/or properties consistent
+   with output or bi-directional usage and contains no other symbols or
+   properties that require a more specific IO component type. Please double
+   check that the types of logic elements and all of their relevant properties
+   and configuration options are compatible with the physical site type of the
+   constraint.
+
+   Summary:
+   Symbols involved:
+   	BUF symbol "out_4_OBUF" (Output Signal = out<4>)
+   	PAD symbol "out<4>" (Pad Signal = out<4>)
+   Component type involved: IOB
+   Site Location involved: E17
+   Site Type involved: IBUF
+
+ERROR:Pack:1107 - Pack was unable to combine the symbols listed below into a
+   single IOB component because the site type selected is not compatible. The
+   component type is determined by the types of logic and the properties and
+   configuration of the logic it contains. In this case an IO component of type
+   IOB was chosen because the IO contains symbols and/or properties consistent
+   with output or bi-directional usage and contains no other symbols or
+   properties that require a more specific IO component type. Please double
+   check that the types of logic elements and all of their relevant properties
+   and configuration options are compatible with the physical site type of the
+   constraint.
+
+   Summary:
+   Symbols involved:
+   	BUF symbol "out_5_OBUF" (Output Signal = out<5>)
+   	PAD symbol "out<5>" (Pad Signal = out<5>)
+   Component type involved: IOB
+   Site Location involved: P15
+   Site Type involved: IBUF
+
+ERROR:Pack:1107 - Pack was unable to combine the symbols listed below into a
+   single IOB component because the site type selected is not compatible. The
+   component type is determined by the types of logic and the properties and
+   configuration of the logic it contains. In this case an IO component of type
+   IOB was chosen because the IO contains symbols and/or properties consistent
+   with output or bi-directional usage and contains no other symbols or
+   properties that require a more specific IO component type. Please double
+   check that the types of logic elements and all of their relevant properties
+   and configuration options are compatible with the physical site type of the
+   constraint.
+
+   Summary:
+   Symbols involved:
+   	BUF symbol "out_6_OBUF" (Output Signal = out<6>)
+   	PAD symbol "out<6>" (Pad Signal = out<6>)
+   Component type involved: IOB
+   Site Location involved: F4
+   Site Type involved: IBUF
+
+ERROR:Pack:1107 - Pack was unable to combine the symbols listed below into a
+   single IOB component because the site type selected is not compatible. The
+   component type is determined by the types of logic and the properties and
+   configuration of the logic it contains. In this case an IO component of type
+   IOB was chosen because the IO contains symbols and/or properties consistent
+   with output or bi-directional usage and contains no other symbols or
+   properties that require a more specific IO component type. Please double
+   check that the types of logic elements and all of their relevant properties
+   and configuration options are compatible with the physical site type of the
+   constraint.
+
+   Summary:
+   Symbols involved:
+   	BUF symbol "out_7_OBUF" (Output Signal = out<7>)
+   	PAD symbol "out<7>" (Pad Signal = out<7>)
+   Component type involved: IOB
+   Site Location involved: R4
+   Site Type involved: IBUF
+
+
+Mapping completed.
+See MAP report file "prog_decoficicador_map.mrp" for details.
+Problem encountered during the packing phase.
+
+Design Summary
+--------------
+Number of errors   :   4
+Number of warnings :   0

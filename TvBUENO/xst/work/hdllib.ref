@@ -1,0 +1,6 @@
+AR pwm arq_pwm "C:/Users/Samuel/Desktop/cinvestav_1er_cuatri/Electrónica Digital/Unidad 1/Códigos VHDL/Spartan 3E/Practica 6/PWM/PWM.vhd" sub00/vhpl05 1539029462
+EN pwm NULL "C:/Users/Samuel/Desktop/cinvestav_1er_cuatri/Electrónica Digital/Unidad 1/Códigos VHDL/Spartan 3E/Practica 6/PWM/PWM.vhd" sub00/vhpl04 1539029461
+EN receptor NULL "C:/Users/Samuel/Desktop/cinvestav_1er_cuatri/Electrónica Digital/Unidad 1/Códigos VHDL/Spartan 3E/Practica 6/Infrarrojos/receptor.vhd" sub00/vhpl00 1539029125
+AR antirrebote behavioral "C:/Users/Samuel/Desktop/cinvestav_1er_cuatri/Electrónica Digital/Unidad 1/Códigos VHDL/Spartan 3E/Practica 6/PWM/Antirrebote.vhd" sub00/vhpl03 1539029460
+AR receptor arq_receptor "C:/Users/Samuel/Desktop/cinvestav_1er_cuatri/Electrónica Digital/Unidad 1/Códigos VHDL/Spartan 3E/Practica 6/Infrarrojos/receptor.vhd" sub00/vhpl01 1539029126
+EN antirrebote NULL "C:/Users/Samuel/Desktop/cinvestav_1er_cuatri/Electrónica Digital/Unidad 1/Códigos VHDL/Spartan 3E/Practica 6/PWM/Antirrebote.vhd" sub00/vhpl02 1539029459

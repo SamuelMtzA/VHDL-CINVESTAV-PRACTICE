@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="Par" num="282" delta="new" >No user timing constraints were detected or you have set the option to ignore timing constraints (&quot;par -x&quot;). Place and Route will run in &quot;Performance Evaluation Mode&quot; to automatically improve the performance of all internal clocks in this design. Because there are not defined timing requirements, a timing score will not be reported in the PAR report in this mode. The PAR timing summary will list the performance achieved for each clock. Note: For the fastest runtime, set the effort level to &quot;std&quot;.  For best performance, set the effort level to &quot;high&quot;.
+</msg>
+
+<msg type="warning" file="Place" num="837" delta="new" >Partially locked IO Bus is found. 
+<arg fmt="%s" index="1"> Following components of the bus are not locked: 
+	 Comp: P&lt;34&gt;
+	 Comp: P&lt;33&gt;
+	 Comp: P&lt;32&gt;
+	 Comp: P&lt;31&gt;
+	 Comp: P&lt;30&gt;
+	 Comp: P&lt;29&gt;
+	 Comp: P&lt;28&gt;
+	 Comp: P&lt;27&gt;
+	 Comp: P&lt;26&gt;
+	 Comp: P&lt;25&gt;
+	 Comp: P&lt;24&gt;
+	 Comp: P&lt;23&gt;
+	 Comp: P&lt;22&gt;
+	 Comp: P&lt;21&gt;
+	 Comp: P&lt;20&gt;
+	 Comp: P&lt;19&gt;
+	 Comp: P&lt;18&gt;
+	 Comp: P&lt;17&gt;
+	 Comp: P&lt;16&gt;
+	 Comp: P&lt;15&gt;
+	 Comp: P&lt;14&gt;
+	 Comp: P&lt;13&gt;
+	 Comp: P&lt;12&gt;
+	 Comp: P&lt;11&gt;
+	 Comp: P&lt;10&gt;
+	 Comp: P&lt;9&gt;
+	 Comp: P&lt;8&gt;
+	 Comp: P&lt;7&gt;
+	 Comp: P&lt;6&gt;
+	 Comp: P&lt;5&gt;
+	 Comp: P&lt;4&gt;
+</arg>
+</msg>
+
+<msg type="warning" file="Place" num="838" delta="new" >An IO Bus with more than one IO standard is found.
+<arg fmt="%s" index="1">Components associated with this bus are as follows: 
+	 Comp: P&lt;0&gt;   IOSTANDARD = LVTTL
+	 Comp: P&lt;1&gt;   IOSTANDARD = LVTTL
+	 Comp: P&lt;2&gt;   IOSTANDARD = LVTTL
+	 Comp: P&lt;3&gt;   IOSTANDARD = LVTTL
+	 Comp: P&lt;4&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;5&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;6&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;7&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;8&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;9&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;10&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;11&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;12&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;13&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;14&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;15&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;16&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;17&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;18&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;19&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;20&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;21&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;22&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;23&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;24&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;25&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;26&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;27&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;28&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;29&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;30&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;31&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;32&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;33&gt;   IOSTANDARD = LVCMOS25
+	 Comp: P&lt;34&gt;   IOSTANDARD = LVCMOS25
+
+</arg>
+</msg>
+
+<msg type="info" file="Place" num="834" delta="new" >Only a subset of IOs are locked. Out of <arg fmt="%d" index="1">35</arg> IOs, <arg fmt="%d" index="2">4</arg> are locked and <arg fmt="%d" index="3">31</arg> are not locked. <arg fmt="%s" index="4">If you would like to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1.</arg> 
+</msg>
+
+</messages>
+

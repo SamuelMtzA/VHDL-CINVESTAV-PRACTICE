@@ -1,0 +1,9 @@
+EN infra_motor NULL C:/Users/Samuel/Desktop/Control_motor/Infra_motor.vhd sub00/vhpl05 1539039462
+AR pwm arq_pwm C:/Users/Samuel/Desktop/Control_motor/PWM.vhd sub00/vhpl04 1539039461
+EN pwm NULL C:/Users/Samuel/Desktop/Control_motor/PWM.vhd sub00/vhpl03 1539039460
+EN receptor NULL C:/Users/Samuel/Desktop/Control_motor/Infrarrojo.vhd sub00/vhpl07 1539039458
+AR infra_motor completo C:/Users/Samuel/Desktop/Control_motor/Infra_motor.vhd sub00/vhpl06 1539039463
+EN infrarrojo NULL C:/Users/Samuel/Desktop/Control_motor/Infrarrojo.vhd sub00/vhpl01 1539039156
+AR receptor arq_receptor C:/Users/Samuel/Desktop/Control_motor/Infrarrojo.vhd sub00/vhpl08 1539039459
+AR infrarrojo arq_receptor C:/Users/Samuel/Desktop/Control_motor/Infrarrojo.vhd sub00/vhpl02 1539039157
+PH modulos NULL C:/Users/Samuel/Desktop/Control_motor/modulos.vhd sub00/vhpl00 1539039457

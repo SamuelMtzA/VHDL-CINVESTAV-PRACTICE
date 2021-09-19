@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/tes_isim_par.exe" -prj "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/moore/tes_par.prj" "work.tes" 

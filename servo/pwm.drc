@@ -1,0 +1,8 @@
+Release 14.5 Drc P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Wed Oct 03 13:37:38 2018
+
+drc -z PWM.ncd PWM.pcf
+
+DRC detected 0 errors and 0 warnings.

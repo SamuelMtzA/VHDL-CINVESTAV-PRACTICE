@@ -1,0 +1,9 @@
+
+ NET "clk"   LOC = "L15";
+ NET "rst" LOC = "F5";  
+ NET "ud" LOC = "A10"; 
+ NET "q<0>" LOC = "U18"; 
+ NET "q<1>" LOC = "M14"; 
+ NET "q<2>" LOC = "N14"; 
+ NET "q<3>" LOC = "L14"; 
+ 

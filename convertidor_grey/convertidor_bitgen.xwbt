@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\convertidor_grey\convertidor.ncd
+OUTFILE=C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\convertidor_grey\convertidor.bit
+FAMILY=Spartan3E
+PART=xc3s1200e-5fg320
+WORKINGDIR=C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\convertidor_grey
+LICENSE=WebPack
+USER_INFO=__0_0_0

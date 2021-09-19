@@ -1,0 +1,563 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: Infra_motor.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Infra_motor.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Infra_motor"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Infra_motor
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Samuel/Desktop/Control_motor/modulos.vhd" in Library work.
+Compiling vhdl file "C:/Users/Samuel/Desktop/Control_motor/Infrarrojo.vhd" in Library work.
+Architecture arq_receptor of Entity receptor is up to date.
+Compiling vhdl file "C:/Users/Samuel/Desktop/Control_motor/PWM.vhd" in Library work.
+Architecture arq_pwm of Entity pwm is up to date.
+Compiling vhdl file "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.vhd" in Library work.
+Architecture completo of Entity infra_motor is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Infra_motor> in library <work> (architecture <completo>).
+
+Analyzing hierarchy for entity <Receptor> in library <work> (architecture <arq_receptor>).
+
+Analyzing hierarchy for entity <PWM> in library <work> (architecture <arq_pwm>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Infra_motor> in library <work> (Architecture <completo>).
+Entity <Infra_motor> analyzed. Unit <Infra_motor> generated.
+
+Analyzing Entity <Receptor> in library <work> (Architecture <arq_receptor>).
+Entity <Receptor> analyzed. Unit <Receptor> generated.
+
+Analyzing Entity <PWM> in library <work> (Architecture <arq_pwm>).
+WARNING:Xst:1610 - "C:/Users/Samuel/Desktop/Control_motor/PWM.vhd" line 62: Width mismatch. <ledss> has a width of 11 bits but assigned expression is 7-bit wide.
+Entity <PWM> analyzed. Unit <PWM> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Receptor>.
+    Related source file is "C:/Users/Samuel/Desktop/Control_motor/Infrarrojo.vhd".
+WARNING:Xst:646 - Signal <vector<12:8>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <vector<0>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 7-bit register for signal <leds>.
+    Found 13-bit up counter for signal <clkdiv>.
+    Found 4-bit up counter for signal <i>.
+    Found 5-bit comparator greater for signal <i$cmp_gt0000> created at line 95.
+    Found 4-bit up counter for signal <npulsos>.
+    Found 5-bit up counter for signal <nref>.
+    Found 5-bit register for signal <pivote>.
+    Found 1-bit register for signal <rstin>.
+    Found 7-bit register for signal <vector<7:1>>.
+    Found 5-bit comparator lessequal for signal <vector_1$cmp_le0000> created at line 95.
+    Found 5-bit comparator less for signal <vector_1$cmp_lt0000> created at line 97.
+    Summary:
+	inferred   4 Counter(s).
+	inferred  20 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+Unit <Receptor> synthesized.
+
+
+Synthesizing Unit <PWM>.
+    Related source file is "C:/Users/Samuel/Desktop/Control_motor/PWM.vhd".
+WARNING:Xst:737 - Found 12-bit latch for signal <s>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 1-bit register for signal <pwm_servo>.
+    Found 12-bit register for signal <a>.
+    Found 12-bit addsub for signal <a$share0000>.
+    Found 12-bit up counter for signal <aux>.
+    Found 1-bit register for signal <clk100K>.
+    Found 13-bit up counter for signal <cnt>.
+    Found 7-bit adder for signal <ledss$add0000> created at line 62.
+    Found 12-bit register for signal <n>.
+    Found 12-bit comparator equal for signal <pwm_servo$cmp_eq0000> created at line 57.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  14 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <PWM> synthesized.
+
+
+Synthesizing Unit <Infra_motor>.
+    Related source file is "C:/Users/Samuel/Desktop/Control_motor/Infra_motor.vhd".
+Unit <Infra_motor> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 12-bit addsub                                         : 1
+ 7-bit adder                                           : 1
+# Counters                                             : 6
+ 12-bit up counter                                     : 1
+ 13-bit up counter                                     : 2
+ 4-bit up counter                                      : 2
+ 5-bit up counter                                      : 1
+# Registers                                            : 14
+ 1-bit register                                        : 10
+ 12-bit register                                       : 2
+ 5-bit register                                        : 1
+ 7-bit register                                        : 1
+# Latches                                              : 1
+ 12-bit latch                                          : 1
+# Comparators                                          : 4
+ 12-bit comparator equal                               : 1
+ 5-bit comparator greater                              : 1
+ 5-bit comparator less                                 : 1
+ 5-bit comparator lessequal                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1426 - The value init of the FF/Latch 0 hinder the constant cleaning in the block 7.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <9>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <10>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <0> has a constant value of 0 in block <11>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <n_8> (without init value) has a constant value of 0 in block <motor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <n_9> (without init value) has a constant value of 0 in block <motor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <n_10> (without init value) has a constant value of 0 in block <motor>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <n_11> (without init value) has a constant value of 0 in block <motor>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 12-bit addsub                                         : 1
+ 7-bit adder                                           : 1
+# Counters                                             : 6
+ 12-bit up counter                                     : 1
+ 13-bit up counter                                     : 2
+ 4-bit up counter                                      : 2
+ 5-bit up counter                                      : 1
+# Registers                                            : 46
+ Flip-Flops                                            : 46
+# Latches                                              : 1
+ 12-bit latch                                          : 1
+# Comparators                                          : 4
+ 12-bit comparator equal                               : 1
+ 5-bit comparator greater                              : 1
+ 5-bit comparator less                                 : 1
+ 5-bit comparator lessequal                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <11> in Unit <LPM_LATCH_1> is equivalent to the following 3 FFs/Latches, which will be removed : <10> <9> <8> 
+WARNING:Xst:1426 - The value init of the FF/Latch 7 hinder the constant cleaning in the block LPM_LATCH_1.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <11> has a constant value of 0 in block <LPM_LATCH_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <n_8> (without init value) has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <n_9> (without init value) has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <n_10> (without init value) has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <n_11> (without init value) has a constant value of 0 in block <PWM>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <Infra_motor> ...
+
+Optimizing unit <Receptor> ...
+
+Optimizing unit <PWM> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Infra_motor, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 93
+ Flip-Flops                                            : 93
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Infra_motor.ngr
+Top Level Output File Name         : Infra_motor
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 4
+
+Cell Usage :
+# BELS                             : 274
+#      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 35
+#      LUT2                        : 14
+#      LUT3                        : 31
+#      LUT3_D                      : 1
+#      LUT3_L                      : 1
+#      LUT4                        : 69
+#      LUT4_D                      : 5
+#      MUXCY                       : 52
+#      MUXF5                       : 8
+#      VCC                         : 1
+#      XORCY                       : 50
+# FlipFlops/Latches                : 101
+#      FDC                         : 64
+#      FDCE                        : 11
+#      FDCE_1                      : 13
+#      FDP                         : 3
+#      FDPE                        : 2
+#      LD                          : 8
+# Clock Buffers                    : 4
+#      BUFG                        : 3
+#      BUFGP                       : 1
+# IO Buffers                       : 3
+#      IBUF                        : 2
+#      OBUF                        : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       90  out of   4656     1%  
+ Number of Slice Flip Flops:            101  out of   9312     1%  
+ Number of 4 input LUTs:                162  out of   9312     1%  
+ Number of IOs:                           4
+ Number of bonded IOBs:                   4  out of    232     1%  
+ Number of GCLKs:                         4  out of     24    16%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+infra/clkdiv_121                   | BUFG                   | 29    |
+ent                                | IBUF+BUFG              | 4     |
+clk                                | BUFGP                  | 27    |
+motor/clk100K1                     | BUFG                   | 33    |
+motor/s_not0001(motor/s_not0001:O) | NONE(*)(motor/s_7)     | 8     |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+--------------------------------------------------+------------------------+-------+
+Control Signal                                    | Buffer(FF name)        | Load  |
+--------------------------------------------------+------------------------+-------+
+rst                                               | IBUF                   | 27    |
+infra/clkdiv_or000062(infra/npulsos_or00001:O)    | NONE(infra/i_0)        | 26    |
+motor/cnt_or0000(motor/cnt_or0000_f5:O)           | NONE(motor/clk100K)    | 14    |
+infra/clkdiv_or0000(infra/clkdiv_or000064:O)      | NONE(infra/clkdiv_0)   | 13    |
+motor/pwm_servo_or0000(motor/pwm_servo_or000053:O)| NONE(motor/aux_0)      | 13    |
+--------------------------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 8.538ns (Maximum Frequency: 117.123MHz)
+   Minimum input arrival time before clock: 3.338ns
+   Maximum output required time after clock: 4.283ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'infra/clkdiv_121'
+  Clock period: 8.538ns (frequency: 117.123MHz)
+  Total number of paths / destination ports: 139 / 40
+-------------------------------------------------------------------------
+Delay:               4.269ns (Levels of Logic = 2)
+  Source:            infra/pivote_0 (FF)
+  Destination:       infra/vector_7 (FF)
+  Source Clock:      infra/clkdiv_121 falling
+  Destination Clock: infra/clkdiv_121 rising
+
+  Data Path: infra/pivote_0 to infra/vector_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE_1:C->Q           2   0.591   0.622  infra/pivote_0 (infra/pivote_0)
+     LUT4_D:I0->O          6   0.704   0.673  infra/vector_6_not00011_SW0 (N73)
+     LUT4:I3->O            1   0.704   0.420  infra/vector_4_not00011 (infra/vector_4_not0001)
+     FDCE:CE                   0.555          infra/vector_4
+    ----------------------------------------
+    Total                      4.269ns (2.554ns logic, 1.715ns route)
+                                       (59.8% logic, 40.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'ent'
+  Clock period: 2.656ns (frequency: 376.506MHz)
+  Total number of paths / destination ports: 10 / 4
+-------------------------------------------------------------------------
+Delay:               2.656ns (Levels of Logic = 1)
+  Source:            infra/npulsos_0 (FF)
+  Destination:       infra/npulsos_0 (FF)
+  Source Clock:      ent rising
+  Destination Clock: ent rising
+
+  Data Path: infra/npulsos_0 to infra/npulsos_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              5   0.591   0.633  infra/npulsos_0 (infra/npulsos_0)
+     INV:I->O              1   0.704   0.420  infra/Mcount_npulsos_xor<0>11_INV_0 (infra/Result<0>1)
+     FDC:D                     0.308          infra/npulsos_0
+    ----------------------------------------
+    Total                      2.656ns (1.603ns logic, 1.053ns route)
+                                       (60.4% logic, 39.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.890ns (frequency: 204.499MHz)
+  Total number of paths / destination ports: 195 / 27
+-------------------------------------------------------------------------
+Delay:               4.890ns (Levels of Logic = 3)
+  Source:            motor/cnt_2 (FF)
+  Destination:       motor/clk100K (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: motor/cnt_2 to motor/clk100K
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.591   0.622  motor/cnt_2 (motor/cnt_2)
+     LUT4:I0->O            1   0.704   0.455  motor/cnt_or000017 (motor/cnt_or000017)
+     LUT4_D:I2->LO         1   0.704   0.135  motor/cnt_or0000132 (N114)
+     LUT4:I2->O            1   0.704   0.420  motor/clk100K_cmp_eq00001 (motor/clk100K_cmp_eq0000)
+     FDPE:CE                   0.555          motor/clk100K
+    ----------------------------------------
+    Total                      4.890ns (3.258ns logic, 1.632ns route)
+                                       (66.6% logic, 33.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'motor/clk100K1'
+  Clock period: 7.577ns (frequency: 131.978MHz)
+  Total number of paths / destination ports: 811 / 33
+-------------------------------------------------------------------------
+Delay:               7.577ns (Levels of Logic = 5)
+  Source:            motor/a_8 (FF)
+  Destination:       motor/n_7 (FF)
+  Source Clock:      motor/clk100K1 rising
+  Destination Clock: motor/clk100K1 rising
+
+  Data Path: motor/a_8 to motor/n_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.591   0.762  motor/a_8 (motor/a_8)
+     LUT4:I0->O            1   0.704   0.424  motor/a_cmp_eq00011_SW0 (N36)
+     LUT4_D:I3->O          1   0.704   0.424  motor/a_cmp_eq00011 (motor/N16)
+     LUT4:I3->O            8   0.704   0.761  motor/a_cmp_eq0001 (motor/a_cmp_eq0001)
+     LUT4_D:I3->O          7   0.704   0.787  motor/n_mux0004<0>130 (motor/N0)
+     LUT2:I1->O            1   0.704   0.000  motor/n_mux0004<7>1 (motor/n_mux0004<7>)
+     FDC:D                     0.308          motor/n_7
+    ----------------------------------------
+    Total                      7.577ns (4.419ns logic, 3.158ns route)
+                                       (58.3% logic, 41.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'infra/clkdiv_121'
+  Total number of paths / destination ports: 10 / 10
+-------------------------------------------------------------------------
+Offset:              3.338ns (Levels of Logic = 2)
+  Source:            ent (PAD)
+  Destination:       infra/nref_4 (FF)
+  Destination Clock: infra/clkdiv_121 falling
+
+  Data Path: ent to infra/nref_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            11   1.218   1.108  ent_IBUF (ent_IBUF1)
+     LUT2:I0->O            1   0.704   0.000  infra/Mcount_nref_xor<0>11 (infra/Mcount_nref)
+     FDC:D                     0.308          infra/nref_0
+    ----------------------------------------
+    Total                      3.338ns (2.230ns logic, 1.108ns route)
+                                       (66.8% logic, 33.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'motor/clk100K1'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.283ns (Levels of Logic = 1)
+  Source:            motor/pwm_servo (FF)
+  Destination:       pwm_servo (PAD)
+  Source Clock:      motor/clk100K1 rising
+
+  Data Path: motor/pwm_servo to pwm_servo
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             1   0.591   0.420  motor/pwm_servo (motor/pwm_servo)
+     OBUF:I->O                 3.272          pwm_servo_OBUF (pwm_servo)
+    ----------------------------------------
+    Total                      4.283ns (3.863ns logic, 0.420ns route)
+                                       (90.2% logic, 9.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.91 secs
+ 
+--> 
+
+Total memory usage is 262484 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   19 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+

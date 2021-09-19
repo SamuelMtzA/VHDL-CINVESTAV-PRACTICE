@@ -1,0 +1,1 @@
+vhdtdtfi -lib work {../../cinvestav_1er_cuatri/Electrónica Digital/Unidad 1/Códigos VHDL/Spartan 6/Practica 3/Registro.vhd} -prj cerradura_esque -o REGISTRO.spl -module REGISTRO -template C:/Xilinx/14.5/ISE_DS/ISE//data/splfile.tft -deleteonerror 

@@ -1,0 +1,2 @@
+vhdl work "netgen/par/Trans_timesim.vhd"
+vhdl work "Transmision_tb.vhd"

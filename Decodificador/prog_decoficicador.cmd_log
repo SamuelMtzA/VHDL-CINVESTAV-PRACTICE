@@ -1,0 +1,9 @@
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Decodificador/prog_decoficicador.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Decodificador/prog_decoficicador.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc puertos.ucf -p xc3s1200e-fg320-4 prog_decoficicador.ngc prog_decoficicador.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o prog_decoficicador_map.ncd prog_decoficicador.ngd prog_decoficicador.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc puertos.ucf -p xc3s1200e-fg320-4 prog_decoficicador.ngc prog_decoficicador.ngd  
+map -intstyle ise -p xc3s1200e-fg320-4 -cm area -ir off -pr off -c 100 -o prog_decoficicador_map.ncd prog_decoficicador.ngd prog_decoficicador.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc puertos.ucf -p xc3s1200e-fg320-4 prog_decoficicador.ngc prog_decoficicador.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc puertos.ucf -p xc3s1200e-fg320-4 prog_decoficicador.ngc prog_decoficicador.ngd  
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Decodificador/prog_decoficicador.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Decodificador/prog_decoficicador.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc puertos.ucf -p xc3s1200e-fg320-4 prog_decoficicador.ngc prog_decoficicador.ngd  

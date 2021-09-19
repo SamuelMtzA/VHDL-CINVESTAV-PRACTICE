@@ -1,0 +1,21 @@
+#User Constraints File
+
+# 50 MHz (20ns) clk source
+NET "CLK"  		LOC = "C9"  | IOSTANDARD = LVCMOS33 ;
+
+# Rotatory push reset terminal
+NET "RST"   	LOC = "V16" | IOSTANDARD = LVTTL 	| PULLDOWN;
+
+# Intel StrataFlash enable terminal
+NET "SF_CE0"	LOC = "D16" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+
+# LCD Control terminals
+NET "LCD_E" 	LOC = "M18" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "LCD_RS" 	LOC = "L18" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "LCD_RW" 	LOC = "L17" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+
+# The LCD four-bit data interface is shared with the StrataFlash.
+NET "DATA<3>" 	LOC = "R15" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "DATA<2>" 	LOC = "R16" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "DATA<1>" 	LOC = "P17" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;
+NET "DATA<0>" 	LOC = "M15" | IOSTANDARD = LVCMOS33 | DRIVE = 4 | SLEW = SLOW ;

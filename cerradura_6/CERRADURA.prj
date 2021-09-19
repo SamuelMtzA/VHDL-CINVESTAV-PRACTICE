@@ -1,0 +1,7 @@
+vhdl work "Registro.vhd"
+vhdl work "Multiplexor.vhd"
+vhdl work "Modulos.vhd"
+vhdl work "Contador.vhd"
+vhdl work "Comparador.vhd"
+vhdl work "Antirrebote.vhd"
+vhdl work "Cerradura.vhd"

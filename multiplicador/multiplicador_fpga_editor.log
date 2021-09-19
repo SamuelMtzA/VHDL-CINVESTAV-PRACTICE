@@ -1,0 +1,24 @@
+#:C0     
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.58f
+#Current Working Directory:
+#:D   C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\multiplicador
+#Date/Time:
+#:T   Sun Sep 16 13:04:35 2018
+#------------------------------
+	#Reading multiplicador.ncd...
+	#Loading device for application Rf_Device from file '3s1200e.nph' in environment C:\Xilinx\14.5\ISE_DS\ISE\.
+	#   "multiplicador" is an NCD, version 3.2, device xc3s1200e, package fg320, speed -5
+	#Design creation date: 2018.09.13.01.48.02
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+unselect -all
+	#3
+unselect -all
+	#4
+select site 'NOPAD42'
+	#site "NOPAD42",  unbonded type = IOB,  pad name = NOPAD42  (RPM grid X133Y122)

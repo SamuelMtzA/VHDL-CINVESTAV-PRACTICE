@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="MapLib" num="562" delta="old" >No environment variables are currently set.
+</msg>
+
+<msg type="info" file="LIT" num="244" delta="old" >All of the single ended outputs in this design are using slew rate limited output drivers. The delay on speed critical single ended outputs can be dramatically reduced by designating them as fast outputs.
+</msg>
+
+<msg type="info" file="Pack" num="1716" delta="old" >Initializing temperature to <arg fmt="%0.3f" index="1">85.000</arg> Celsius. (default - Range: <arg fmt="%0.3f" index="2">0.000</arg> to <arg fmt="%0.3f" index="3">85.000</arg> Celsius)
+</msg>
+
+<msg type="info" file="Pack" num="1720" delta="old" >Initializing voltage to <arg fmt="%0.3f" index="1">1.140</arg> Volts. (default - Range: <arg fmt="%0.3f" index="2">1.140</arg> to <arg fmt="%0.3f" index="3">1.260</arg> Volts)
+</msg>
+
+<msg type="info" file="Map" num="215" delta="old" >The Interim Design Summary has been generated in the MAP Report (.mrp).
+</msg>
+
+<msg type="warning" file="Place" num="837" delta="old" >Partially locked IO Bus is found. 
+<arg fmt="%s" index="1"> Following components of the bus are not locked: 
+	 Comp: A&lt;16&gt;
+	 Comp: A&lt;15&gt;
+	 Comp: A&lt;14&gt;
+	 Comp: A&lt;13&gt;
+	 Comp: A&lt;12&gt;
+	 Comp: A&lt;11&gt;
+	 Comp: A&lt;10&gt;
+	 Comp: A&lt;9&gt;
+	 Comp: A&lt;8&gt;
+	 Comp: A&lt;7&gt;
+	 Comp: A&lt;6&gt;
+	 Comp: A&lt;5&gt;
+	 Comp: A&lt;4&gt;
+</arg>
+</msg>
+
+<msg type="warning" file="Place" num="837" delta="old" >Partially locked IO Bus is found. 
+<arg fmt="%s" index="1"> Following components of the bus are not locked: 
+	 Comp: B&lt;16&gt;
+	 Comp: B&lt;15&gt;
+	 Comp: B&lt;14&gt;
+	 Comp: B&lt;13&gt;
+	 Comp: B&lt;12&gt;
+	 Comp: B&lt;11&gt;
+	 Comp: B&lt;10&gt;
+	 Comp: B&lt;9&gt;
+	 Comp: B&lt;8&gt;
+	 Comp: B&lt;7&gt;
+	 Comp: B&lt;6&gt;
+	 Comp: B&lt;5&gt;
+	 Comp: B&lt;4&gt;
+</arg>
+</msg>
+
+<msg type="warning" file="Place" num="837" delta="old" >Partially locked IO Bus is found. 
+<arg fmt="%s" index="1"> Following components of the bus are not locked: 
+	 Comp: P&lt;33&gt;
+	 Comp: P&lt;32&gt;
+	 Comp: P&lt;31&gt;
+	 Comp: P&lt;30&gt;
+	 Comp: P&lt;29&gt;
+	 Comp: P&lt;28&gt;
+	 Comp: P&lt;27&gt;
+	 Comp: P&lt;26&gt;
+	 Comp: P&lt;25&gt;
+	 Comp: P&lt;24&gt;
+	 Comp: P&lt;23&gt;
+	 Comp: P&lt;22&gt;
+	 Comp: P&lt;21&gt;
+	 Comp: P&lt;20&gt;
+	 Comp: P&lt;19&gt;
+	 Comp: P&lt;18&gt;
+	 Comp: P&lt;17&gt;
+	 Comp: P&lt;16&gt;
+	 Comp: P&lt;15&gt;
+	 Comp: P&lt;14&gt;
+	 Comp: P&lt;13&gt;
+	 Comp: P&lt;12&gt;
+	 Comp: P&lt;11&gt;
+	 Comp: P&lt;10&gt;
+	 Comp: P&lt;9&gt;
+	 Comp: P&lt;8&gt;
+</arg>
+</msg>
+
+<msg type="info" file="Place" num="834" delta="old" >Only a subset of IOs are locked. Out of <arg fmt="%d" index="1">68</arg> IOs, <arg fmt="%d" index="2">16</arg> are locked and <arg fmt="%d" index="3">52</arg> are not locked. <arg fmt="%s" index="4">If you would like to print the names of these IOs, please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1.</arg> 
+</msg>
+
+<msg type="info" file="Pack" num="1650" delta="old" >Map created a placed design.
+</msg>
+
+</messages>
+

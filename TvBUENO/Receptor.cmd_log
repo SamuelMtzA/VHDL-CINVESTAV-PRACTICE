@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TvBUENO/Receptor.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/TvBUENO/Receptor.syr" 

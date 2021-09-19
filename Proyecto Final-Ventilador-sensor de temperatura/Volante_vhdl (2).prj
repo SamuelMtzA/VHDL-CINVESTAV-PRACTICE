@@ -1,0 +1,6 @@
+vhdl work "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\Ventilador\PWM.vhd"
+vhdl work "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\Ventilador\Modulos.vhd"
+vhdl work "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\Ventilador\LCD.vhd"
+vhdl work "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\Ventilador\BCD.vhd"
+vhdl work "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\Ventilador\ADC.vhd"
+vhdl work "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\Ventilador\Ventilador.vhd"

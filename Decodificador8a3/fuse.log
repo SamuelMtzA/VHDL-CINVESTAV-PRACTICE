@@ -1,0 +1,17 @@
+Running: C:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Decodificador8a3/programa_Deco_case_isim_beh.exe -prj C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Decodificador8a3/programa_Deco_case_beh.prj work.programa_Deco_case work.glbl 
+ISim P.58f (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Decodificador8a3/programa_Deco_case.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.5/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module programa_Deco_case
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 2 Verilog Units
+Built simulation executable C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Decodificador8a3/programa_Deco_case_isim_beh.exe
+Fuse Memory Usage: 26808 KB
+Fuse CPU Usage: 514 ms

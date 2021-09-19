@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/multiplicacion_spartan6/multiplicador_sim_isim_par.exe" -prj "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/multiplicacion_spartan6/multiplicador_sim_par.prj" "work.multiplicador_sim" 

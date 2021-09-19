@@ -1,0 +1,499 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: contador.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "contador.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "contador"
+Output Format                      : NGC
+Target Device                      : xc6slx45-3-csg324
+
+---- Source Options
+Top Module Name                    : contador
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\contador_6\contador.vhd" into library work
+Parsing entity <contador>.
+Parsing architecture <Arq_contador> of entity <contador>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <contador> (architecture <Arq_contador>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <contador>.
+    Related source file is "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\contador_6\contador.vhd".
+    Found 4-bit register for signal <q>.
+    Found 1-bit register for signal <cont<3>>.
+    Found 1-bit register for signal <cont<2>>.
+    Found 1-bit register for signal <cont<1>>.
+    Found 1-bit register for signal <cont<0>>.
+    Found 4-bit adder for signal <cont[3]_GND_5_o_add_3_OUT> created at line 46.
+    Found 4-bit subtractor for signal <GND_5_o_GND_5_o_sub_8_OUT<3:0>> created at line 53.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   8 D-type flip-flop(s).
+Unit <contador> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 4-bit addsub                                          : 1
+# Registers                                            : 5
+ 1-bit register                                        : 4
+ 4-bit register                                        : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 4-bit addsub                                          : 1
+# Registers                                            : 8
+ Flip-Flops                                            : 8
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    cont_3 in unit <contador>
+    cont_0 in unit <contador>
+    cont_2 in unit <contador>
+    cont_1 in unit <contador>
+
+
+Optimizing unit <contador> ...
+WARNING:Xst:1710 - FF/Latch <q_0> (without init value) has a constant value of 1 in block <contador>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block contador, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 10
+ Flip-Flops                                            : 10
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : contador.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 14
+#      INV                         : 1
+#      LUT2                        : 6
+#      LUT3                        : 3
+#      LUT5                        : 2
+#      LUT6                        : 1
+#      VCC                         : 1
+# FlipFlops/Latches                : 13
+#      FDC                         : 3
+#      FDCE                        : 3
+#      FDP                         : 4
+#      LDC                         : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 6
+#      IBUF                        : 2
+#      OBUF                        : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              13  out of  54576     0%  
+ Number of Slice LUTs:                   13  out of  27288     0%  
+    Number used as Logic:                13  out of  27288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     18
+   Number with an unused Flip Flop:       5  out of     18    27%  
+   Number with an unused LUT:             5  out of     18    27%  
+   Number of fully used LUT-FF pairs:     8  out of     18    44%  
+   Number of unique control sets:        11
+
+IO Utilization: 
+ Number of IOs:                           7
+ Number of bonded IOBs:                   7  out of    218     3%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRL/BUFHCEs:         1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-------------------------------------+------------------------+-------+
+Clock Signal                         | Clock buffer(FF name)  | Load  |
+-------------------------------------+------------------------+-------+
+clk                                  | BUFGP                  | 10    |
+rst_q[1]_AND_5_o(rst_q[1]_AND_5_o1:O)| NONE(*)(cont_1_LDC)    | 1     |
+rst_q[2]_AND_3_o(rst_q[2]_AND_3_o1:O)| NONE(*)(cont_2_LDC)    | 1     |
+rst_q[3]_AND_1_o(rst_q[3]_AND_1_o1:O)| NONE(*)(cont_3_LDC)    | 1     |
+-------------------------------------+------------------------+-------+
+(*) These 3 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.486ns (Maximum Frequency: 402.236MHz)
+   Minimum input arrival time before clock: 3.432ns
+   Maximum output required time after clock: 3.668ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.486ns (frequency: 402.236MHz)
+  Total number of paths / destination ports: 46 / 19
+-------------------------------------------------------------------------
+Delay:               2.486ns (Levels of Logic = 2)
+  Source:            cont_3_P_3 (FF)
+  Destination:       cont_3_C_3 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: cont_3_P_3 to cont_3_C_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              1   0.447   0.684  cont_3_P_3 (cont_3_P_3)
+     LUT3:I1->O            2   0.203   0.845  cont_31 (cont_3)
+     LUT5:I2->O            2   0.205   0.000  GND_5_o_cont[3]_mux_11_OUT<3>1 (GND_5_o_cont[3]_mux_11_OUT<3>)
+     FDC:D                     0.102          cont_3_C_3
+    ----------------------------------------
+    Total                      2.486ns (0.957ns logic, 1.529ns route)
+                                       (38.5% logic, 61.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              3.432ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       cont_1_C_1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to cont_1_C_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.222   0.961  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.203   0.616  rst_q[3]_AND_1_o1 (rst_q[3]_AND_1_o)
+     FDP:PRE                   0.430          cont_3_P_3
+    ----------------------------------------
+    Total                      3.432ns (1.855ns logic, 1.577ns route)
+                                       (54.0% logic, 46.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'rst_q[1]_AND_5_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.432ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       cont_1_LDC (LATCH)
+  Destination Clock: rst_q[1]_AND_5_o falling
+
+  Data Path: rst to cont_1_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.222   0.961  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.203   0.616  rst_q[1]_AND_6_o1 (rst_q[1]_AND_6_o)
+     LDC:CLR                   0.430          cont_1_LDC
+    ----------------------------------------
+    Total                      3.432ns (1.855ns logic, 1.577ns route)
+                                       (54.0% logic, 46.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'rst_q[2]_AND_3_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.432ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       cont_2_LDC (LATCH)
+  Destination Clock: rst_q[2]_AND_3_o falling
+
+  Data Path: rst to cont_2_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.222   0.961  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.203   0.616  rst_q[2]_AND_4_o1 (rst_q[2]_AND_4_o)
+     LDC:CLR                   0.430          cont_2_LDC
+    ----------------------------------------
+    Total                      3.432ns (1.855ns logic, 1.577ns route)
+                                       (54.0% logic, 46.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'rst_q[3]_AND_1_o'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.432ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       cont_3_LDC (LATCH)
+  Destination Clock: rst_q[3]_AND_1_o falling
+
+  Data Path: rst to cont_3_LDC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.222   0.961  rst_IBUF (rst_IBUF)
+     LUT2:I0->O            2   0.203   0.616  rst_q[3]_AND_2_o1 (rst_q[3]_AND_2_o)
+     LDC:CLR                   0.430          cont_3_LDC
+    ----------------------------------------
+    Total                      3.432ns (1.855ns logic, 1.577ns route)
+                                       (54.0% logic, 46.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 3 / 3
+-------------------------------------------------------------------------
+Offset:              3.668ns (Levels of Logic = 1)
+  Source:            q_3 (FF)
+  Destination:       q<3> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: q_3 to q<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             3   0.447   0.650  q_3 (q_3)
+     OBUF:I->O                 2.571          q_3_OBUF (q<3>)
+    ----------------------------------------
+    Total                      3.668ns (3.018ns logic, 0.650ns route)
+                                       (82.3% logic, 17.7% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+clk             |    2.486|         |         |         |
+rst_q[1]_AND_5_o|         |    2.507|         |         |
+rst_q[2]_AND_3_o|         |    2.571|         |         |
+rst_q[3]_AND_1_o|         |    2.663|         |         |
+----------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock rst_q[1]_AND_5_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    2.350|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock rst_q[2]_AND_3_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    2.350|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock rst_q[3]_AND_1_o
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    2.350|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.67 secs
+ 
+--> 
+
+Total memory usage is 258348 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    2 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

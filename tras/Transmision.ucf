@@ -1,0 +1,11 @@
+ # clock pin for Atlys rev C board
+ NET "clk"   LOC = "L15";
+ NET "rst" LOC = "F5";
+
+ # USB UART Connector
+ NET "tx" LOC = "B16";
+
+ 
+
+
+

@@ -1,0 +1,55 @@
+V3 40
+FL C:/Users/dania/OneDrive/Escritorio/Ventilador/ADC.vhd 2018/10/17.06:54:56 P.58f
+FL C:/Users/dania/OneDrive/Escritorio/Ventilador/BCD.vhd 2018/10/17.09:53:40 P.58f
+FL C:/Users/dania/OneDrive/Escritorio/Ventilador/LCD.vhd 2018/10/16.19:01:20 P.58f
+FL C:/Users/dania/OneDrive/Escritorio/Ventilador/Modulos.vhd 2018/10/16.21:22:25 P.58f
+FL C:/Users/dania/OneDrive/Escritorio/Ventilador/PWM.vhd 2018/10/17.08:34:53 P.58f
+FL C:/Users/dania/OneDrive/Escritorio/Ventilador/Ventilador1.vhd 2018/10/16.21:13:10 P.58f
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/ADC.vhd 2018/10/16.19:55:41 P.58f
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/BCD.vhd 2018/10/16.21:50:05 P.58f
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/LCD.vhd 2018/10/16.19:01:20 P.58f
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Modulos.vhd 2018/10/16.21:22:25 P.58f
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/PWM.vhd 2018/10/16.18:47:32 P.58f
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.vhd 2018/10/16.20:06:23 P.58f
+EN work/Volante 1539738395 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221 PH work/MODULOS 1539797434
+AR work/Volante/arq_Volante 1539738396 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador.vhd \
+      EN work/Volante 1539738395 CP ADC CP PWM CP Convertidor CP LCD
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/Ventilador/Ventilador1.vhd 2018/10/16.21:13:10 P.58f
+FL C:/Users/Samuel/Desktop/Ventilador/ADC.vhd 2018/10/17.06:54:56 P.58f
+EN work/ADC 1539797435 FL C:/Users/Samuel/Desktop/Ventilador/ADC.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/ADC/ADC_Arq 1539797436 \
+      FL C:/Users/Samuel/Desktop/Ventilador/ADC.vhd EN work/ADC 1539797435
+FL C:/Users/Samuel/Desktop/Ventilador/BCD.vhd 2018/10/17.12:30:17 P.58f
+EN work/Convertidor 1539797439 FL C:/Users/Samuel/Desktop/Ventilador/BCD.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/Convertidor/arq_Convertidor 1539797440 \
+      FL C:/Users/Samuel/Desktop/Ventilador/BCD.vhd EN work/Convertidor 1539797439
+FL C:/Users/Samuel/Desktop/Ventilador/LCD.vhd 2018/10/16.19:01:20 P.58f
+EN work/LCD 1539797441 FL C:/Users/Samuel/Desktop/Ventilador/LCD.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/LCD/Behavioral 1539797442 \
+      FL C:/Users/Samuel/Desktop/Ventilador/LCD.vhd EN work/LCD 1539797441
+FL C:/Users/Samuel/Desktop/Ventilador/Modulos.vhd 2018/10/16.21:22:25 P.58f
+PH work/MODULOS 1539797434 FL C:/Users/Samuel/Desktop/Ventilador/Modulos.vhd \
+      PB ieee/std_logic_1164 1364358218 CD ADC CD PWM CD Convertidor CD LCD
+FL C:/Users/Samuel/Desktop/Ventilador/PWM.vhd 2018/10/17.08:34:53 P.58f
+EN work/PWM 1539797437 FL C:/Users/Samuel/Desktop/Ventilador/PWM.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221
+AR work/PWM/arq_PWM 1539797438 \
+      FL C:/Users/Samuel/Desktop/Ventilador/PWM.vhd EN work/PWM 1539797437
+FL C:/Users/Samuel/Desktop/Ventilador/Ventilador1.vhd 2018/10/16.21:13:10 P.58f
+EN work/Ventilador 1539797443 \
+      FL C:/Users/Samuel/Desktop/Ventilador/Ventilador1.vhd \
+      PB ieee/std_logic_1164 1364358218 PB ieee/std_logic_arith 1364358219 \
+      PB ieee/STD_LOGIC_UNSIGNED 1364358221 PH work/MODULOS 1539797434
+AR work/Ventilador/arq_Ventilador 1539797444 \
+      FL C:/Users/Samuel/Desktop/Ventilador/Ventilador1.vhd EN work/Ventilador 1539797443 \
+      CP ADC CP PWM CP Convertidor CP LCD

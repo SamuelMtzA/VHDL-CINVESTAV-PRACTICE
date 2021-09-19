@@ -1,0 +1,9 @@
+[Inputs]
+=DATO0[3:0]=
+=DATO1[3:0]=
+=DATO2[3:0]=
+=DATO3[3:0]=
+=CONT[1:0]=
+[Outputs]
+=MUX[3:0]=
+[BiDir]

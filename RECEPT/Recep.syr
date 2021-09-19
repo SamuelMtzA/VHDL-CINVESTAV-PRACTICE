@@ -1,0 +1,528 @@
+Release 14.5 - xst P.58f (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: Recep.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Recep.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Recep"
+Output Format                      : NGC
+Target Device                      : xc6slx45-3-csg324
+
+---- Source Options
+Top Module Name                    : Recep
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\RECEPT\Recepcion.vhd" into library work
+Parsing entity <Recep>.
+Parsing architecture <Arq_Recep> of entity <recep>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <Recep> (architecture <Arq_Recep>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <Recep>.
+    Related source file is "C:\Users\Samuel\Desktop\Practicas_FPGa_nexys2\RECEPT\Recepcion.vhd".
+    Found 4-bit register for signal <regrx>.
+    Found 4-bit register for signal <modu>.
+    Found 9-bit register for signal <clkdiv>.
+    Found 4-bit register for signal <leds>.
+    Found 11-bit register for signal <cntrx>.
+    Found 5-bit register for signal <trx>.
+    Found 11-bit adder for signal <cntrx[10]_GND_5_o_add_1_OUT> created at line 43.
+    Found 5-bit adder for signal <trx[4]_GND_5_o_add_3_OUT> created at line 45.
+    Found 9-bit adder for signal <clkdiv[8]_GND_5_o_add_14_OUT> created at line 73.
+    Found 4-bit adder for signal <leds[3]_GND_5_o_add_16_OUT> created at line 82.
+    Found 4-bit subtractor for signal <GND_5_o_GND_5_o_sub_18_OUT<3:0>> created at line 83.
+WARNING:Xst:737 - Found 1-bit latch for signal <erx>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <f>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 4-bit comparator equal for signal <leds[3]_GND_5_o_equal_19_o> created at line 83
+    Summary:
+	inferred   5 Adder/Subtractor(s).
+	inferred  37 D-type flip-flop(s).
+	inferred   2 Latch(s).
+	inferred   1 Comparator(s).
+	inferred   7 Multiplexer(s).
+Unit <Recep> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 5
+ 11-bit adder                                          : 1
+ 4-bit adder                                           : 1
+ 4-bit subtractor                                      : 1
+ 5-bit adder                                           : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 6
+ 11-bit register                                       : 1
+ 4-bit register                                        : 3
+ 5-bit register                                        : 1
+ 9-bit register                                        : 1
+# Latches                                              : 2
+ 1-bit latch                                           : 2
+# Comparators                                          : 1
+ 4-bit comparator equal                                : 1
+# Multiplexers                                         : 7
+ 1-bit 2-to-1 multiplexer                              : 2
+ 11-bit 2-to-1 multiplexer                             : 1
+ 4-bit 2-to-1 multiplexer                              : 4
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <Recep>.
+The following registers are absorbed into counter <clkdiv>: 1 register on signal <clkdiv>.
+The following registers are absorbed into counter <cntrx>: 1 register on signal <cntrx>.
+The following registers are absorbed into counter <trx>: 1 register on signal <trx>.
+The following registers are absorbed into counter <leds>: 1 register on signal <leds>.
+Unit <Recep> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 4-bit subtractor                                      : 1
+# Counters                                             : 4
+ 11-bit up counter                                     : 1
+ 4-bit up counter                                      : 1
+ 5-bit up counter                                      : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 8
+ Flip-Flops                                            : 8
+# Comparators                                          : 1
+ 4-bit comparator equal                                : 1
+# Multiplexers                                         : 5
+ 1-bit 2-to-1 multiplexer                              : 2
+ 4-bit 2-to-1 multiplexer                              : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set and reset:
+    erx in unit <Recep>
+    f in unit <Recep>
+
+
+Optimizing unit <Recep> ...
+WARNING:Xst:1710 - FF/Latch <cntrx_9> (without init value) has a constant value of 0 in block <Recep>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <cntrx_10> (without init value) has a constant value of 0 in block <Recep>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Recep, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 35
+ Flip-Flops                                            : 35
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : Recep.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 91
+#      GND                         : 1
+#      INV                         : 2
+#      LUT1                        : 10
+#      LUT2                        : 3
+#      LUT3                        : 3
+#      LUT4                        : 9
+#      LUT5                        : 6
+#      LUT6                        : 21
+#      MUXCY                       : 16
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 18
+# FlipFlops/Latches                : 37
+#      FDC                         : 12
+#      FDCE                        : 23
+#      LD                          : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 6
+#      IBUF                        : 2
+#      OBUF                        : 4
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx45csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              37  out of  54576     0%  
+ Number of Slice LUTs:                   54  out of  27288     0%  
+    Number used as Logic:                54  out of  27288     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     57
+   Number with an unused Flip Flop:      20  out of     57    35%  
+   Number with an unused LUT:             3  out of     57     5%  
+   Number of fully used LUT-FF pairs:    34  out of     57    59%  
+   Number of unique control sets:         8
+
+IO Utilization: 
+ Number of IOs:                           7
+ Number of bonded IOBs:                   7  out of    218     3%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRL/BUFHCEs:         1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 31    |
+clkdiv_8                           | NONE(leds_0)           | 4     |
+erx_G(f_G:O)                       | NONE(*)(f)             | 2     |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.666ns (Maximum Frequency: 272.810MHz)
+   Minimum input arrival time before clock: 3.928ns
+   Maximum output required time after clock: 3.847ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.666ns (frequency: 272.810MHz)
+  Total number of paths / destination ports: 579 / 41
+-------------------------------------------------------------------------
+Delay:               3.666ns (Levels of Logic = 11)
+  Source:            cntrx_4 (FF)
+  Destination:       cntrx_8 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: cntrx_4 to cntrx_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.447   0.864  cntrx_4 (cntrx_4)
+     LUT4:I0->O           13   0.203   0.933  cntrx[10]_GND_5_o_equal_3_o<10>_SW0 (N01)
+     LUT6:I5->O            1   0.205   0.579  cntrx[10]_GND_5_o_equal_3_o_inv1 (cntrx[10]_GND_5_o_equal_3_o_inv)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_cntrx_cy<0> (Mcount_cntrx_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_cntrx_cy<1> (Mcount_cntrx_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_cntrx_cy<2> (Mcount_cntrx_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_cntrx_cy<3> (Mcount_cntrx_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_cntrx_cy<4> (Mcount_cntrx_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_cntrx_cy<5> (Mcount_cntrx_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Mcount_cntrx_cy<6> (Mcount_cntrx_cy<6>)
+     MUXCY:CI->O           0   0.019   0.000  Mcount_cntrx_cy<7> (Mcount_cntrx_cy<7>)
+     XORCY:CI->O           1   0.180   0.000  Mcount_cntrx_xor<8> (Mcount_cntrx8)
+     FDCE:D                    0.102          cntrx_8
+    ----------------------------------------
+    Total                      3.666ns (1.289ns logic, 2.377ns route)
+                                       (35.2% logic, 64.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clkdiv_8'
+  Clock period: 2.860ns (frequency: 349.626MHz)
+  Total number of paths / destination ports: 40 / 4
+-------------------------------------------------------------------------
+Delay:               2.860ns (Levels of Logic = 2)
+  Source:            leds_3 (FF)
+  Destination:       leds_3 (FF)
+  Source Clock:      clkdiv_8 rising
+  Destination Clock: clkdiv_8 rising
+
+  Data Path: leds_3 to leds_3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             7   0.447   0.878  leds_3 (leds_3)
+     LUT4:I2->O            4   0.203   1.028  leds[3]_GND_5_o_equal_19_o42 (leds[3]_GND_5_o_equal_19_o41)
+     LUT6:I1->O            1   0.203   0.000  Mcount_leds_xor<3>11 (Mcount_leds3)
+     FDCE:D                    0.102          leds_3
+    ----------------------------------------
+    Total                      2.860ns (0.955ns logic, 1.905ns route)
+                                       (33.4% logic, 66.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 35 / 35
+-------------------------------------------------------------------------
+Offset:              3.928ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       cntrx_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to cntrx_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            21   1.222   1.114  rst_IBUF (rst_IBUF)
+     LUT2:I1->O           14   0.205   0.957  rst_erx_OR_9_o1 (rst_erx_OR_9_o)
+     FDCE:CLR                  0.430          cntrx_0
+    ----------------------------------------
+    Total                      3.928ns (1.857ns logic, 2.071ns route)
+                                       (47.3% logic, 52.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'erx_G'
+  Total number of paths / destination ports: 5 / 2
+-------------------------------------------------------------------------
+Offset:              3.431ns (Levels of Logic = 3)
+  Source:            rx (PAD)
+  Destination:       f (LATCH)
+  Destination Clock: erx_G falling
+
+  Data Path: rx to f
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.222   1.147  rx_IBUF (rx_IBUF)
+     LUT6:I1->O            2   0.203   0.617  rst_GND_5_o_AND_2_o41 (rst_GND_5_o_AND_2_o_bdd0)
+     LUT3:I2->O            1   0.205   0.000  f_D (f_D)
+     LD:D                      0.037          f
+    ----------------------------------------
+    Total                      3.431ns (1.667ns logic, 1.764ns route)
+                                       (48.6% logic, 51.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clkdiv_8'
+  Total number of paths / destination ports: 4 / 4
+-------------------------------------------------------------------------
+Offset:              3.847ns (Levels of Logic = 1)
+  Source:            leds_2 (FF)
+  Destination:       leds<2> (PAD)
+  Source Clock:      clkdiv_8 rising
+
+  Data Path: leds_2 to leds<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             9   0.447   0.829  leds_2 (leds_2)
+     OBUF:I->O                 2.571          leds_2_OBUF (leds<2>)
+    ----------------------------------------
+    Total                      3.847ns (3.018ns logic, 0.829ns route)
+                                       (78.5% logic, 21.5% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    3.666|         |         |         |
+erx_G          |         |    3.174|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clkdiv_8
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.902|         |         |         |
+clkdiv_8       |    2.860|         |         |         |
+erx_G          |         |    2.531|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock erx_G
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    2.676|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.81 secs
+ 
+--> 
+
+Total memory usage is 258092 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    5 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

@@ -1,0 +1,24 @@
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/RECEPT/Recep.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/RECEPT/Recep.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Recepcion.ucf -p xc6slx45-csg324-3 Recep.ngc Recep.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Recepcion.ucf -p xc6slx45-csg324-3 Recep.ngc Recep.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Recep_map.ncd Recep.ngd Recep.pcf 
+par -w -intstyle ise -ol high -mt off Recep_map.ncd Recep.ncd Recep.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Recep.twx Recep.ncd -o Recep.twr Recep.pcf -ucf Recepcion.ucf 
+bitgen -intstyle ise -f Recep.ut Recep.ncd 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/RECEPT/Recep.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/RECEPT/Recep.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Recepcion.ucf -p xc6slx45-csg324-3 Recep.ngc Recep.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Recep_map.ncd Recep.ngd Recep.pcf 
+par -w -intstyle ise -ol high -mt off Recep_map.ncd Recep.ncd Recep.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Recep.twx Recep.ncd -o Recep.twr Recep.pcf -ucf Recepcion.ucf 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/RECEPT/Recep.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/RECEPT/Recep.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Recepcion.ucf -p xc6slx45-csg324-3 Recep.ngc Recep.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Recep_map.ncd Recep.ngd Recep.pcf 
+par -w -intstyle ise -ol high -mt off Recep_map.ncd Recep.ncd Recep.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Recep.twx Recep.ncd -o Recep.twr Recep.pcf -ucf Recepcion.ucf 
+bitgen -intstyle ise -f Recep.ut Recep.ncd 
+xst -intstyle ise -ifn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/RECEPT/Recep.xst" -ofn "C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/RECEPT/Recep.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Recepcion.ucf -p xc6slx45-csg324-3 Recep.ngc Recep.ngd  
+map -intstyle ise -p xc6slx45-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o Recep_map.ncd Recep.ngd Recep.pcf 
+par -w -intstyle ise -ol high -mt off Recep_map.ncd Recep.ncd Recep.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml Recep.twx Recep.ncd -o Recep.twr Recep.pcf -ucf Recepcion.ucf 
+netgen -intstyle ise -s 3  -pcf Recep.pcf -rpw 100 -tpw 0 -ar Structure -tm Recep -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim Recep.ncd Recep_timesim.vhd 

@@ -1,0 +1,4 @@
+AR pwm arq_pwm C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/servo/PWM.vhd sub00/vhpl03 1538591815
+EN pwm NULL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/servo/PWM.vhd sub00/vhpl02 1538591814
+AR antirrebote behavioral C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/servo/Antirrebote.vhd sub00/vhpl01 1538591813
+EN antirrebote NULL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/servo/Antirrebote.vhd sub00/vhpl00 1538591812

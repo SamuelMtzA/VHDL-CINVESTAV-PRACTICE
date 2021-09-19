@@ -1,0 +1,7 @@
+V3 3
+FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/MEALY.vhd 2018/09/23.20:37:49 P.58f
+EN work/MEALY 1537821893 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/MEALY.vhd \
+      PB ieee/std_logic_1164 1364358218
+AR work/MEALY/BEHAVIOR 1537821894 \
+      FL C:/Users/Samuel/Desktop/Practicas_FPGa_nexys2/MEALY.vhd EN work/MEALY 1537821893
